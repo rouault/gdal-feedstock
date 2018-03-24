@@ -67,3 +67,24 @@ assert list(gen_list(N)) == list(range(N))
 
 # This module does some additional tests.
 import extra_tests
+
+# Test international encoding.
+# https://github.com/conda-forge/libgdal-feedstock/issues/32
+from osgeo import ogr
+
+driver = ogr.GetDriverByName("ESRI Shapefile")
+ds = driver.CreateDataSource("test.shp")
+lyr = ds.CreateLayer("test", options=["ENCODING=GB18030"])
+
+field_defn = ogr.FieldDefn("myfield", ogr.OFTString)
+lyr.CreateField(field_defn)
+
+lyr_defn = lyr.GetLayerDefn()
+feature = ogr.Feature(lyr_defn)
+
+feature.SetField("myfield", "\u5f90\u6c47\u533a")
+
+lyr.CreateFeature(feature)
+
+lyr = None
+ds = None
