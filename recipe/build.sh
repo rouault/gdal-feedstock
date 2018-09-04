@@ -11,3 +11,6 @@ $PYTHON setup.py build_scripts
 $PYTHON setup.py install
 
 popd
+
+# We can remove this when we start using the new conda-build.
+find $PREFIX -name '*.la' -delete
