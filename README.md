@@ -1,13 +1,13 @@
-About gdal
-==========
+About gdal-split
+================
 
-Home: http://www.gdal.org/
+Home: 
 
-Package license: MIT
+Package license: 
 
 Feedstock license: BSD 3-Clause
 
-Summary: Python wrapper for the Geospatial Data Abstraction Library (GDAL)
+Summary: The Geospatial Data Abstraction Library (GDAL)
 
 
 
@@ -24,20 +24,21 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-gdal-green.svg)](https://anaconda.org/conda-forge/gdal) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/gdal.svg)](https://anaconda.org/conda-forge/gdal) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/gdal.svg)](https://anaconda.org/conda-forge/gdal) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/gdal.svg)](https://anaconda.org/conda-forge/gdal) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libgdal-green.svg)](https://anaconda.org/conda-forge/libgdal) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libgdal.svg)](https://anaconda.org/conda-forge/libgdal) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libgdal.svg)](https://anaconda.org/conda-forge/libgdal) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libgdal.svg)](https://anaconda.org/conda-forge/libgdal) |
 
-Installing gdal
-===============
+Installing gdal-split
+=====================
 
-Installing `gdal` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `gdal-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `gdal` can be installed with:
+Once the `conda-forge` channel has been enabled, `gdal, libgdal` can be installed with:
 
 ```
-conda install gdal
+conda install gdal libgdal
 ```
 
 It is possible to list all of the versions of `gdal` available on your platform with:
@@ -83,17 +84,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating gdal-feedstock
-=======================
+Updating gdal-split-feedstock
+=============================
 
-If you would like to improve the gdal recipe or build a new
+If you would like to improve the gdal-split recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/gdal-feedstock are
+Note that all branches in the conda-forge/gdal-split-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
