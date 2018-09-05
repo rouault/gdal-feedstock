@@ -1,16 +1,6 @@
-cd swig\python
+call "%RECIPE_DIR%\set_bld_opts.bat"
 
-%PYTHON% setup.py build_ext --include-dirs %LIBRARY_INC% --library-dirs %LIBRARY_LIB% --gdal-config %LIBRARY_BIN%\gdal-config
+nmake /f makefile.vc %BLD_OPTS%
 if errorlevel 1 exit 1
 
-%PYTHON% setup.py build_py
-if errorlevel 1 exit 1
-
-%PYTHON% setup.py build_scripts
-if errorlevel 1 exit 1
-
-%PYTHON% setup.py install
-if errorlevel 1 exit 1
-
-rd /s /q %SP_DIR%\numpy
-if errorlevel 1 exit 1
+mkdir -p %LIBRARY_PREFIX%\share\doc\gdal
