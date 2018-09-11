@@ -111,7 +111,7 @@ poppler:
 proj4:
 - 4.9.3
 python:
-- '2.7'
+- '3.7'
 sqlite:
 - '3'
 xerces_c:
