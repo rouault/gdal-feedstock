@@ -8,8 +8,10 @@ find $PREFIX/lib -name '*.la' -delete
 # Force python bindings to not be built.
 unset PYTHON
 
-export CFLAGS="-O2 -Wl,-S $CFLAGS"
-export CXXFLAGS="-O2 -Wl,-S $CXXFLAGS"
+if [ $(uname) != Darwin ]; then
+  export CFLAGS="-O2 -Wl,-S $CFLAGS"
+  export CXXFLAGS="-O2 -Wl,-S $CXXFLAGS"
+fi
 
 export CPPFLAGS="$CPPFLAGS -I$PREFIX/include"
 
