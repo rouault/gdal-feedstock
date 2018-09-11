@@ -11,8 +11,6 @@ import ogr
 # Set the working directory and file names.
 fname = os.path.join(os.environ['RECIPE_DIR'], 'test_data', 'sites.shp')
 
-# Open the output file.
-
 # Open the data source.
 driver = ogr.GetDriverByName('ESRI Shapefile')
 data_source = driver.Open(fname, 0)
