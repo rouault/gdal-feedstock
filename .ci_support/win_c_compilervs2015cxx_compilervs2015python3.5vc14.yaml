@@ -33,7 +33,7 @@ libtiff:
 libxml2:
 - '2.9'
 numpy:
-- '1.11'
+- '1.14'
 openjpeg:
 - '2.3'
 openssl:
