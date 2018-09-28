@@ -17,7 +17,7 @@ geos:
 hdf4:
 - '4.2'
 hdf5:
-- 1.10.2
+- 1.10.3
 jpeg:
 - '9'
 kealib:
@@ -33,7 +33,7 @@ libtiff:
 libxml2:
 - '2.9'
 numpy:
-- '1.14'
+- '1.11'
 openjpeg:
 - '2.3'
 openssl:
