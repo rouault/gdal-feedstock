@@ -1,4 +1,4 @@
-{% set version = "2.3.1" %}
+{% set version = "2.3.2" %}
 
 package:
   name: gdal-split
@@ -6,7 +6,7 @@ package:
 
 source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
-  sha256: 9c4625c45a3ee7e49a604ef221778983dd9fd8104922a87f20b99d9bedb7725a
+  sha256: 3f6d78fe8807d1d6afb7bed27394f19467840a82bc36d65e66316fa0aa9d32a4
   patches:
   patches:
     # BUILT_AS_DYNAMIC_LIB.
@@ -17,13 +17,13 @@ source:
     - patches/disable_jpeg12.patch
 
 build:
-  number: 4
+  number: 0
   skip: True  # [win and vc<14]
 
 requirements:
   build:
     - cmake  # [win]
-    -  pkg-config  # [not win]
+    - pkg-config >=0.21  # [not win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
