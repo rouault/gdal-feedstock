@@ -11,7 +11,7 @@ cxx_compiler:
 expat:
 - '2.2'
 gdal:
-- '2.2'
+- '2.3'
 geos:
 - 3.6.2
 hdf4:
@@ -27,7 +27,7 @@ libkml:
 libnetcdf:
 - '4.6'
 libpng:
-- 1.6.34
+- 1.6.35
 libtiff:
 - 4.0.9
 libxml2:

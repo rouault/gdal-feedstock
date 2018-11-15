@@ -1,5 +1,9 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+build_number_decrement:
+- '1000'
 c_compiler:
-- vs2015
+- toolchain_c
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -7,21 +11,27 @@ channel_targets:
 curl:
 - '7.59'
 cxx_compiler:
-- vs2015
+- toolchain_cxx
 expat:
 - '2.2'
 gdal:
 - '2.3'
 geos:
 - 3.6.2
+giflib:
+- '5.1'
 hdf4:
 - '4.2'
 hdf5:
 - 1.10.3
 jpeg:
 - '9'
+json_c:
+- '0.12'
 kealib:
 - 1.4.9
+libdap4:
+- '3.19'
 libkml:
 - '1.3'
 libnetcdf:
@@ -32,8 +42,12 @@ libtiff:
 - 4.0.9
 libxml2:
 - '2.9'
+macos_machine:
+- x86_64-apple-darwin13.4.0
+macos_min_version:
+- '10.9'
 numpy:
-- '1.11'
+- '1.9'
 openjpeg:
 - '2.3'
 openssl:
@@ -47,13 +61,19 @@ pin_run_as_build:
     max_pin: x.x
   geos:
     max_pin: x.x.x
+  giflib:
+    max_pin: x.x
   hdf4:
     max_pin: x.x
   hdf5:
     max_pin: x.x.x
   jpeg:
     max_pin: x
+  json-c:
+    max_pin: x.x
   kealib:
+    max_pin: x.x
+  libdap4:
     max_pin: x.x
   libkml:
     max_pin: x.x
@@ -69,6 +89,8 @@ pin_run_as_build:
     max_pin: x.x
   openssl:
     max_pin: x.x.x
+  poppler:
+    max_pin: x.x
   proj4:
     max_pin: x.x.x
   python:
@@ -76,30 +98,29 @@ pin_run_as_build:
     max_pin: x.x
   sqlite:
     max_pin: x
-  vc:
-    max_pin: x
   xerces-c:
     max_pin: x.x.x
   xz:
     max_pin: x.x
   zlib:
     max_pin: x.x
+poppler:
+- '0.67'
 proj4:
 - 4.9.3
 python:
-- '3.7'
+- '2.7'
 sqlite:
 - '3'
-vc:
-- '14'
 xerces_c:
 - 3.2.0
 xz:
 - '5.2'
 zip_keys:
-- - python
-  - vc
-  - c_compiler
+- - c_compiler
   - cxx_compiler
+  - channel_sources
+  - channel_targets
+  - build_number_decrement
 zlib:
 - '1.2'
