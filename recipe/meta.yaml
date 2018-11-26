@@ -30,7 +30,7 @@ requirements:
     # Python here is only needed so conda-smithy can get the matrix right.
     # We should probably re-visit this at some point and make it more efficient.
     - python
-    - curl
+    - curl 7.62.0
     - expat
     - freexl
     - geos
@@ -39,7 +39,7 @@ requirements:
     - hdf4
     - hdf5
     - jpeg
-    - json-c  # [not win]
+    - json-c 0.13.1  # [not win]
     - kealib
     - libdap4  # [not win]
     - libkml
@@ -57,7 +57,7 @@ requirements:
     - postgresql
     - proj4
     - sqlite
-    - xerces-c
+    - xerces-c 3.2.2
     - xz  # [not win or vc>=14]
     - m2w64-xz  # [win]
     - zlib
@@ -78,7 +78,7 @@ outputs:
         - {{ compiler('cxx') }}
         - pkg-config  # [not win]
       host:
-        - libcurl
+        - libcurl 7.62.0
         - expat
         - freexl
         - geos
@@ -87,7 +87,7 @@ outputs:
         - hdf4
         - hdf5
         - jpeg
-        - json-c  # [not win]
+        - json-c 0.13.1  # [not win]
         - kealib
         - libdap4  # [not win]
         - libkml
@@ -105,14 +105,14 @@ outputs:
         - postgresql
         - proj4
         - sqlite
-        - xerces-c
+        - xerces-c 3.2.2
         - xz  # [not win or vc>=14]
         - m2w64-xz  # [win]
         - zlib
       run:
         - geotiff
         - giflib  # [not win]
-        - json-c  # [not win]
+        - json-c 0.13.1  # [not win]
         - libdap4  # [not win]
         - libpq
         - libspatialite
