@@ -33,7 +33,7 @@ requirements:
     - curl 7.62.0
     - expat
     - freexl
-    - geos
+    - geos 3.7.0
     - geotiff
     - giflib  # [not win]
     - hdf4
@@ -81,7 +81,7 @@ outputs:
         - libcurl 7.62.0
         - expat
         - freexl
-        - geos
+        - geos 3.7.0
         - geotiff
         - giflib  # [not win]
         - hdf4
