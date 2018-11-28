@@ -13,7 +13,7 @@ expat:
 gdal:
 - '2.3'
 geos:
-- 3.6.2
+- 3.7.0
 hdf4:
 - '4.2'
 hdf5:
@@ -91,7 +91,7 @@ sqlite:
 vc:
 - '14'
 xerces_c:
-- 3.2.0
+- 3.2.2
 xz:
 - '5.2'
 zip_keys:

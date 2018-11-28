@@ -17,7 +17,7 @@ expat:
 gdal:
 - '2.3'
 geos:
-- 3.6.2
+- 3.7.0
 giflib:
 - '5.1'
 hdf4:
@@ -27,7 +27,7 @@ hdf5:
 jpeg:
 - '9'
 json_c:
-- '0.12'
+- '0.13'
 kealib:
 - 1.4.10
 libdap4:
@@ -111,7 +111,7 @@ python:
 sqlite:
 - '3'
 xerces_c:
-- 3.2.0
+- 3.2.2
 xz:
 - '5.2'
 zip_keys:
