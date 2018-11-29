@@ -108,6 +108,8 @@ proj4:
 - 5.2.0
 python:
 - '2.7'
+- '3.6'
+- '3.7'
 sqlite:
 - '3'
 xerces_c:
