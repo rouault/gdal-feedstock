@@ -2,9 +2,6 @@
 
 set -e # Abort on error.
 
-# Get rid of any `.la` from defaults.
-find $PREFIX/lib -name '*.la' -delete
-
 # Force python bindings to not be built.
 unset PYTHON
 
