@@ -27,9 +27,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    # Python here is only needed so conda-smithy can get the matrix right.
-    # We should probably re-visit this at some point and make it more efficient.
-    - python
     - curl
     - expat
     - freexl
