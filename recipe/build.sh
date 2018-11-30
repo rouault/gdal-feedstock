@@ -2,16 +2,8 @@
 
 set -e # Abort on error.
 
-# Get rid of any `.la` from defaults.
-find $PREFIX/lib -name '*.la' -delete
-
 # Force python bindings to not be built.
 unset PYTHON
-
-if [ $(uname) != Darwin ]; then
-  export CFLAGS="-O2 -Wl,-S $CFLAGS"
-  export CXXFLAGS="-O2 -Wl,-S $CXXFLAGS"
-fi
 
 export CPPFLAGS="$CPPFLAGS -I$PREFIX/include"
 
@@ -19,6 +11,11 @@ export CPPFLAGS="$CPPFLAGS -I$PREFIX/include"
 re='(.*[[:space:]])\-std\=[^[:space:]]*(.*)'
 if [[ "${CXXFLAGS}" =~ $re ]]; then
     export CXXFLAGS="${BASH_REMATCH[1]}${BASH_REMATCH[2]}"
+fi
+
+# See https://github.com/AnacondaRecipes/aggregate/pull/103
+if [[ $target_platform =~ linux.* ]]; then
+  export LDFLAGS="${LDFLAGS} -Wl,-rpath-link,${PREFIX}/lib"
 fi
 
 # `--without-pam` was removed.
@@ -50,7 +47,7 @@ bash configure --prefix=$PREFIX \
                --with-poppler=$PREFIX \
                --with-spatialite=$PREFIX \
                --with-sqlite3=$PREFIX \
-               --with-static-proj4=$PREFIX \
+               --with-proj4=$PREFIX \
                --with-xerces=$PREFIX \
                --with-xml2=$PREFIX \
                --without-python \

@@ -17,7 +17,7 @@ source:
     - patches/disable_jpeg12.patch
 
 build:
-  number: 0
+  number: 1000
   skip: True  # [win and vc<14]
 
 requirements:
@@ -27,9 +27,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    # Python here is only needed so conda-smithy can get the matrix right.
-    # We should probably re-visit this at some point and make it more efficient.
-    - python
     - curl
     - expat
     - freexl
@@ -110,37 +107,18 @@ outputs:
         - m2w64-xz  # [win]
         - zlib
       run:
-        - curl
-        - expat
-        - freexl
-        - geos
         - geotiff
         - giflib  # [not win]
-        - hdf4
-        - hdf5
-        - jpeg
         - json-c  # [not win]
-        - kealib
         - libdap4  # [not win]
-        - libkml
-        - libnetcdf
-        - libpng
         - libpq
         - libspatialite
-        - libtiff
         - libuuid  # [linux]
-        - libxml2
-        - openjpeg
-        - openssl
-        - pcre
         - poppler  # [not win]
         - postgresql
         - proj4
-        - sqlite
-        - xerces-c
         - xz  # [not win or vc>=14]
         - m2w64-xz  # [win]
-        - zlib
     test:
       files:
         - test_data
@@ -162,10 +140,10 @@ outputs:
       build:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
+        - cmake  # [win]
       host:
         - python
         - pip
-        - cmake  # [win]
         - numpy
         - {{ pin_subpackage('libgdal', exact=True) }}
       run:
@@ -191,9 +169,12 @@ outputs:
         summary: 'Python wrapper for the Geospatial Data Abstraction Library (GDAL)'
 
 about:
-  home: http://www.gdal.org/
+  home: http://www.gdal.org
   license: MIT
   license_file: LICENSE.TXT
+  summary: |
+    GDAL is a translator library for raster and vector geospatial data formats that is released under an
+    X/MIT style Open Source license by the Open Source Geospatial Foundation. 
 
 extra:
   recipe-maintainers:
