@@ -26,7 +26,7 @@ source:
 
 build:
   skip: True  # [win and py27]
-  number: 10
+  number: 11
 
 requirements:
   build:
