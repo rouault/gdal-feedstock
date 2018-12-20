@@ -16,6 +16,8 @@ gdal:
 - '2.3'
 geos:
 - 3.7.0
+geotiff:
+- 1.4.2
 hdf4:
 - '4.2'
 hdf5:
@@ -49,6 +51,8 @@ pin_run_as_build:
     max_pin: x.x
   geos:
     max_pin: x.x.x
+  geotiff:
+    max_pin: x.x
   hdf4:
     max_pin: x.x
   jpeg:
