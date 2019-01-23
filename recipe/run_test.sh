@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# exit when any command fails
+set -e
+
 pushd $RECIPE_DIR/test_data/
 
 # From @mhearne-usgs. See https://github.com/conda-forge/gdal-feedstock/issues/23#issue-144997326

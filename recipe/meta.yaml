@@ -132,7 +132,7 @@ outputs:
         - gdalinfo --formats
         - gdalinfo http://thredds.nersc.no/thredds/dodsC/greenpath/Model/topaz  # [not win]
         - {{ RECIPE_DIR }}/run_test.bat  # [win]
-        - {{ RECIPE_DIR }}/run_test.sh  # [not win]
+        - bash {{ RECIPE_DIR }}/run_test.sh  # [not win]
     about:
       summary: 'The Geospatial Data Abstraction Library (GDAL)'
 
