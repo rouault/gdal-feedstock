@@ -11,6 +11,13 @@ if "%ARCH%"=="64" (
 if  %vc% LEQ 9 set MSVC_VER=1500
 if  %vc% GTR 9 set MSVC_VER=1900
 
+:: Get the minor/major version of poppler from the %poppler% environment
+:: variable that is set by conda-build
+FOR /F "tokens=1,2 delims=." %%a IN ("%poppler%") DO (
+  set POPPLER_MAJOR_VERSION=%%a
+  set POPPLER_MINOR_VERSION=%%b
+)
+
 :: Need consistent flags between build and install.
 set BLD_OPTS=%WIN64% ^
     MSVC_VER=%MSVC_VER% ^
@@ -66,6 +73,11 @@ set BLD_OPTS=%WIN64% ^
     GEOTIFF_INC="-I%LIBRARY_INC%" ^
     GEOTIFF_LIB=%LIBRARY_LIB%\geotiff_i.lib ^
     LIBICONV_INCLUDE="-I%LIBRARY_INC% -DICONV_CONST= " ^
-    LIBICONV_LIBRARY="%LIBRARY_LIB%\iconv.lib"
+    LIBICONV_LIBRARY="%LIBRARY_LIB%\iconv.lib" ^
+	POPPLER_ENABLED=YES ^
+	POPPLER_CFLAGS="-I%LIBRARY_INC%\poppler -DPOPPLER_0_20_OR_LATER= -DPOPPLER_0_23_OR_LATER= -DPOPPLER_0_58_OR_LATER= -DPOPPLER_HAS_OPTCONTENT= -DPOPPLER_BASE_STREAM_HAS_TWO_ARGS= " ^
+	POPPLER_MAJOR_VERSION=%POPPLER_MAJOR_VERSION% ^
+	POPPLER_MINOR_VERSION=%POPPLER_MINOR_VERSION% ^
+	POPPLER_LIBS="%LIBRARY_LIB%\poppler.lib %LIBRARY_LIB%\freetype.lib advapi32.lib"
 
 endlocal && set BLD_OPTS=%BLD_OPTS%
