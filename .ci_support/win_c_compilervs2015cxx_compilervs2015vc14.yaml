@@ -13,7 +13,7 @@ cxx_compiler:
 expat:
 - '2.2'
 gdal:
-- '2.3'
+- '2.4'
 geos:
 - 3.7.1
 geotiff:
@@ -73,6 +73,8 @@ pin_run_as_build:
     max_pin: x.x
   openssl:
     max_pin: x.x.x
+  poppler:
+    max_pin: x.x
   proj4:
     max_pin: x.x.x
   python:
@@ -88,6 +90,8 @@ pin_run_as_build:
     max_pin: x.x
   zlib:
     max_pin: x.x
+poppler:
+- 0.67.0
 proj4:
 - 5.2.0
 python:
