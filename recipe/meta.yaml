@@ -168,7 +168,7 @@ outputs:
         - osgeo._ogr
         - osgeo._osr
       commands:
-        - python {{ RECIPE_DIR }}\run_test.py
+        - python {{ RECIPE_DIR }}/run_test.py
       about:
         summary: 'Python wrapper for the Geospatial Data Abstraction Library (GDAL)'
 
