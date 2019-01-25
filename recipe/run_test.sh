@@ -1,6 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
-pushd $RECIPE_DIR/test_data/
+# exit when any command fails
+set -e
+# print all commands
+set -x
+
+pushd $( dirname "${BASH_SOURCE[0]}" )/test_data/
 
 # From @mhearne-usgs. See https://github.com/conda-forge/gdal-feedstock/issues/23#issue-144997326
 echo ""
@@ -14,7 +19,7 @@ echo ""
 # gdalwarp -s_srs "+proj=latlong" -t_srs "$proj4" -of EHdr grid.asc grid.flt
 
 echo ""
-echo "Test ISIS3/USGS driver `SetNoDataValue()`"
+echo "Test ISIS3/USGS driver SetNoDataValue()"
 echo ""
 gdalinfo cropped.cub
 

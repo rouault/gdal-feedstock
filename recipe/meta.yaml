@@ -17,7 +17,7 @@ source:
     - patches/disable_jpeg12.patch  # [win]
 
 build:
-  number: 1001
+  number: 1002
   skip: True  # [win and vc<14]
 
 requirements:
@@ -50,7 +50,7 @@ requirements:
     - openjpeg
     - openssl
     - pcre
-    - poppler  # [not win]
+    - poppler
     - postgresql
     - proj4
     - sqlite
@@ -98,7 +98,7 @@ outputs:
         - openjpeg
         - openssl
         - pcre
-        - poppler  # [not win]
+        - poppler
         - postgresql
         - proj4
         - sqlite
@@ -114,7 +114,7 @@ outputs:
         - libpq
         - libspatialite
         - libuuid  # [linux]
-        - poppler  # [not win]
+        - poppler
         - postgresql
         - proj4
         - xz  # [not win or vc>=14]
@@ -131,6 +131,8 @@ outputs:
         - gdalwarp --version
         - gdalinfo --formats
         - gdalinfo http://thredds.nersc.no/thredds/dodsC/greenpath/Model/topaz  # [not win]
+        - {{ RECIPE_DIR }}/run_test.bat  # [win]
+        - bash {{ RECIPE_DIR }}/run_test.sh  # [not win]
     about:
       summary: 'The Geospatial Data Abstraction Library (GDAL)'
 
@@ -165,6 +167,8 @@ outputs:
         - osgeo._gdalconst
         - osgeo._ogr
         - osgeo._osr
+      commands:
+        - python {{ RECIPE_DIR }}/run_test.py
       about:
         summary: 'Python wrapper for the Geospatial Data Abstraction Library (GDAL)'
 
