@@ -7,7 +7,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 curl:
-- '7.59'
+- '7.64'
 cxx_compiler:
 - clangxx
 expat:
@@ -35,7 +35,7 @@ libdap4:
 libkml:
 - '1.3'
 libnetcdf:
-- '4.6'
+- 4.6.2
 libpng:
 - 1.6.35
 libtiff:
@@ -51,7 +51,7 @@ numpy:
 openjpeg:
 - '2.3'
 openssl:
-- 1.0.2
+- 1.1.1a
 pin_run_as_build:
   curl:
     max_pin: x
@@ -78,7 +78,7 @@ pin_run_as_build:
   libkml:
     max_pin: x.x
   libnetcdf:
-    max_pin: x.x
+    max_pin: x.x.x
   libpng:
     max_pin: x.x
   libtiff:
