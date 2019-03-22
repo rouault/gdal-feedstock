@@ -177,8 +177,9 @@ about:
   license: MIT
   license_file: LICENSE.TXT
   summary: |
-    GDAL is a translator library for raster and vector geospatial data formats that is released under an
-    X/MIT style Open Source license by the Open Source Geospatial Foundation. 
+    GDAL is a translator library for raster and vector geospatial data formats
+    that is released under an X/MIT style Open Source license by the
+    Open Source Geospatial Foundation.
 
 extra:
   recipe-maintainers:
