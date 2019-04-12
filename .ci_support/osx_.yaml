@@ -21,7 +21,7 @@ gdal:
 geos:
 - 3.7.1
 geotiff:
-- 1.4.2
+- 1.5.1
 giflib:
 - 5.1.7
 hdf4:
@@ -66,7 +66,7 @@ pin_run_as_build:
   geos:
     max_pin: x.x.x
   geotiff:
-    max_pin: x.x
+    max_pin: x.x.x
   hdf4:
     max_pin: x.x
   jpeg:
@@ -109,7 +109,7 @@ pin_run_as_build:
 poppler:
 - 0.67.0
 proj4:
-- 5.2.0
+- 6.0.0
 python:
 - '2.7'
 - '3.6'
