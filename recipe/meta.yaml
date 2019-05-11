@@ -32,7 +32,7 @@ requirements:
     - freexl
     - geos
     - geotiff
-    - cfitsio # [not win]
+    - cfitsio  # [not win]
     - giflib  # [not win]
     - hdf4
     - hdf5
@@ -81,7 +81,7 @@ outputs:
         - freexl
         - geos
         - geotiff
-        - cfitsio # [not win]
+        - cfitsio  # [not win]
         - giflib  # [not win]
         - hdf4
         - hdf5
@@ -110,7 +110,7 @@ outputs:
         - zlib
       run:
         - geotiff
-        - cfitsio # [not win]
+        - cfitsio  # [not win]
         - giflib  # [not win]
         - json-c  # [not win]
         - libdap4  # [not win]
