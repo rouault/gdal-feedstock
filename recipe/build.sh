@@ -45,7 +45,7 @@ bash configure --prefix=$PREFIX \
                --with-netcdf=$PREFIX \
                --with-openjpeg=$PREFIX \
                --with-pcre \
-               --with-pg=$PREFIX/bin/pg_config \
+               --with-pg=yes \
                --with-png=$PREFIX \
                --with-poppler=$PREFIX \
                --with-spatialite=$PREFIX \
