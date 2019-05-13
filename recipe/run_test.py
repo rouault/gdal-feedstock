@@ -9,7 +9,7 @@ from osgeo import osr
 from osgeo.gdal_array import *
 
 drivers = ['netCDF', 'HDF4', 'HDF5', 'GTiff', 'PNG', 'JPEG', 'GPKG', 'KEA', 
-    'JP2OpenJPEG', 'WCS', 'PDF', 'FTIS']
+    'JP2OpenJPEG', 'WCS', 'PDF', 'FITS']
 for driver in drivers:
     print(driver)
     assert gdal.GetDriverByName(driver)
