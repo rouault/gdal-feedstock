@@ -17,7 +17,7 @@ source:
     - patches/disable_jpeg12.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
 
 requirements:
@@ -32,6 +32,7 @@ requirements:
     - freexl
     - geos
     - geotiff
+    - cfitsio
     - giflib  # [not win]
     - hdf4
     - hdf5
@@ -80,6 +81,7 @@ outputs:
         - freexl
         - geos
         - geotiff
+        - cfitsio
         - giflib  # [not win]
         - hdf4
         - hdf5
@@ -108,6 +110,7 @@ outputs:
         - zlib
       run:
         - geotiff
+        - cfitsio
         - giflib  # [not win]
         - json-c  # [not win]
         - libdap4  # [not win]

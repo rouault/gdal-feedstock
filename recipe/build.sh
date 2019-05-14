@@ -33,6 +33,7 @@ bash configure --prefix=$PREFIX \
                --with-geos=$PREFIX/bin/geos-config \
                --with-geotiff=$PREFIX \
                --with-hdf4=$PREFIX \
+               --with-cfitsio=$PREFIX \
                --with-hdf5=$PREFIX \
                --with-jpeg=$PREFIX \
                --with-kea=$PREFIX/bin/kea-config \
