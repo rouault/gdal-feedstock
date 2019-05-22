@@ -51,7 +51,7 @@ bash configure --prefix=$PREFIX \
                --with-poppler=$PREFIX \
                --with-spatialite=$PREFIX \
                --with-sqlite3=$PREFIX \
-               --with-proj4=$PREFIX \
+               --with-proj=$PREFIX \
                --with-xerces=$PREFIX \
                --with-xml2=$PREFIX \
                --without-python \
