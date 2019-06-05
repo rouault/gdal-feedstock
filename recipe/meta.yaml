@@ -123,6 +123,7 @@ outputs:
         - proj4
         - xz  # [not win or vc>=14]
         - m2w64-xz  # [win]
+        - tiledb
     test:
       files:
         - test_data
