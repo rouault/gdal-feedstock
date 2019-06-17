@@ -30,7 +30,7 @@ requirements:
     - expat
     - freexl
     - geos
-    - geotiff
+    - geotiff 1.4.3
     - cfitsio
     - giflib  # [not win]
     - hdf4
@@ -52,7 +52,7 @@ requirements:
     - pcre
     - poppler
     - postgresql
-    - proj4 <6
+    - proj4 5.2.0
     - sqlite
     - xerces-c
     - xz  # [not win or vc>=14]
@@ -79,7 +79,7 @@ outputs:
         - expat
         - freexl
         - geos
-        - geotiff
+        - geotiff 1.4.3
         - cfitsio
         - giflib  # [not win]
         - hdf4
@@ -101,14 +101,14 @@ outputs:
         - pcre
         - poppler
         - postgresql
-        - proj4 <6
+        - proj4 5.2.0
         - sqlite
         - xerces-c
         - xz  # [not win or vc>=14]
         - m2w64-xz  # [win]
         - zlib
       run:
-        - geotiff
+        - geotiff 1.4.3
         - cfitsio
         - giflib  # [not win]
         - json-c  # [not win]
@@ -118,7 +118,7 @@ outputs:
         - libuuid  # [linux]
         - poppler
         - postgresql
-        - proj4 <6
+        - proj4 5.2.0
         - xz  # [not win or vc>=14]
         - m2w64-xz  # [win]
     test:
