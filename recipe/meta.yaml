@@ -52,7 +52,7 @@ requirements:
     - pcre
     - poppler
     - postgresql
-    - proj4
+    - proj4 <6
     - sqlite
     - xerces-c
     - xz  # [not win or vc>=14]
@@ -101,7 +101,7 @@ outputs:
         - pcre
         - poppler
         - postgresql
-        - proj4
+        - proj4 <6
         - sqlite
         - xerces-c
         - xz  # [not win or vc>=14]
@@ -118,7 +118,7 @@ outputs:
         - libuuid  # [linux]
         - poppler
         - postgresql
-        - proj4
+        - proj4 <6
         - xz  # [not win or vc>=14]
         - m2w64-xz  # [win]
     test:
