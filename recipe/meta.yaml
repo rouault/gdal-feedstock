@@ -52,7 +52,8 @@ requirements:
     - openjpeg
     - openssl
     - pcre
-    - poppler
+    - poppler  0.67.0  # [win]
+    - poppler  # [not win]
     - postgresql
     - proj4 5.2.0
     - sqlite
@@ -101,7 +102,8 @@ outputs:
         - openjpeg
         - openssl
         - pcre
-        - poppler
+        - poppler  0.67.0  # [win]
+        - poppler  # [not win]
         - postgresql
         - proj4 5.2.0
         - sqlite
@@ -118,7 +120,8 @@ outputs:
         - libpq
         - libspatialite
         - libuuid  # [linux]
-        - poppler
+        - poppler  0.67.0  # [win]
+        - poppler  # [not win]
         - postgresql
         - proj4 5.2.0
         - xz  # [not win or vc>=14]
