@@ -78,7 +78,7 @@ jobs:
       continueOnError: true
       displayName: remove strawberryperl
 
-        # workaround until the pinning issued is fixed in conda-build
+    # workaround until the pinning issued is fixed in conda-build
     - script: |
         conda install conda-build=3.17.8 --yes
         conda clean --all --yes
