@@ -18,7 +18,7 @@ source:
     - patches/setcsvfilenamehook.patch  # [win]
 
 build:
-  number: 7
+  number: 8
   skip: True  # [win and vc<14]
 
 requirements:
@@ -28,15 +28,16 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
+    - cfitsio
     - curl
     - expat
     - freexl
     - geos
     - geotiff 1.4.3
-    - cfitsio
     - giflib  # [not win]
     - hdf4
     - hdf5
+    - icu
     - jpeg
     - json-c  # [not win]
     - kealib
@@ -49,6 +50,7 @@ requirements:
     - libtiff
     - libuuid  # [linux]
     - libxml2
+    - m2w64-xz  # [win]
     - openjpeg
     - openssl
     - pcre
@@ -58,7 +60,6 @@ requirements:
     - sqlite
     - xerces-c
     - xz  # [not win or vc>=14]
-    - m2w64-xz  # [win]
     - zlib
 
 outputs:
@@ -77,15 +78,16 @@ outputs:
         - {{ compiler('cxx') }}
         - pkg-config  # [not win]
       host:
+        - cfitsio
         - curl
         - expat
         - freexl
         - geos
         - geotiff 1.4.3
-        - cfitsio
         - giflib  # [not win]
         - hdf4
         - hdf5
+        - icu
         - jpeg
         - json-c  # [not win]
         - kealib
@@ -98,6 +100,7 @@ outputs:
         - libtiff
         - libuuid  # [linux]
         - libxml2
+        - m2w64-xz  # [win]
         - openjpeg
         - openssl
         - pcre
@@ -107,22 +110,22 @@ outputs:
         - sqlite
         - xerces-c
         - xz  # [not win or vc>=14]
-        - m2w64-xz  # [win]
         - zlib
       run:
-        - geotiff 1.4.3
         - cfitsio
+        - geotiff 1.4.3
         - giflib  # [not win]
+        - icu
         - json-c  # [not win]
         - libdap4  # [not win]
         - libpq
         - libspatialite
         - libuuid  # [linux]
+        - m2w64-xz  # [win]
         - poppler
         - postgresql
         - proj4 5.2.0
         - xz  # [not win or vc>=14]
-        - m2w64-xz  # [win]
     test:
       files:
         - test_data
