@@ -18,7 +18,7 @@ source:
     - patches/setcsvfilenamehook.patch  # [win]
 
 build:
-  number: 9
+  number: 10
   skip: True  # [win and vc<14]
 
 requirements:
@@ -36,7 +36,7 @@ requirements:
     - geotiff 1.4.3
     - giflib  # [not win]
     - hdf4
-    - hdf5
+    - hdf5 1.10.4
     - icu 58.2
     - jpeg
     - json-c  # [not win]
@@ -86,7 +86,7 @@ outputs:
         - geotiff 1.4.3
         - giflib  # [not win]
         - hdf4
-        - hdf5
+        - hdf5 1.10.4
         - icu 58.2
         - jpeg
         - json-c  # [not win]
