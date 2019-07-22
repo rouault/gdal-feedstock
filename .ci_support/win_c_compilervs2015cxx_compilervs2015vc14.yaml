@@ -35,7 +35,7 @@ libnetcdf:
 libpng:
 - 1.6.35
 libtiff:
-- 4.0.9
+- 4.0.10
 libxml2:
 - '2.9'
 numpy:
