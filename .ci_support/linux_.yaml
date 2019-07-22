@@ -30,6 +30,8 @@ hdf4:
 - '4.2'
 hdf5:
 - 1.10.5
+icu:
+- '64.2'
 jpeg:
 - '9'
 json_c:
@@ -67,6 +69,8 @@ pin_run_as_build:
     max_pin: x.x.x
   hdf4:
     max_pin: x.x
+  icu:
+    max_pin: x
   jpeg:
     max_pin: x
   json-c:
