@@ -16,7 +16,7 @@ source:
     - patches/disable_jpeg12.patch  # [win]
 
 build:
-  number: 4
+  number: 5
   skip: True  # [win and vc<14]
 
 requirements:
@@ -26,16 +26,16 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
+    - cfitsio
     - curl
     - expat
     - freexl
     - geos
     - geotiff
-    - cfitsio
     - giflib  # [not win]
     - hdf4
     - hdf5
-    - tiledb
+    - icu 58.2
     - jpeg
     - json-c  # [not win]
     - kealib
@@ -48,6 +48,7 @@ requirements:
     - libtiff
     - libuuid  # [linux]
     - libxml2
+    - m2w64-xz  # [win]
     - openjpeg
     - openssl
     - pcre
@@ -55,9 +56,9 @@ requirements:
     - postgresql
     - proj4
     - sqlite
+    - tiledb
     - xerces-c
     - xz  # [not win or vc>=14]
-    - m2w64-xz  # [win]
     - zlib
 
 outputs:
@@ -76,16 +77,16 @@ outputs:
         - {{ compiler('cxx') }}
         - pkg-config  # [not win]
       host:
+        - cfitsio
         - curl
         - expat
         - freexl
         - geos
         - geotiff
-        - cfitsio
         - giflib  # [not win]
         - hdf4
         - hdf5
-        - tiledb
+        - icu 58.2
         - jpeg
         - json-c  # [not win]
         - kealib
@@ -98,6 +99,7 @@ outputs:
         - libtiff
         - libuuid  # [linux]
         - libxml2
+        - m2w64-xz  # [win]
         - openjpeg
         - openssl
         - pcre
@@ -105,25 +107,26 @@ outputs:
         - postgresql
         - proj4
         - sqlite
+        - tiledb
         - xerces-c
         - xz  # [not win or vc>=14]
-        - m2w64-xz  # [win]
         - zlib
       run:
-        - geotiff
         - cfitsio
+        - geotiff
         - giflib  # [not win]
+        - icu 58.2
         - json-c  # [not win]
         - libdap4  # [not win]
         - libpq
         - libspatialite
         - libuuid  # [linux]
+        - m2w64-xz  # [win]
         - poppler
         - postgresql
         - proj4
-        - xz  # [not win or vc>=14]
-        - m2w64-xz  # [win]
         - tiledb
+        - xz  # [not win or vc>=14]
     test:
       files:
         - test_data
