@@ -16,7 +16,7 @@ source:
     - patches/disable_jpeg12.patch  # [win]
 
 build:
-  number: 5
+  number: 6
   skip: True  # [win and vc<14]
 
 requirements:
@@ -34,7 +34,7 @@ requirements:
     - geotiff
     - giflib  # [not win]
     - hdf4
-    - hdf5
+    - hdf5 1.10.4
     - icu 58.2
     - jpeg
     - json-c  # [not win]
@@ -84,7 +84,7 @@ outputs:
         - geotiff
         - giflib  # [not win]
         - hdf4
-        - hdf5
+        - hdf5 1.10.4
         - icu 58.2
         - jpeg
         - json-c  # [not win]
