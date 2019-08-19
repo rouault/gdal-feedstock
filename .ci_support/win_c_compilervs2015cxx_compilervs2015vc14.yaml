@@ -15,7 +15,7 @@ cxx_compiler:
 expat:
 - '2.2'
 gdal:
-- '2.4'
+- '3.0'
 geos:
 - 3.7.2
 geotiff:
@@ -35,7 +35,7 @@ libkml:
 libnetcdf:
 - 4.6.2
 libpng:
-- 1.6.35
+- '1.6'
 libtiff:
 - 4.0.10
 libxml2:
@@ -86,6 +86,8 @@ pin_run_as_build:
     max_pin: x.x
   sqlite:
     max_pin: x
+  tiledb:
+    max_pin: x.x.x
   vc:
     max_pin: x
   xerces-c:
@@ -97,12 +99,14 @@ pin_run_as_build:
 poppler:
 - 0.67.0
 proj4:
-- 6.1.0
+- 6.1.1
 python:
 - '3.6'
 - '3.7'
 sqlite:
 - '3'
+tiledb:
+- 1.6.0
 vc:
 - '14'
 - '14'
