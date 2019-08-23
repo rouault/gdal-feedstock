@@ -19,6 +19,8 @@ fi
 # See https://github.com/AnacondaRecipes/aggregate/pull/103
 if [[ $target_platform =~ linux.* ]]; then
   export LDFLAGS="${LDFLAGS} -Wl,-rpath-link,${PREFIX}/lib"
+  mkdir -p ${PREFIX}/include/linux
+  cp ${RECIPE_DIR}/userfaultfd.h ${PREFIX}/include/linux/userfaultfd.h
 fi
 
 # `--without-pam` was removed.
@@ -60,3 +62,7 @@ bash configure --prefix=$PREFIX \
                $OPTS
 
 make -j $CPU_COUNT ${VERBOSE_AT}
+
+if [[ $target_platform =~ linux.* ]]; then
+  rm ${PREFIX}/include/linux/userfaultfd.h
+fi
