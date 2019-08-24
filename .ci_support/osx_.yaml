@@ -121,7 +121,7 @@ python:
 sqlite:
 - '3'
 tiledb:
-- 1.6.0
+- 1.6.2
 xerces_c:
 - 3.2.2
 xz:
