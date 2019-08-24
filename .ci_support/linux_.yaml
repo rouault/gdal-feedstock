@@ -19,7 +19,7 @@ docker_image:
 expat:
 - '2.2'
 gdal:
-- '2.4'
+- 2.4.2
 geos:
 - 3.7.2
 geotiff:
@@ -41,7 +41,7 @@ libkml:
 libnetcdf:
 - 4.6.2
 libpng:
-- 1.6.35
+- '1.6'
 libtiff:
 - 4.0.10
 libuuid:
@@ -105,7 +105,7 @@ pin_run_as_build:
 poppler:
 - 0.67.0
 proj4:
-- 6.1.0
+- 6.1.1
 python:
 - '2.7'
 - '3.6'
