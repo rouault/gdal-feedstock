@@ -1,0 +1,4 @@
+gdal:
+  - 2.4
+zipped_keys:
+  - gdal
