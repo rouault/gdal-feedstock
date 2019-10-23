@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '4'
+- '9'
 cfitsio:
 - '3.470'
 channel_sources:
@@ -15,11 +15,11 @@ curl:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '4'
+- '9'
 expat:
 - '2.2'
 gdal:
-- 2.4.2
+- '2.4'
 geos:
 - 3.7.2
 geotiff:
@@ -89,8 +89,6 @@ pin_run_as_build:
     max_pin: x.x.x
   poppler:
     max_pin: x.x
-  proj4:
-    max_pin: x.x.x
   python:
     min_pin: x.x
     max_pin: x.x
