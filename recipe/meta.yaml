@@ -14,9 +14,12 @@ source:
     - patches/multiprocessor.patch  # [win]
     # disable 12 bit jpeg on Windows as we aren't using internal jpeg
     - patches/disable_jpeg12.patch  # [win]
+    # Backport https://github.com/OSGeo/gdal/pull/1722
+    # Can be dropped in the next release.
+    - patches/backport_1722.patch
 
 build:
-  number: 9
+  number: 10
   skip: True  # [win and vc<14]
 
 requirements:
