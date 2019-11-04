@@ -1,6 +1,7 @@
 c_compiler:
 - vs2015
 - vs2015
+- vs2015
 cfitsio:
 - '3.470'
 channel_sources:
@@ -10,6 +11,7 @@ channel_targets:
 curl:
 - '7.64'
 cxx_compiler:
+- vs2015
 - vs2015
 - vs2015
 expat:
@@ -101,11 +103,13 @@ proj:
 python:
 - '3.6'
 - '3.7'
+- '3.8'
 sqlite:
 - '3'
 tiledb:
 - 1.6.2
 vc:
+- '14'
 - '14'
 - '14'
 xerces_c:
