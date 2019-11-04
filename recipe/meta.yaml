@@ -34,8 +34,8 @@ requirements:
     - geotiff
     - giflib  # [not win]
     - hdf4
-    - hdf5 1.10.4
-    - icu 58.2
+    - hdf5
+    - icu
     - jpeg
     - json-c  # [not win]
     - kealib
@@ -84,8 +84,8 @@ outputs:
         - geotiff
         - giflib  # [not win]
         - hdf4
-        - hdf5 1.10.4
-        - icu 58.2
+        - hdf5
+        - icu
         - jpeg
         - json-c  # [not win]
         - kealib
@@ -113,7 +113,7 @@ outputs:
         - cfitsio
         - geotiff
         - giflib  # [not win]
-        - icu 58.2
+        - icu
         - json-c  # [not win]
         - libdap4  # [not win]
         - libpq
