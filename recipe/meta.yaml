@@ -19,7 +19,7 @@ source:
     - patches/backport_1722.patch
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win and vc<14]
 
 requirements:
