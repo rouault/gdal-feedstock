@@ -108,8 +108,8 @@ pin_run_as_build:
     max_pin: x.x
 poppler:
 - 0.67.0
-proj4:
-- 6.1.1
+proj:
+- 6.2.1
 python:
 - '2.7'
 - '3.6'
