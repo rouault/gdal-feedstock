@@ -16,7 +16,7 @@ source:
     - patches/disable_jpeg12.patch  # [win]
 
 build:
-  number: 8
+  number: 9
   skip: True  # [win and vc<14]
 
 requirements:
@@ -54,7 +54,7 @@ requirements:
     - pcre
     - poppler
     - postgresql
-    - proj4
+    - proj
     - sqlite
     - xerces-c
     - xz  # [not win or vc>=14]
@@ -104,7 +104,7 @@ outputs:
         - pcre
         - poppler
         - postgresql
-        - proj4
+        - proj
         - sqlite
         - xerces-c
         - xz  # [not win or vc>=14]
@@ -122,7 +122,7 @@ outputs:
         - m2w64-xz  # [win]
         - poppler
         - postgresql
-        - proj4
+        - proj
         - xz  # [not win or vc>=14]
     test:
       files:
