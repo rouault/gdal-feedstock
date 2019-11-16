@@ -22,7 +22,6 @@ drivers = [
     "PDF",
     "FITS",
     "TileDB",
-    "ZSTD",
     "WebP",
 ]
 
