@@ -50,6 +50,8 @@ libtiff:
 - 4.0.10
 libuuid:
 - 2.32.1
+libwebp:
+- '1.0'
 libxml2:
 - '2.9'
 numpy:
@@ -87,6 +89,8 @@ pin_run_as_build:
     max_pin: x
   libuuid:
     max_pin: x
+  libwebp:
+    max_pin: x.x
   libxml2:
     max_pin: x.x
   openjpeg:
@@ -108,10 +112,12 @@ pin_run_as_build:
     max_pin: x.x
   zlib:
     max_pin: x.x
+  zstd:
+    max_pin: x.x.x
 poppler:
 - 0.67.0
 proj:
-- 6.2.0
+- 6.2.1
 python:
 - '2.7'
 - '3.6'
@@ -127,3 +133,5 @@ xz:
 - '5.2'
 zlib:
 - '1.2'
+zstd:
+- 1.4.3
