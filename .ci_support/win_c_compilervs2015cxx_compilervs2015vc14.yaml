@@ -40,6 +40,8 @@ libpng:
 - '1.6'
 libtiff:
 - 4.0.10
+libwebp:
+- '1.0'
 libxml2:
 - '2.9'
 numpy:
@@ -73,6 +75,8 @@ pin_run_as_build:
     max_pin: x.x
   libtiff:
     max_pin: x
+  libwebp:
+    max_pin: x.x
   libxml2:
     max_pin: x.x
   openjpeg:
@@ -96,6 +100,8 @@ pin_run_as_build:
     max_pin: x.x
   zlib:
     max_pin: x.x
+  zstd:
+    max_pin: x.x.x
 poppler:
 - 0.67.0
 proj:
@@ -107,7 +113,7 @@ python:
 sqlite:
 - '3'
 tiledb:
-- 1.6.2
+- 1.7.0
 vc:
 - '14'
 - '14'
@@ -123,3 +129,5 @@ zip_keys:
   - cxx_compiler
 zlib:
 - '1.2'
+zstd:
+- 1.4.4

@@ -55,8 +55,10 @@ bash configure --prefix=${PREFIX} \
                --with-spatialite=${PREFIX} \
                --with-sqlite3=${PREFIX} \
                --with-proj=${PREFIX} \
+               --with-webp=${PREFIX} \
                --with-xerces=${PREFIX} \
                --with-xml2=${PREFIX} \
+               --with-zstd=${PREFIX} \
                --without-python \
                --verbose \
                ${OPTS}

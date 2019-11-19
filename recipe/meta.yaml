@@ -50,6 +50,7 @@ requirements:
     - libspatialite
     - libtiff
     - libuuid  # [linux]
+    - libwebp
     - libxml2
     - m2w64-xz  # [win]
     - openjpeg
@@ -63,6 +64,7 @@ requirements:
     - xerces-c
     - xz  # [not win or vc>=14]
     - zlib
+    - zstd
 
 outputs:
   - name: libgdal
@@ -101,6 +103,7 @@ outputs:
         - libspatialite
         - libtiff
         - libuuid  # [linux]
+        - libwebp
         - libxml2
         - m2w64-xz  # [win]
         - openjpeg
@@ -114,6 +117,7 @@ outputs:
         - xerces-c
         - xz  # [not win or vc>=14]
         - zlib
+        - zstd
       run:
         - cfitsio
         - geotiff
@@ -123,12 +127,14 @@ outputs:
         - libpq
         - libspatialite
         - libuuid  # [linux]
+        - libwebp
         - m2w64-xz  # [win]
         - poppler
         - postgresql
         - proj
         - tiledb
         - xz  # [not win or vc>=14]
+        - zstd
     test:
       files:
         - test_data
@@ -188,7 +194,7 @@ about:
   license_file: LICENSE.TXT
   summary: |
     GDAL is a translator library for raster and vector geospatial data formats that is released under an
-    X/MIT style Open Source license by the Open Source Geospatial Foundation. 
+    X/MIT style Open Source license by the Open Source Geospatial Foundation.
 
 extra:
   recipe-maintainers:
