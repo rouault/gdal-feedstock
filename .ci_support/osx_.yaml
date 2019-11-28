@@ -21,7 +21,7 @@ expat:
 gdal:
 - '3.0'
 geos:
-- 3.7.2
+- 3.8.0
 geotiff:
 - 1.5.1
 giflib:
