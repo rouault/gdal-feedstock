@@ -25,7 +25,7 @@ geos:
 geotiff:
 - 1.5.1
 giflib:
-- 5.1.7
+- '5.2'
 hdf4:
 - '4.2'
 hdf5:
@@ -83,8 +83,6 @@ pin_run_as_build:
     max_pin: x.x
   libkml:
     max_pin: x.x
-  libnetcdf:
-    max_pin: x.x.x
   libpng:
     max_pin: x.x
   libtiff:

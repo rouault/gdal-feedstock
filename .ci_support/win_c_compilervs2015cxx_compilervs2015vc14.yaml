@@ -69,8 +69,6 @@ pin_run_as_build:
     max_pin: x.x
   libkml:
     max_pin: x.x
-  libnetcdf:
-    max_pin: x.x.x
   libpng:
     max_pin: x.x
   libtiff:
