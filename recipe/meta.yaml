@@ -1,4 +1,4 @@
-{% set version = "3.0.2" %}
+{% set version = "3.0.3" %}
 
 package:
   name: gdal-split
@@ -6,7 +6,7 @@ package:
 
 source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
-  sha256: c3765371ce391715c8f28bd6defbc70b57aa43341f6e94605f04fe3c92468983
+  sha256: e20add5802265159366f197a8bb354899e1693eab8dbba2208de14a457566109
   patches:
     # BUILT_AS_DYNAMIC_LIB.
     - patches/windowshdf5.patch  # [win]
@@ -19,7 +19,7 @@ source:
     - patches/backport_1722.patch
 
 build:
-  number: 8
+  number: 0
   skip: True  # [win and vc<14]
 
 requirements:
