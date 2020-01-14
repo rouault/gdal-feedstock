@@ -45,6 +45,7 @@ set BLD_OPTS=%WIN64% ^
     HDF4_LIB="%LIBRARY_LIB%\hdf.lib %LIBRARY_LIB%\mfhdf.lib %LIBRARY_LIB%\xdr.lib" ^
     HDF5_DIR=%LIBRARY_PREFIX% ^
     HDF5_LIB=%LIBRARY_LIB%\hdf5.lib ^
+    HDF5_H5_IS_DLL=YES ^
     TILEDB_ENABLED=YES ^
     TILEDB_DIR=%LIBRARY_PREFIX% ^
     TILEDB_LIBS=%LIBRARY_LIB%\tiledb.lib ^
