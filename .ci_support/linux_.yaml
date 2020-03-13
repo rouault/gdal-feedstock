@@ -21,7 +21,7 @@ expat:
 gdal:
 - '3.0'
 geos:
-- 3.8.0
+- 3.8.1
 geotiff:
 - 1.5.1
 giflib:
@@ -117,10 +117,10 @@ poppler:
 proj:
 - 6.3.1
 python:
-- '2.7'
-- '3.6'
-- '3.7'
-- '3.8'
+- 2.7.* *_cpython
+- 3.6.* *_cpython
+- 3.7.* *_cpython
+- 3.8.* *_cpython
 sqlite:
 - '3'
 tiledb:
