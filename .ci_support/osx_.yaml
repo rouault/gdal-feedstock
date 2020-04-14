@@ -11,7 +11,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 curl:
-- '7.64'
+- '7'
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
@@ -48,8 +48,6 @@ libpng:
 - '1.6'
 libtiff:
 - 4.1.0
-libwebp:
-- '1.0'
 libxml2:
 - '2.9'
 macos_machine:
@@ -87,8 +85,6 @@ pin_run_as_build:
     max_pin: x.x
   libtiff:
     max_pin: x
-  libwebp:
-    max_pin: x.x
   libxml2:
     max_pin: x.x
   openjpeg:
