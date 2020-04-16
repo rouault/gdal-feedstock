@@ -48,8 +48,6 @@ libpng:
 - '1.6'
 libtiff:
 - 4.1.0
-libwebp_base:
-- '1.1'
 libxml2:
 - '2.9'
 macos_machine:
@@ -101,7 +99,7 @@ pin_run_as_build:
   sqlite:
     max_pin: x
   tiledb:
-    max_pin: x.x.x
+    max_pin: x.x
   xerces-c:
     max_pin: x.x.x
   xz:
@@ -121,7 +119,7 @@ python:
 sqlite:
 - '3'
 tiledb:
-- 1.7.0
+- '1.7'
 xerces_c:
 - 3.2.2
 xz:
