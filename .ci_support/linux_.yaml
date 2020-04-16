@@ -9,7 +9,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 curl:
-- '7.64'
+- '7'
 cxx_compiler:
 - gxx
 cxx_compiler_version:
@@ -50,8 +50,8 @@ libtiff:
 - 4.1.0
 libuuid:
 - 2.32.1
-libwebp:
-- '1.0'
+libwebp_base:
+- '1.1'
 libxml2:
 - '2.9'
 numpy:
@@ -87,8 +87,6 @@ pin_run_as_build:
     max_pin: x
   libuuid:
     max_pin: x
-  libwebp:
-    max_pin: x.x
   libxml2:
     max_pin: x.x
   openjpeg:

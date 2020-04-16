@@ -14,7 +14,7 @@ source:
     - patches/disable_jpeg12.patch  # [win]
 
 build:
-  number: 4
+  number: 5
   skip: True  # [win and vc<14]
 
 requirements:
@@ -45,7 +45,7 @@ requirements:
     - libspatialite
     - libtiff
     - libuuid  # [linux]
-    - libwebp
+    - libwebp-base
     - libxml2
     - m2w64-xz  # [win]
     - openjpeg
@@ -98,7 +98,7 @@ outputs:
         - libspatialite
         - libtiff
         - libuuid  # [linux]
-        - libwebp
+        - libwebp-base
         - libxml2
         - m2w64-xz  # [win]
         - openjpeg
@@ -122,7 +122,7 @@ outputs:
         - libpq
         - libspatialite
         - libuuid  # [linux]
-        - libwebp
+        - libwebp-base
         - m2w64-xz  # [win]
         - poppler
         - postgresql

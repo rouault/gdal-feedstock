@@ -1,5 +1,5 @@
 c_compiler:
-- vs2015
+- vs2017
 cfitsio:
 - '3.470'
 channel_sources:
@@ -7,9 +7,9 @@ channel_sources:
 channel_targets:
 - conda-forge main
 curl:
-- '7.64'
+- '7'
 cxx_compiler:
-- vs2015
+- vs2017
 expat:
 - '2.2'
 gdal:
@@ -36,8 +36,8 @@ libpng:
 - '1.6'
 libtiff:
 - 4.1.0
-libwebp:
-- '1.0'
+libwebp_base:
+- '1.1'
 libxml2:
 - '2.9'
 numpy:
@@ -69,8 +69,6 @@ pin_run_as_build:
     max_pin: x.x
   libtiff:
     max_pin: x
-  libwebp:
-    max_pin: x.x
   libxml2:
     max_pin: x.x
   openjpeg:
@@ -86,8 +84,6 @@ pin_run_as_build:
     max_pin: x
   tiledb:
     max_pin: x.x.x
-  vc:
-    max_pin: x
   xerces-c:
     max_pin: x.x.x
   xz:
