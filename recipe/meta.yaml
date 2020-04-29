@@ -14,7 +14,7 @@ source:
     - patches/disable_jpeg12.patch  # [win]
 
 build:
-  number: 8
+  number: 9
   skip: True  # [win and vc<14]
 
 requirements:
@@ -133,6 +133,8 @@ outputs:
     test:
       files:
         - test_data
+        - run_test.bat
+        - run_test.sh
       commands:
         - gdal_grid --version
         - gdal_rasterize --version
@@ -142,8 +144,8 @@ outputs:
         - gdalwarp --version
         - gdalinfo --formats
         - gdalinfo http://thredds.nersc.no/thredds/dodsC/greenpath/Model/topaz  # [not win]
-        - {{ RECIPE_DIR }}/run_test.bat  # [win]
-        - bash {{ RECIPE_DIR }}/run_test.sh  # [not win]
+        - run_test.bat  # [win]
+        - bash run_test.sh  # [not win]
     about:
       summary: 'The Geospatial Data Abstraction Library (GDAL)'
 
@@ -167,6 +169,7 @@ outputs:
       files:
         - test_data
         - extra_tests.py
+        - run_test.py
       imports:
         - osr
         - gdal
@@ -179,7 +182,7 @@ outputs:
         - osgeo._ogr
         - osgeo._osr
       commands:
-        - python {{ RECIPE_DIR }}/run_test.py
+        - python run_test.py
       about:
         summary: 'Python wrapper for the Geospatial Data Abstraction Library (GDAL)'
 
