@@ -1,4 +1,4 @@
-{% set version = "3.0.4" %}
+{% set version = "3.1.0" %}
 
 package:
   name: gdal-split
@@ -6,7 +6,7 @@ package:
 
 source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
-  sha256: 5569a4daa1abcbba47a9d535172fc335194d9214fdb96cd0f139bb57329ae277
+  sha256: e754a22242ccbec731aacdb2333b567d4c95b9b02d3ba1ea12f70508d244fcda
   patches:
     # Use multiple cores on Windows.
     - multiprocessor.patch  # [win]
@@ -14,8 +14,8 @@ source:
     - disable_jpeg12.patch  # [win]
 
 build:
-  number: 10
-  skip: True  # [win and vc<14]
+  number: 0
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
@@ -63,8 +63,8 @@ requirements:
 
 outputs:
   - name: libgdal
-    script: install_lib.sh   # [unix]
-    script: install_lib.bat   # [win]
+    script: install_lib.sh  # [unix]
+    script: install_lib.bat  # [win]
     build:
       run_exports:
         # no idea, going with minor pin
@@ -147,7 +147,7 @@ outputs:
         - run_test.bat  # [win]
         - bash run_test.sh  # [not win]
     about:
-      summary: 'The Geospatial Data Abstraction Library (GDAL)'
+      summary: The Geospatial Data Abstraction Library (GDAL)
 
   - name: gdal
     script: install_python.sh
@@ -184,7 +184,7 @@ outputs:
       commands:
         - python run_test.py
       about:
-        summary: 'Python wrapper for the Geospatial Data Abstraction Library (GDAL)'
+        summary: Python wrapper for the Geospatial Data Abstraction Library (GDAL)
 
 about:
   home: http://www.gdal.org
