@@ -8,8 +8,6 @@ source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
   sha256: e754a22242ccbec731aacdb2333b567d4c95b9b02d3ba1ea12f70508d244fcda
   patches:
-    # Use multiple cores on Windows.
-    - multiprocessor.patch  # [win]
     # disable 12 bit jpeg on Windows as we aren't using internal jpeg
     - disable_jpeg12.patch  # [win]
 
