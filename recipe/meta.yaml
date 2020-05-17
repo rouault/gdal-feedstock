@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/OSGeo/gdal/releases/download/{{ version }}/gdal-{{ version }}.tar.gz
+  url: https://github.com/OSGeo/gdal/releases/download/v{{ version }}/gdal-{{ version }}.tar.gz
   sha256: e6a2456907610639d73fc6a82bb10aa6fa02e2d03b24edacde34a16b6aa91080
   patches:
     # BUILT_AS_DYNAMIC_LIB.
@@ -16,7 +16,7 @@ source:
     - patches/disable_jpeg12.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
 
 requirements:
