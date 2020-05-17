@@ -18,7 +18,6 @@ build:
 requirements:
   build:
     - cmake  # [win]
-    - make  # [win]
     - pkg-config >=0.21  # [not win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -74,7 +73,6 @@ outputs:
         - {{ compiler('c') }}
         # libstdc++ is needed in requirements/run
         - {{ compiler('cxx') }}
-        - make  # [win]
         - pkg-config  # [not win]
       host:
         - cfitsio
