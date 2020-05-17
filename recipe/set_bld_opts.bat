@@ -26,7 +26,6 @@ set BLD_OPTS=%WIN64% ^
     LIBDIR=%LIBRARY_LIB% ^
     INCDIR=%LIBRARY_INC% ^
     DATADIR=%LIBRARY_PREFIX%\share\gdal ^
-    HTMLDIR=%LIBRARY_PREFIX%\share\doc\gdal ^
     CURL_INC="-I%LIBRARY_INC%" ^
     CURL_LIB="%LIBRARY_LIB%\libcurl.lib wsock32.lib wldap32.lib winmm.lib" ^
     EXPAT_DIR=%LIBRARY_PREFIX% ^

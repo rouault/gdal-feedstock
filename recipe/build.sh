@@ -57,7 +57,7 @@ bash configure --prefix=${PREFIX} \
                --with-proj=${PREFIX} \
                --with-webp=${PREFIX} \
                --with-xerces=${PREFIX} \
-               --with-xml2=${PREFIX} \
+               --with-xml2=yes \
                --with-zstd=${PREFIX} \
                --without-python \
                --verbose \
