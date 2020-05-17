@@ -46,7 +46,7 @@ requirements:
     - libwebp-base
     - libxml2
     - m2w64-xz  # [win]
-    - m2w64-make  # [win]
+    - make  # [win]
     - openjpeg
     - openssl
     - pcre
