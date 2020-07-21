@@ -12,7 +12,7 @@ source:
     - disable_jpeg12.patch  # [win]
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -132,17 +132,6 @@ outputs:
         - test_data
         - run_test.bat
         - run_test.sh
-      commands:
-        - gdal_grid --version
-        - gdal_rasterize --version
-        - gdal_translate --version
-        - gdaladdo --version
-        - gdalenhance --version
-        - gdalwarp --version
-        - gdalinfo --formats
-        - gdalinfo http://thredds.nersc.no/thredds/dodsC/greenpath/Model/topaz  # [not win]
-        - run_test.bat  # [win]
-        - bash run_test.sh  # [not win]
     about:
       summary: The Geospatial Data Abstraction Library (GDAL)
 

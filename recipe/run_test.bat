@@ -17,3 +17,10 @@ if errorlevel 1 exit 1
 :: Check shapefile read.
 ogrinfo sites.shp
 if errorlevel 1 exit 1
+        - gdal_grid --version
+        - gdal_rasterize --version
+        - gdal_translate --version
+        - gdaladdo --version
+        - gdalenhance --version
+        - gdalwarp --version
+        - gdalinfo --formats

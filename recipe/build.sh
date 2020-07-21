@@ -60,6 +60,7 @@ bash configure --prefix=${PREFIX} \
                --with-xml2=yes \
                --with-zstd=${PREFIX} \
                --without-python \
+               --disable-static \
                --verbose \
                ${OPTS}
 
