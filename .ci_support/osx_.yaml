@@ -57,7 +57,7 @@ macos_machine:
 macos_min_version:
 - '10.9'
 numpy:
-- '1.14'
+- '1.16'
 openjpeg:
 - '2.3'
 openssl:
@@ -109,7 +109,7 @@ pin_run_as_build:
 poppler:
 - '0.89'
 proj:
-- 7.0.0
+- 7.1.0
 python:
 - 3.6.* *_cpython
 - 3.7.* *_cpython
