@@ -12,7 +12,7 @@ source:
     - disable_jpeg12.patch  # [win]
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -187,3 +187,4 @@ extra:
     - mingwandroid
     - msarahan
     - ocefpaf
+    - xylar
