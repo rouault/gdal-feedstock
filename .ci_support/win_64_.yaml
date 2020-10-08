@@ -57,8 +57,6 @@ pin_run_as_build:
     max_pin: x.x.x
   hdf4:
     max_pin: x.x
-  icu:
-    max_pin: x
   jpeg:
     max_pin: x
   kealib:

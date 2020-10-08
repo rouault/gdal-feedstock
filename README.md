@@ -5,11 +5,9 @@ Home:
 
 Package license: 
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gdal-feedstock/blob/master/LICENSE.txt)
 
 Summary: The Geospatial Data Abstraction Library (GDAL)
-
-
 
 Current build status
 ====================
