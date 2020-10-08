@@ -107,7 +107,7 @@ pin_run_as_build:
 poppler:
 - '0.89'
 proj:
-- 7.1.0
+- 7.1.1
 python:
 - 3.6.* *_cpython
 - 3.7.* *_cpython
@@ -117,7 +117,7 @@ sqlite:
 target_platform:
 - linux-64
 tiledb:
-- '2.0'
+- '2.1'
 xerces_c:
 - '3.2'
 xz:
