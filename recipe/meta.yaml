@@ -44,7 +44,6 @@ requirements:
     - libuuid  # [linux]
     - libwebp-base
     - libxml2
-    - m2w64-xz  # [win]
     - openjpeg
     - openssl
     - pcre
@@ -54,7 +53,7 @@ requirements:
     - sqlite
     - tiledb
     - xerces-c
-    - xz  # [not win or vc>=14]
+    - xz
     - zlib
     - zstd
 
@@ -97,7 +96,6 @@ outputs:
         - libuuid  # [linux]
         - libwebp-base
         - libxml2
-        - m2w64-xz  # [win]
         - openjpeg
         - openssl
         - pcre
@@ -107,7 +105,7 @@ outputs:
         - sqlite
         - tiledb
         - xerces-c
-        - xz  # [not win or vc>=14]
+        - xz
         - zlib
         - zstd
       run:
@@ -120,12 +118,11 @@ outputs:
         - libspatialite
         - libuuid  # [linux]
         - libwebp-base
-        - m2w64-xz  # [win]
         - poppler
         - postgresql
         - proj
         - tiledb
-        - xz  # [not win or vc>=14]
+        - xz
         - zstd
     test:
       files:
