@@ -145,6 +145,10 @@ outputs:
         - pip
         - numpy
         - {{ pin_subpackage('libgdal', exact=True) }}
+        # Workaround to prevent run depending on "libgfortran5 9.3.0" despite "hdf5"
+        # having not been migrated yet causing conflicts with the "libgdal" output
+        # See: https://github.com/conda-forge/gdal-feedstock/pull/415
+        - hdf5
       run:
         - python
         - {{ pin_compatible('numpy') }}
