@@ -42,6 +42,9 @@ libxml2:
 - '2.9'
 numpy:
 - '1.16'
+- '1.16'
+- '1.16'
+- '1.19'
 openjpeg:
 - '2.3'
 openssl:
@@ -94,18 +97,20 @@ python:
 - 3.6.* *_cpython
 - 3.7.* *_cpython
 - 3.8.* *_cpython
+- 3.9.* *_cpython
 sqlite:
 - '3'
 target_platform:
 - win-64
 tiledb:
 - '2.1'
-vc:
-- '14'
 xerces_c:
 - '3.2'
 xz:
 - '5.2'
+zip_keys:
+- - python
+  - numpy
 zlib:
 - '1.2'
 zstd:
