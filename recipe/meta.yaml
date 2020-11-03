@@ -159,9 +159,6 @@ outputs:
         - extra_tests.py
         - run_test.py
       imports:
-        - osr
-        - gdal
-        - gdalconst
         - osgeo
         - osgeo.ogr
         - osgeo.gdal
