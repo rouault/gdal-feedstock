@@ -89,8 +89,6 @@ import extra_tests
 
 # Test international encoding.
 # https://github.com/conda-forge/libgdal-feedstock/issues/32
-from osgeo import ogr
-
 driver = ogr.GetDriverByName("ESRI Shapefile")
 ds = driver.CreateDataSource("test.shp")
 lyr = ds.CreateLayer("test", options=["ENCODING=GB18030"])

@@ -6,7 +6,7 @@ http://www.gis.usu.edu/~chrisg/python/2008/os1_hw.py
 """
 
 import os
-import ogr
+from osgeo import ogr
 
 # Set the working directory and file names.
 fname = os.path.join(os.path.dirname(__file__), 'test_data', 'sites.shp')
