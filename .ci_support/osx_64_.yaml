@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '10'
+- '11'
 cfitsio:
 - '3.470'
 channel_sources:
@@ -15,11 +15,11 @@ curl:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '10'
+- '11'
 expat:
 - '2.2'
 gdal:
-- '3.0'
+- '3.1'
 geos:
 - 3.8.1
 geotiff:
