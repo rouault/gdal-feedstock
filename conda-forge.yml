@@ -3,3 +3,6 @@ provider:
   linux: azure
   win: azure
 conda_forge_output_validation: true
+bot:
+  abi_migration_branches:
+    - "v3.1.x"

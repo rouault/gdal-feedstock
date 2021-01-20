@@ -45,7 +45,7 @@ libnetcdf:
 libpng:
 - '1.6'
 libtiff:
-- 4.1.0
+- '4'
 libwebp_base:
 - '1.1'
 libxml2:
@@ -58,7 +58,7 @@ numpy:
 - '1.16'
 - '1.19'
 openjpeg:
-- '2.3'
+- '2.4'
 openssl:
 - 1.1.1
 pin_run_as_build:
