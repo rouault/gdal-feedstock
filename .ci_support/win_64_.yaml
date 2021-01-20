@@ -33,7 +33,7 @@ libnetcdf:
 libpng:
 - '1.6'
 libtiff:
-- 4.1.0
+- '4'
 libwebp_base:
 - '1.1'
 libxml2:
