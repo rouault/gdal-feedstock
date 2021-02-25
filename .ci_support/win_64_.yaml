@@ -13,7 +13,7 @@ cxx_compiler:
 expat:
 - '2.2'
 geos:
-- 3.9.0
+- 3.9.1
 geotiff:
 - '1.6'
 hdf4:
