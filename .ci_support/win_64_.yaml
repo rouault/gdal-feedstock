@@ -47,6 +47,8 @@ openjpeg:
 - '2.4'
 openssl:
 - 1.1.1
+pcre:
+- '8'
 pin_run_as_build:
   curl:
     max_pin: x
