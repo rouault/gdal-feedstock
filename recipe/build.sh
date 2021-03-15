@@ -23,6 +23,15 @@ if [[ $target_platform =~ linux.* ]]; then
   cp ${RECIPE_DIR}/userfaultfd.h ${PREFIX}/include/linux/userfaultfd.h
 fi
 
+# Hdf4 not supported on non-x86
+HDF4="--with-hdf4=${PREFIX}"
+if [[ $ARCH =~ aarch.* ]]; then
+  HDF4=
+fi
+if [[ $ARCH =~ ppc.* ]]; then
+  HDF4=
+fi
+
 # `--without-pam` was removed.
 # See https://github.com/conda-forge/gdal-feedstock/pull/47 for the discussion.
 
@@ -34,7 +43,7 @@ bash configure --prefix=${PREFIX} \
                --with-freexl=${PREFIX} \
                --with-geos=${PREFIX}/bin/geos-config \
                --with-geotiff=${PREFIX} \
-               --with-hdf4=${PREFIX} \
+               ${HDF4} \
                --with-cfitsio=${PREFIX} \
                --with-hdf5=${PREFIX} \
                --with-tiledb=${PREFIX} \

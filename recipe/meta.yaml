@@ -18,6 +18,7 @@ requirements:
   build:
     - cmake  # [win]
     - pkg-config >=0.21  # [not win]
+    - make  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
@@ -28,7 +29,7 @@ requirements:
     - geos
     - geotiff
     - giflib  # [not win]
-    - hdf4
+    - hdf4  # [x86]
     - hdf5
     - icu
     - jpeg
@@ -80,7 +81,7 @@ outputs:
         - geos
         - geotiff
         - giflib  # [not win]
-        - hdf4
+        - hdf4  # [x86]
         - hdf5
         - icu
         - jpeg
