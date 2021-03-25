@@ -36,7 +36,7 @@ fi
 # `--without-pam` was removed.
 # See https://github.com/conda-forge/gdal-feedstock/pull/47 for the discussion.
 
-bash configure --prefix=${PREFIX} \
+(bash configure --prefix=${PREFIX} \
                --host=${HOST} \
                --with-curl \
                --with-dods-root=${PREFIX} \
@@ -72,7 +72,7 @@ bash configure --prefix=${PREFIX} \
                --without-python \
                --disable-static \
                --verbose \
-               ${OPTS}
+               ${OPTS}) || (cat config.log; false)
 
 make -j $CPU_COUNT ${VERBOSE_AT}
 
