@@ -35,7 +35,7 @@ requirements:
     - jpeg
     - json-c  # [not win]
     - kealib
-    - libdap4  # [not win]
+    - libdap4  # [(not win) and x86]
     - libkml
     - libnetcdf
     - libpng
@@ -87,7 +87,7 @@ outputs:
         - jpeg
         - json-c  # [not win]
         - kealib
-        - libdap4  # [not win]
+        - libdap4  # [(not win) and x86]
         - libkml
         - libnetcdf
         - libpng
