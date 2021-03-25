@@ -10,7 +10,7 @@ from osgeo.gdal_array import *
 
 drivers = [
     "netCDF",
-    "HDF4",
+    #"HDF4",
     "HDF5",
     "GTiff",
     "PNG",
