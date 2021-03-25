@@ -73,6 +73,7 @@ outputs:
         # libstdc++ is needed in requirements/run
         - {{ compiler('cxx') }}
         - pkg-config  # [not win]
+        - make  # [unix]
       host:
         - cfitsio
         - curl
@@ -114,7 +115,7 @@ outputs:
         - geotiff
         - giflib  # [not win]
         - json-c  # [not win]
-        - libdap4  # [not win]
+        - libdap4  # [(not win) and x86]
         - libpq
         - libspatialite
         - libuuid  # [linux]
