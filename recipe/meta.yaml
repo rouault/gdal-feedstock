@@ -10,6 +10,7 @@ source:
   patches:
     # disable 12 bit jpeg on Windows as we aren't using internal jpeg
     - disable_jpeg12.patch  # [win]
+	- pcre_ldflags.patch  # [unix]
 
 build:
   number: 0
