@@ -1,3 +1,4 @@
+import os
 import sys
 
 from osgeo import gdal
@@ -10,7 +11,7 @@ from osgeo.gdal_array import *
 
 drivers = [
     "netCDF",
-    #"HDF4",
+    "HDF4",
     "HDF5",
     "GTiff",
     "PNG",
@@ -24,6 +25,10 @@ drivers = [
     "TileDB",
     "WebP",
 ]
+
+if os.getenv('ARCH') != "64":
+    # only available for x86
+    drivers.remove("HDF4")
 
 for driver in drivers:
     print(driver)

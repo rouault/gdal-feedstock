@@ -48,7 +48,11 @@ gdaladdo --version
 gdalenhance --version
 gdalwarp --version
 gdalinfo --formats
-# Disable for now until we fix libdap on non-x86
-#gdalinfo http://thredds.nersc.no/thredds/dodsC/greenpath/Model/topaz
+
+if [ $ARCH == "64" ]; then
+    # only available on x86 ATM
+    gdalinfo http://thredds.nersc.no/thredds/dodsC/greenpath/Model/topaz
+fi
+
 test -f ${PREFIX}/lib/libgdal${SHLIB_EXT}
 test ! -f ${PREFIX}/lib/libgdal.a

@@ -28,11 +28,11 @@ HDF4="--with-hdf4=${PREFIX}"
 # Disable DODs for non-x86 while we fix libdap
 DODS="--with-dods-root=${PREFIX}"
 if [[ $ARCH =~ aarch.* ]]; then
-  HDF4=
+  HDF4="--with-hdf4=no"
   DODS="--with-dods-root=no"
 fi
 if [[ $ARCH =~ ppc.* ]]; then
-  HDF4=
+  HDF4="--with-hdf4=no"
   DODS="--with-dods-root=no"
 fi
 
