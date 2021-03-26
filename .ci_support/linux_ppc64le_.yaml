@@ -1,5 +1,9 @@
 c_compiler:
-- vs2017
+- gcc
+c_compiler_version:
+- '9'
+cdt_name:
+- cos7
 cfitsio:
 - '3.470'
 channel_sources:
@@ -9,21 +13,27 @@ channel_targets:
 curl:
 - '7'
 cxx_compiler:
-- vs2017
+- gxx
+cxx_compiler_version:
+- '9'
+docker_image:
+- quay.io/condaforge/linux-anvil-ppc64le
 expat:
 - '2.2'
 geos:
 - 3.9.1
 geotiff:
 - '1.6'
-hdf4:
-- '4.2'
+giflib:
+- '5.2'
 hdf5:
 - 1.10.6
 icu:
 - '68'
 jpeg:
 - '9'
+json_c:
+- '0.15'
 kealib:
 - '1.4'
 libkml:
@@ -34,6 +44,8 @@ libpng:
 - '1.6'
 libtiff:
 - '4'
+libuuid:
+- 2.32.1
 libwebp_base:
 - '1.1'
 libxml2:
@@ -56,10 +68,10 @@ pin_run_as_build:
     max_pin: x.x
   geotiff:
     max_pin: x.x.x
-  hdf4:
-    max_pin: x.x
   jpeg:
     max_pin: x
+  json-c:
+    max_pin: x.x
   kealib:
     max_pin: x.x
   libkml:
@@ -67,6 +79,8 @@ pin_run_as_build:
   libpng:
     max_pin: x.x
   libtiff:
+    max_pin: x
+  libuuid:
     max_pin: x
   libxml2:
     max_pin: x.x
@@ -99,7 +113,7 @@ python:
 sqlite:
 - '3'
 target_platform:
-- win-64
+- linux-ppc64le
 tiledb:
 - '2.2'
 xerces_c:
@@ -107,6 +121,8 @@ xerces_c:
 xz:
 - '5.2'
 zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
 - - python
   - numpy
 zlib:

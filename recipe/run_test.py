@@ -1,3 +1,4 @@
+import os
 import sys
 
 from osgeo import gdal
@@ -24,6 +25,10 @@ drivers = [
     "TileDB",
     "WebP",
 ]
+
+if os.getenv('ARCH') != "64":
+    # only available for x86
+    drivers.remove("HDF4")
 
 for driver in drivers:
     print(driver)

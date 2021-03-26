@@ -53,9 +53,9 @@ libxml2:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
-- '1.16'
-- '1.16'
-- '1.16'
+- '1.17'
+- '1.17'
+- '1.17'
 - '1.19'
 openjpeg:
 - '2.4'

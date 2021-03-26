@@ -1,8 +1,5 @@
-provider:
-  osx: azure
-  linux: azure
-  win: azure
-conda_forge_output_validation: true
 bot:
-  abi_migration_branches:
-    - "v3.1.x"
+  abi_migration_branches: [v3.1.x]
+conda_forge_output_validation: true
+provider: {linux: azure, linux_aarch64: azure, linux_ppc64le: azure, osx: azure,
+  win: azure}

@@ -18,6 +18,7 @@ requirements:
   build:
     - cmake  # [win]
     - pkg-config >=0.21  # [not win]
+    - make  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
@@ -28,13 +29,13 @@ requirements:
     - geos
     - geotiff
     - giflib  # [not win]
-    - hdf4
+    - hdf4  # [x86]
     - hdf5
     - icu
     - jpeg
     - json-c  # [not win]
     - kealib
-    - libdap4  # [not win]
+    - libdap4  # [(not win) and x86]
     - libkml
     - libnetcdf
     - libpng
@@ -72,6 +73,7 @@ outputs:
         # libstdc++ is needed in requirements/run
         - {{ compiler('cxx') }}
         - pkg-config  # [not win]
+        - make  # [unix]
       host:
         - cfitsio
         - curl
@@ -80,13 +82,13 @@ outputs:
         - geos
         - geotiff
         - giflib  # [not win]
-        - hdf4
+        - hdf4  # [x86]
         - hdf5
         - icu
         - jpeg
         - json-c  # [not win]
         - kealib
-        - libdap4  # [not win]
+        - libdap4  # [(not win) and x86]
         - libkml
         - libnetcdf
         - libpng
@@ -113,7 +115,7 @@ outputs:
         - geotiff
         - giflib  # [not win]
         - json-c  # [not win]
-        - libdap4  # [not win]
+        - libdap4  # [(not win) and x86]
         - libpq
         - libspatialite
         - libuuid  # [linux]

@@ -23,18 +23,31 @@ if [[ $target_platform =~ linux.* ]]; then
   cp ${RECIPE_DIR}/userfaultfd.h ${PREFIX}/include/linux/userfaultfd.h
 fi
 
+# Hdf4 not supported on non-x86
+HDF4="--with-hdf4=${PREFIX}"
+# Disable DODs for non-x86 while we fix libdap
+DODS="--with-dods-root=${PREFIX}"
+if [[ $ARCH =~ aarch.* ]]; then
+  HDF4="--with-hdf4=no"
+  DODS="--with-dods-root=no"
+fi
+if [[ $ARCH =~ ppc.* ]]; then
+  HDF4="--with-hdf4=no"
+  DODS="--with-dods-root=no"
+fi
+
 # `--without-pam` was removed.
 # See https://github.com/conda-forge/gdal-feedstock/pull/47 for the discussion.
 
-bash configure --prefix=${PREFIX} \
+(bash configure --prefix=${PREFIX} \
                --host=${HOST} \
                --with-curl \
-               --with-dods-root=${PREFIX} \
+               ${DODS} \
                --with-expat=${PREFIX} \
                --with-freexl=${PREFIX} \
                --with-geos=${PREFIX}/bin/geos-config \
                --with-geotiff=${PREFIX} \
-               --with-hdf4=${PREFIX} \
+               ${HDF4} \
                --with-cfitsio=${PREFIX} \
                --with-hdf5=${PREFIX} \
                --with-tiledb=${PREFIX} \
@@ -62,7 +75,7 @@ bash configure --prefix=${PREFIX} \
                --without-python \
                --disable-static \
                --verbose \
-               ${OPTS}
+               ${OPTS}) || (cat config.log; false)
 
 make -j $CPU_COUNT ${VERBOSE_AT}
 
