@@ -91,9 +91,9 @@ set BLD_OPTS=%WIN64% ^
     WEBP_LIBS="%LIBARY_LIB%\libwebp.lib" ^
     ZSTD_CFLAGS="-I%LIBRARY_INC%" ^
     ZSTD_LIBS="%LIBRARY_LIB%\libzstd.lib" ^
-    LIBKML_DIR=%LIBRARY_PREFIX% ^
-    LIBKML_INCLUDE="%LIBRARY_INC%" ^
-    LIBKML_LIBS="%LIBRARY_LIB%\kmlconvenience.lib %LIBRARY_LIB%\kmldom.lib %LIBRARY_LIB%\kmlengine.lib %LIBRARY_LIB%\kmlregionator.lib %LIBRARY_LIB%\kmlxsd.lib %LIBRARY_LIB%\minizip.lib %LIBRARY_LIB%\uriparser.lib"
+    LIBKML_DIR="%LIBRARY_PREFIX%" ^
+    LIBKML_INCLUDE="-I%LIBRARY_INC%" ^
+    LIBKML_LIBS="%LIBRARY_LIB%\kmlbase.lib %LIBRARY_LIB%\kmlconvenience.lib %LIBRARY_LIB%\kmldom.lib %LIBRARY_LIB%\kmlengine.lib %LIBRARY_LIB%\kmlregionator.lib %LIBRARY_LIB%\kmlxsd.lib %LIBRARY_LIB%\minizip.lib %LIBRARY_LIB%\uriparser.lib"
 
 
 endlocal && set BLD_OPTS=%BLD_OPTS%
