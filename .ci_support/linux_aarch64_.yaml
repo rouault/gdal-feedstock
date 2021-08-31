@@ -47,7 +47,7 @@ libdap4:
 libkml:
 - '1.3'
 libnetcdf:
-- 4.8.0
+- 4.8.1
 libpng:
 - '1.6'
 libtiff:
@@ -59,9 +59,9 @@ libwebp_base:
 libxml2:
 - '2.9'
 numpy:
-- '1.17'
-- '1.17'
-- '1.17'
+- '1.18'
+- '1.18'
+- '1.18'
 - '1.19'
 openjpeg:
 - '2.4'
