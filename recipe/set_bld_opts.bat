@@ -17,6 +17,8 @@ FOR /F "tokens=1,2 delims=." %%a IN ("%poppler%") DO (
   set POPPLER_MAJOR_VERSION=%%a
   set POPPLER_MINOR_VERSION=%%b
 )
+:: remove leading zeros
+set /a POPPLER_MINOR_VERSION=10000%POPPLER_MINOR_VERSION% %% 10000
 
 :: Need consistent flags between build and install.
 set BLD_OPTS=%WIN64% ^
