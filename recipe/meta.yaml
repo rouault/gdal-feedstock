@@ -1,4 +1,4 @@
-{% set version = "3.3.1" %}
+{% set version = "3.3.2" %}
 
 package:
   name: gdal-split
@@ -6,13 +6,13 @@ package:
 
 source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
-  sha256: 48ab00b77d49f08cf66c60ccce55abb6455c3079f545e60c90ee7ce857bccb70
+  sha256: 630e34141cf398c3078d7d8f08bb44e804c65bbf09807b3610dcbfbc37115cc3
   patches:
     # disable 12 bit jpeg on Windows as we aren't using internal jpeg
     - disable_jpeg12.patch  # [win]
 
 build:
-  number: 3
+  number: 0
 
 requirements:
   build:
@@ -37,6 +37,8 @@ requirements:
     - json-c  # [not win]
     - kealib
     - libdap4  # [not win]
+    # temporary workaround while ffi is migrating
+    - libffi
     - libkml
     - libnetcdf
     - libpng
@@ -155,6 +157,8 @@ outputs:
         # having not been migrated yet causing conflicts with the "libgdal" output
         # See: https://github.com/conda-forge/gdal-feedstock/pull/415
         - hdf5
+        # temporary workaround while ffi is migrating
+        - libffi
       run:
         - python
         - {{ pin_compatible('numpy') }}
