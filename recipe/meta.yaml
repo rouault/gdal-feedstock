@@ -37,8 +37,6 @@ requirements:
     - json-c  # [not win]
     - kealib
     - libdap4  # [not win]
-    # temporary workaround while ffi is migrating
-    - libffi
     - libkml
     - libnetcdf
     - libpng
@@ -157,8 +155,6 @@ outputs:
         # having not been migrated yet causing conflicts with the "libgdal" output
         # See: https://github.com/conda-forge/gdal-feedstock/pull/415
         - hdf5
-        # temporary workaround while ffi is migrating
-        - libffi
       run:
         - python
         - {{ pin_compatible('numpy') }}
