@@ -27,7 +27,7 @@ expat:
 geos:
 - 3.9.1
 geotiff:
-- '1.6'
+- '1.7'
 giflib:
 - '5.2'
 hdf4:
