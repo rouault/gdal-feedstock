@@ -7,7 +7,7 @@ cdt_name:
 cfitsio:
 - '3.470'
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 curl:
@@ -106,7 +106,7 @@ pin_run_as_build:
 poppler:
 - '21.09'
 proj:
-- 8.1.0
+- 8.1.1
 python:
 - 3.6.* *_cpython
 - 3.7.* *_cpython
