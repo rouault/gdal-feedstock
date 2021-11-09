@@ -39,6 +39,7 @@ libwebp_base:
 libxml2:
 - '2.9'
 numpy:
+- '1.21'
 - '1.18'
 - '1.18'
 - '1.19'
@@ -87,6 +88,7 @@ poppler:
 proj:
 - 8.1.1
 python:
+- 3.10.* *_cpython
 - 3.7.* *_cpython
 - 3.8.* *_cpython
 - 3.9.* *_cpython
