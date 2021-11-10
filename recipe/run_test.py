@@ -1,5 +1,6 @@
 import os
 import sys
+import zarr
 
 from osgeo import gdal
 from osgeo import ogr
@@ -84,6 +85,14 @@ def gen_list(N):
 
 N = 10
 assert list(gen_list(N)) == list(range(N))
+
+# https://github.com/conda-forge/gdal-feedstock/issues/567
+# test libblosc / zarr
+root = zarr.group("test.zarr/")
+z = root.zeros("data", shape=(10, 10), chunks=(5, 5), overwrite=True)
+
+ds = gdal.Open("test.zarr")
+assert ds.RasterXSize == 10
 
 # This module does some additional tests.
 import extra_tests

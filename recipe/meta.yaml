@@ -165,6 +165,8 @@ outputs:
         - {{ pin_compatible('numpy') }}
         - {{ pin_subpackage('libgdal', exact=True) }}
     test:
+      requires:
+        - zarr
       files:
         - test_data
         - extra_tests.py
