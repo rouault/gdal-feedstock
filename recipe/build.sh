@@ -30,7 +30,7 @@ fi
 
 (bash configure --prefix=${PREFIX} \
                --host=${HOST} \
-               --with-libblosc=${PREFIX} \
+               --with-blosc=${PREFIX} \
                --with-curl \
                --with-dods-root=${PREFIX} \
                --with-expat=${PREFIX} \
