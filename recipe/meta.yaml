@@ -48,7 +48,7 @@ requirements:
     - libwebp-base
     - libxml2
     - openjpeg
-    - openssl
+    - openssl >=1.1.1l,<1.1.2a
     - pcre
     - poppler
     - postgresql
@@ -102,7 +102,7 @@ outputs:
         - libwebp-base
         - libxml2
         - openjpeg
-        - openssl
+        - openssl >=1.1.1l,<1.1.2a
         - pcre
         - poppler
         - postgresql
@@ -159,7 +159,7 @@ outputs:
         - hdf5
         # Workaround to prevent conflicts seen in 
         #  https://github.com/conda-forge/gdal-feedstock/pull/543
-        - openssl
+        - openssl >=1.1.1l,<1.1.2a
       run:
         - python
         - {{ pin_compatible('numpy') }}
