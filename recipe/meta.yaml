@@ -12,7 +12,7 @@ source:
     - disable_jpeg12.patch  # [win]
 
 build:
-  number: 10
+  number: 11
 
 requirements:
   build:
@@ -33,7 +33,7 @@ requirements:
     - giflib  # [not win]
     - hdf4
     - hdf5
-    - icu
+    - icu >=68.1,<69
     - jpeg
     - json-c  # [not win]
     - kealib
@@ -41,14 +41,14 @@ requirements:
     - libkml
     - libnetcdf
     - libpng
-    - libpq
+    - libpq >=13,<14
     - libspatialite
     - libtiff
     - libuuid  # [linux]
     - libwebp-base
     - libxml2
     - openjpeg
-    - openssl
+    - openssl >=1.1.1l,<1.1.2a
     - pcre
     - poppler
     - postgresql
@@ -87,7 +87,7 @@ outputs:
         - giflib  # [not win]
         - hdf4
         - hdf5
-        - icu
+        - icu >=68.1,<69
         - jpeg
         - json-c  # [not win]
         - kealib
@@ -95,14 +95,14 @@ outputs:
         - libkml
         - libnetcdf
         - libpng
-        - libpq
+        - libpq >=13,<14
         - libspatialite
         - libtiff
         - libuuid  # [linux]
         - libwebp-base
         - libxml2
         - openjpeg
-        - openssl
+        - openssl >=1.1.1l,<1.1.2a
         - pcre
         - poppler
         - postgresql
@@ -119,7 +119,7 @@ outputs:
         - giflib  # [not win]
         - json-c  # [not win]
         - libdap4  # [not win]
-        - libpq
+        - libpq >=13,<14
         - libspatialite
         - libuuid  # [linux]
         - libwebp-base
@@ -159,7 +159,7 @@ outputs:
         - hdf5
         # Workaround to prevent conflicts seen in 
         #  https://github.com/conda-forge/gdal-feedstock/pull/543
-        - openssl
+        - openssl >=1.1.1l,<1.1.2a
       run:
         - python
         - {{ pin_compatible('numpy') }}

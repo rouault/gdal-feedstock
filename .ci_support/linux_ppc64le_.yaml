@@ -1,9 +1,9 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 c_compiler:
-- clang
+- gcc
 c_compiler_version:
-- '11'
+- '9'
+cdt_name:
+- cos7
 cfitsio:
 - 4.0.0
 channel_sources:
@@ -13,9 +13,11 @@ channel_targets:
 curl:
 - '7'
 cxx_compiler:
-- clangxx
+- gxx
 cxx_compiler_version:
-- '11'
+- '9'
+docker_image:
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 expat:
 - '2'
 geos:
@@ -28,8 +30,6 @@ hdf4:
 - 4.2.15
 hdf5:
 - 1.12.1
-icu:
-- '69'
 jpeg:
 - '9'
 json_c:
@@ -46,12 +46,12 @@ libpng:
 - '1.6'
 libtiff:
 - '4'
+libuuid:
+- '2'
 libwebp_base:
 - '1'
 libxml2:
 - '2.9'
-macos_machine:
-- x86_64-apple-darwin13.4.0
 numpy:
 - '1.21'
 - '1.18'
@@ -59,8 +59,6 @@ numpy:
 - '1.19'
 openjpeg:
 - '2.4'
-openssl:
-- '3'
 pcre:
 - '8'
 pin_run_as_build:
@@ -81,6 +79,8 @@ pin_run_as_build:
   libpng:
     max_pin: x.x
   libtiff:
+    max_pin: x
+  libuuid:
     max_pin: x
   libxml2:
     max_pin: x.x
@@ -111,7 +111,7 @@ python:
 sqlite:
 - '3'
 target_platform:
-- osx-64
+- linux-ppc64le
 tiledb:
 - '2.5'
 xerces_c:
