@@ -1,7 +1,7 @@
 About gdal-split
 ================
 
-Home: https://github.com/OSGeo/gdal
+Home: 
 
 Package license: 
 
