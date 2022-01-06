@@ -12,7 +12,7 @@ source:
     - disable_jpeg12.patch  # [win]
 
 build:
-  number: 12
+  number: 13
 
 requirements:
   build:
@@ -158,6 +158,8 @@ outputs:
         # Workaround to prevent conflicts seen in 
         #  https://github.com/conda-forge/gdal-feedstock/pull/543
         - openssl
+        # Workaround cross-compile issue with setuptools>=60
+        - setuptools <60
       run:
         - python
         - {{ pin_compatible('numpy') }}
