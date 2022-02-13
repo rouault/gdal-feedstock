@@ -11,22 +11,9 @@ find ${PREFIX}/lib -name '*.la' -delete
 unset PYTHON
 
 export CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
-
-# Filter out -std=.* from CXXFLAGS as it disrupts checks for C++ language levels.
-re='(.*[[:space:]])\-std\=[^[:space:]]*(.*)'
-if [[ "${CXXFLAGS}" =~ $re ]]; then
-    export CXXFLAGS="${BASH_REMATCH[1]}${BASH_REMATCH[2]}"
-fi
-
-# See https://github.com/AnacondaRecipes/aggregate/pull/103
-if [[ $target_platform =~ linux.* ]]; then
-  export LDFLAGS="${LDFLAGS} -Wl,-rpath-link,${PREFIX}/lib"
-  mkdir -p ${PREFIX}/include/linux
-  cp ${RECIPE_DIR}/userfaultfd.h ${PREFIX}/include/linux/userfaultfd.h
-fi
-
-# `--without-pam` was removed.
-# See https://github.com/conda-forge/gdal-feedstock/pull/47 for the discussion.
+# Remove -std=c++XX from build ${CXXFLAGS}
+CXXFLAGS=$(echo "${CXXFLAGS}" | sed -E 's@-std=c\+\+[^ ]+@@g')
+export CXXFLAGS="${CXXFLAGS} -std=c++17"
 
 (bash configure --prefix=${PREFIX} \
                --host=${HOST} \
@@ -69,6 +56,3 @@ fi
 
 make -j $CPU_COUNT ${VERBOSE_AT}
 
-if [[ $target_platform =~ linux.* ]]; then
-  rm ${PREFIX}/include/linux/userfaultfd.h
-fi
