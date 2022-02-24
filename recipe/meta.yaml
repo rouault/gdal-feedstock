@@ -12,7 +12,7 @@ source:
     - disable_jpeg12.patch  # [win]
 
 build:
-  number: 3
+  number: 4
 
 requirements:
   build:
@@ -159,7 +159,7 @@ outputs:
         # having not been migrated yet causing conflicts with the "libgdal" output
         # See: https://github.com/conda-forge/gdal-feedstock/pull/415
         - hdf5
-        # Workaround to prevent conflicts seen in 
+        # Workaround to prevent conflicts seen in
         #  https://github.com/conda-forge/gdal-feedstock/pull/543
         - openssl
       run:
