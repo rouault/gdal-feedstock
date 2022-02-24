@@ -196,6 +196,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - zklaus
     - akrherz
     - gillins
     - kmuehlbauer
