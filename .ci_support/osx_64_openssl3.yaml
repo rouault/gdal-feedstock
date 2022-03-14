@@ -54,8 +54,8 @@ macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
 - '1.21'
-- '1.18'
-- '1.18'
+- '1.19'
+- '1.19'
 - '1.19'
 openjpeg:
 - '2.4'
