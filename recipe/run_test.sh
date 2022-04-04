@@ -49,9 +49,5 @@ gdalenhance --version
 gdalwarp --version
 gdalinfo --formats
 
-# allow the DODS test to run for now
-export GDAL_ENABLE_DEPRECATED_DRIVER_DODS=YES
-gdalinfo http://thredds.nersc.no/thredds/dodsC/greenpath/Model/topaz
-
 test -f ${PREFIX}/lib/libgdal${SHLIB_EXT}
 test ! -f ${PREFIX}/lib/libgdal.a
