@@ -100,7 +100,7 @@ pin_run_as_build:
 poppler:
 - '22.04'
 proj:
-- 9.0.0
+- 9.0.1
 python:
 - 3.10.* *_cpython
 - 3.7.* *_cpython
