@@ -12,7 +12,7 @@ source:
     - disable_jpeg12.patch  # [win]
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -138,6 +138,8 @@ outputs:
         - run_test.sh
     about:
       summary: The Geospatial Data Abstraction Library (GDAL)
+      license: MIT
+      license_file: LICENSE.TXT
 
   - name: gdal
     script: install_python.sh  # [unix]
@@ -185,6 +187,8 @@ outputs:
         - python run_test.py
       about:
         summary: Python wrapper for the Geospatial Data Abstraction Library (GDAL)
+        license: MIT
+        license_file: LICENSE.TXT
 
 about:
   home: http://www.gdal.org
