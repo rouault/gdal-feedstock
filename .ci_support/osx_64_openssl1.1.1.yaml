@@ -56,7 +56,6 @@ numpy:
 - '1.21'
 - '1.20'
 - '1.20'
-- '1.20'
 openjpeg:
 - '2'
 openssl:
@@ -75,7 +74,6 @@ proj:
 - 9.1.0
 python:
 - 3.10.* *_cpython
-- 3.7.* *_cpython
 - 3.8.* *_cpython
 - 3.9.* *_cpython
 sqlite:
