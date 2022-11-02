@@ -72,7 +72,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 poppler:
-- '22.10'
+- '22.11'
 proj:
 - 9.1.0
 python:
