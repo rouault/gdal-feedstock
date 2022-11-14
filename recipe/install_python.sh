@@ -1,9 +1,14 @@
 #!/bin/bash
 
+set -xe
+
 # now re-configure with BUILD_PYTHON_BINDINGS:BOOL=ON
 
+# suggested addition per conda-forge/gdal-feedstock/651
+export CXXFLAGS="${CXXFLAGS} -std=c++17 -D_LIBCPP_DISABLE_AVAILABILITY"
+
 mkdir pybuild_${PKG_HASH}
-cd pybuild_${PKG_HASH}
+pushd pybuild_${PKG_HASH}
 
 cmake -G "Unix Makefiles" \
       ${CMAKE_ARGS} \
@@ -19,11 +24,16 @@ cmake -G "Unix Makefiles" \
       ${SRC_DIR} || (cat CMakeFiles/CMakeError.log;false)
 
 
-pushd ${SRC_DIR}/swig/python
+cd swig/python
 
-$PYTHON -m pip install --no-deps --ignore-installed . \
-        --global-option build_ext \
-        --global-option "-I$INCLUDE_PATH" \
-        --global-option "-L$LIBRARY_PATH"
+cat >pyproject.toml <<EOF
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+EOF
+
+cmake --build . --target python_wheel
+
+$PYTHON -m pip install --no-deps --ignore-installed .
 
 popd
