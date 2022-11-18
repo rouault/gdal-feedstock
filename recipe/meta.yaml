@@ -11,7 +11,7 @@ source:
     - 0001-Improve-numpy-fixing.patch
 
 build:
-  number: 2
+  number: 3
   skip_compile_pyc:
     - "share/bash-completion/completions/*.py"
 
@@ -39,7 +39,6 @@ requirements:
     - jpeg
     - json-c  # [not win]
     - kealib
-    - libdap4  # [not win]
     - libkml
     - libnetcdf
     - libpng
@@ -51,7 +50,7 @@ requirements:
     - libxml2
     - openjpeg
     - openssl
-    - pcre
+    - pcre2
     - poppler
     - postgresql
     - proj
@@ -97,7 +96,6 @@ outputs:
         - jpeg
         - json-c  # [not win]
         - kealib
-        - libdap4  # [not win]
         - libkml
         - libnetcdf
         - libpng
@@ -109,7 +107,7 @@ outputs:
         - libxml2
         - openjpeg
         - openssl
-        - pcre
+        - pcre2
         - poppler
         - postgresql
         - proj
@@ -124,7 +122,6 @@ outputs:
         - geotiff
         - giflib  # [not win]
         - json-c  # [not win]
-        - libdap4  # [not win]
         - libpq
         - libspatialite
         - libuuid  # [linux]
