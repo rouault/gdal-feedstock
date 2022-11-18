@@ -10,6 +10,8 @@ export CXXFLAGS="${CXXFLAGS} -std=c++17 -D_LIBCPP_DISABLE_AVAILABILITY"
 mkdir build
 cd build
 
+# Make sure to disable Arrow/Parquet dependencies for now, so they are only
+# used in build_arrow_parquet
 cmake -G "Unix Makefiles" \
       ${CMAKE_ARGS} \
       -DCMAKE_BUILD_TYPE=Release \
@@ -17,6 +19,9 @@ cmake -G "Unix Makefiles" \
       -DCMAKE_INSTALL_PREFIX=$PREFIX \
       -DCMAKE_INSTALL_LIBDIR=lib \
       -DBUILD_SHARED_LIBS=ON \
+      -DGDAL_USE_PARQUET=OFF \
+      -DGDAL_USE_ARROW=OFF \
+      -DGDAL_USE_ARROWDATASET=OFF \
       -DBUILD_PYTHON_BINDINGS:BOOL=OFF \
       -DBUILD_JAVA_BINDINGS:BOOL=OFF \
       -DBUILD_CSHARP_BINDINGS:BOOL=OFF \

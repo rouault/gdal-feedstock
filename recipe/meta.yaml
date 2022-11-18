@@ -9,6 +9,7 @@ source:
   sha256: f7afa4aa8d32d0799e011a9f573c6a67e9471f78e70d3d0d0b45b45c8c0c1a94
   patches:
     - 0001-Improve-numpy-fixing.patch
+    - 0002-Parquet-make-sure-that-ArrowLayer-destructor-is-avai.patch
 
 build:
   number: 10
@@ -54,6 +55,7 @@ requirements:
     - lz4-c
     - openjpeg
     - openssl
+    - parquet-cpp
     - pcre2
     - poppler
     - postgresql
@@ -149,6 +151,89 @@ outputs:
         - run_test.sh
     about:
       summary: The Geospatial Data Abstraction Library (GDAL)
+      license: MIT
+      license_file: LICENSE.TXT
+
+  - name: libgdal-arrow-parquet
+    script: build_arrow_parquet.sh  # [unix]
+    script: build_arrow_parquet.bat  # [win]
+    requirements:
+      build:
+        - cmake
+        # ranlib used at install time
+        - {{ compiler('c') }}
+        # libstdc++ is needed in requirements/run
+        - {{ compiler('cxx') }}
+        - pkg-config  # [not win]
+        - make  # [unix]
+        - ninja  # [win]
+        - sysroot_linux-64 2.17  # [linux64]
+      host:
+        - {{ pin_subpackage('libgdal', exact=True) }}
+        - blosc
+        - cfitsio
+        - curl
+        - expat
+        - freexl
+        - geos
+        - geotiff
+        - giflib  # [not win]
+        - hdf4
+        - hdf5
+        - icu
+        - jpeg
+        - json-c  # [not win]
+        - kealib
+        - libkml
+        - libnetcdf
+        - libpng
+        - libpq
+        - libspatialite
+        - libtiff
+        - libuuid  # [linux]
+        - libwebp-base
+        - libxml2
+        - openjpeg
+        - openssl
+        - parquet-cpp
+        - pcre2
+        - poppler
+        - postgresql
+        - proj
+        - qhull
+        - sqlite
+        - tiledb
+        - xerces-c
+        - xz
+        - zlib
+        - zstd
+      run:
+        - {{ pin_subpackage('libgdal', exact=True) }}
+        - arrow-cpp
+        - cfitsio
+        - geotiff
+        - giflib  # [not win]
+        - json-c  # [not win]
+        - libpq
+        - libspatialite
+        - libuuid  # [linux]
+        - libwebp-base
+        - parquet-cpp
+        - poppler
+        - postgresql
+        - proj
+        - tiledb
+        - xz
+        - zstd
+    test:
+      files:
+        - test_arrow_parquet.sh   # [unix]
+        - test_arrow_parquet.bat  # [win]
+      commands:
+        - sh test_arrow_parquet.sh   # [unix]
+        - test_arrow_parquet.bat  # [win]
+    about:
+      summary: Arrow and Parquet drivers for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
 
