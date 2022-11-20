@@ -54,6 +54,7 @@ requirements:
     - poppler
     - postgresql
     - proj
+    - qhull
     - sqlite
     - swig
     - tiledb
@@ -111,6 +112,7 @@ outputs:
         - poppler
         - postgresql
         - proj
+        - qhull
         - sqlite
         - tiledb
         - xerces-c
