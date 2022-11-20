@@ -154,6 +154,7 @@ outputs:
         - {{ compiler('cxx') }}
         - cmake
         - make  # [unix]
+        - ninja  # [win]
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
         - numpy                                  # [build_platform != target_platform]
