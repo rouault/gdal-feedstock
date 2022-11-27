@@ -41,7 +41,7 @@ jpeg:
 json_c:
 - '0.16'
 kealib:
-- '1.4'
+- '1.5'
 libdeflate:
 - '1.14'
 libkml:
