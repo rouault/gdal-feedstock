@@ -6,8 +6,6 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
-curl:
-- '7'
 cxx_compiler:
 - vs2019
 expat:
@@ -26,8 +24,14 @@ jpeg:
 - '9'
 kealib:
 - '1.5'
+lerc:
+- '4'
+libcurl:
+- '7'
 libdeflate:
 - '1.14'
+libiconv:
+- '1'
 libkml:
 - '1.3'
 libnetcdf:
@@ -40,6 +44,8 @@ libwebp_base:
 - '1'
 libxml2:
 - '2.10'
+lz4_c:
+- 1.9.3
 numpy:
 - '1.21'
 - '1.23'
