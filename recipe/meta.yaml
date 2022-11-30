@@ -27,7 +27,6 @@ requirements:
   host:
     - blosc
     - cfitsio
-    - curl
     - expat
     - freexl
     - geos
@@ -39,6 +38,7 @@ requirements:
     - jpeg
     - json-c  # [not win]
     - kealib
+    - libcurl
     - libdeflate
     - libkml
     - libnetcdf
@@ -86,7 +86,6 @@ outputs:
       host:
         - blosc
         - cfitsio
-        - curl
         - expat
         - freexl
         - geos
@@ -98,6 +97,7 @@ outputs:
         - jpeg
         - json-c  # [not win]
         - kealib
+        - libcurl
         - libdeflate
         - libkml
         - libnetcdf
