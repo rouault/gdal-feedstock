@@ -41,6 +41,7 @@ requirements:
     - lerc
     - libcurl
     - libdeflate
+    - libiconv
     - libkml
     - libnetcdf
     - libpng
@@ -102,6 +103,7 @@ outputs:
         - lerc
         - libcurl
         - libdeflate
+        - libiconv
         - libkml
         - libnetcdf
         - libpng
