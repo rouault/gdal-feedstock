@@ -38,6 +38,7 @@ requirements:
     - jpeg
     - json-c  # [not win]
     - kealib
+    - lerc
     - libcurl
     - libdeflate
     - libkml
@@ -98,6 +99,7 @@ outputs:
         - jpeg
         - json-c  # [not win]
         - kealib
+        - lerc
         - libcurl
         - libdeflate
         - libkml
