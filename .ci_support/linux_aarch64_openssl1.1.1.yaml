@@ -1,9 +1,16 @@
+BUILD:
+- aarch64-conda_cos7-linux-gnu
 arrow_cpp:
+- 6.0.2
+- 7.0.1
+- 8.0.1
 - 9.0.0
 c_compiler:
 - gcc
 c_compiler_version:
 - '10'
+cdt_arch:
+- aarch64
 cdt_name:
 - cos7
 cfitsio:
@@ -93,7 +100,7 @@ python:
 sqlite:
 - '3'
 target_platform:
-- linux-64
+- linux-aarch64
 tiledb:
 - '2.11'
 xerces_c:
