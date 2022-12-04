@@ -26,7 +26,6 @@ requirements:
     - {{ compiler('cxx') }}
     - sysroot_linux-64 2.17  # [linux64]
   host:
-    - arrow-cpp >=10.0
     - blosc
     - cfitsio
     - expat
@@ -41,6 +40,7 @@ requirements:
     - json-c  # [not win]
     - kealib
     - lerc
+    - libarrow
     - libcurl
     - libdeflate
     - libiconv
@@ -170,7 +170,6 @@ outputs:
         - sysroot_linux-64 2.17  # [linux64]
       host:
         - {{ pin_subpackage('libgdal', exact=True) }}
-        - arrow-cpp >=10.0
         - blosc
         - cfitsio
         - curl
@@ -185,6 +184,7 @@ outputs:
         - jpeg
         - json-c  # [not win]
         - kealib
+        - libarrow
         - libkml
         - libnetcdf
         - libpng
@@ -209,7 +209,6 @@ outputs:
         - zstd
       run:
         - {{ pin_subpackage('libgdal', exact=True) }}
-        - arrow-cpp
         - cfitsio
         - geotiff
         - giflib  # [not win]
