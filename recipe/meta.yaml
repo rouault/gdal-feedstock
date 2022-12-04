@@ -26,6 +26,7 @@ requirements:
     - {{ compiler('cxx') }}
     - sysroot_linux-64 2.17  # [linux64]
   host:
+    - arrow-cpp
     - blosc
     - cfitsio
     - expat
@@ -55,7 +56,6 @@ requirements:
     - lz4-c
     - openjpeg
     - openssl
-    - parquet-cpp
     - pcre2
     - poppler
     - postgresql
@@ -170,6 +170,7 @@ outputs:
         - sysroot_linux-64 2.17  # [linux64]
       host:
         - {{ pin_subpackage('libgdal', exact=True) }}
+        - arrow-cpp
         - blosc
         - cfitsio
         - curl
@@ -195,7 +196,6 @@ outputs:
         - libxml2
         - openjpeg
         - openssl
-        - parquet-cpp
         - pcre2
         - poppler
         - postgresql
@@ -218,7 +218,6 @@ outputs:
         - libspatialite
         - libuuid  # [linux]
         - libwebp-base
-        - parquet-cpp
         - poppler
         - postgresql
         - proj
