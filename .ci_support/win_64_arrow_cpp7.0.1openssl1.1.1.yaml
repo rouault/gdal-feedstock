@@ -1,31 +1,21 @@
+arrow_cpp:
+- 7.0.1
 c_compiler:
-- gcc
-c_compiler_version:
-- '11'
-cdt_name:
-- cos7
+- vs2019
 cfitsio:
 - 4.2.0
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
-curl:
-- '7'
 cxx_compiler:
-- gxx
-cxx_compiler_version:
-- '11'
-docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- vs2019
 expat:
 - '2'
 geos:
 - 3.11.1
 geotiff:
 - 1.7.1
-giflib:
-- '5.2'
 hdf4:
 - 4.2.15
 hdf5:
@@ -34,8 +24,6 @@ icu:
 - '70'
 jpeg:
 - '9'
-json_c:
-- '0.16'
 kealib:
 - '1.5'
 lerc:
@@ -54,8 +42,6 @@ libpng:
 - '1.6'
 libtiff:
 - '4'
-libuuid:
-- '2'
 libwebp_base:
 - '1'
 libxml2:
@@ -91,7 +77,7 @@ python:
 sqlite:
 - '3'
 target_platform:
-- linux-64
+- win-64
 tiledb:
 - '2.11'
 xerces_c:
@@ -99,8 +85,6 @@ xerces_c:
 xz:
 - '5'
 zip_keys:
-- - c_compiler_version
-  - cxx_compiler_version
 - - python
   - numpy
 zlib:

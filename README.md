@@ -27,87 +27,339 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_openssl1.1.1</td>
+              <td>linux_64_arrow_cpp6.0.2openssl1.1.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_openssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp6.0.2openssl1.1.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_openssl3</td>
+              <td>linux_64_arrow_cpp6.0.2openssl3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_openssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp6.0.2openssl3" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl1.1.1</td>
+              <td>linux_64_arrow_cpp7.0.1openssl1.1.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_openssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp7.0.1openssl1.1.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl3</td>
+              <td>linux_64_arrow_cpp7.0.1openssl3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_openssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp7.0.1openssl3" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_openssl1.1.1</td>
+              <td>linux_64_arrow_cpp8.0.1openssl1.1.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_openssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp8.0.1openssl1.1.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_openssl3</td>
+              <td>linux_64_arrow_cpp8.0.1openssl3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_openssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp8.0.1openssl3" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_openssl1.1.1</td>
+              <td>linux_64_arrow_cpp9.0.0openssl1.1.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_openssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp9.0.0openssl1.1.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_openssl3</td>
+              <td>linux_64_arrow_cpp9.0.0openssl3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_openssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp9.0.0openssl3" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_openssl1.1.1</td>
+              <td>linux_aarch64_arrow_cpp6.0.2openssl1.1.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_openssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp6.0.2openssl1.1.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_openssl3</td>
+              <td>linux_aarch64_arrow_cpp6.0.2openssl3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_openssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp6.0.2openssl3" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_openssl1.1.1</td>
+              <td>linux_aarch64_arrow_cpp7.0.1openssl1.1.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=win&configuration=win%20win_64_openssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp7.0.1openssl1.1.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_openssl3</td>
+              <td>linux_aarch64_arrow_cpp7.0.1openssl3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=win&configuration=win%20win_64_openssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp7.0.1openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_arrow_cpp8.0.1openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp8.0.1openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_arrow_cpp8.0.1openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp8.0.1openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_arrow_cpp9.0.0openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp9.0.0openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_arrow_cpp9.0.0openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp9.0.0openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_arrow_cpp6.0.2openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp6.0.2openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_arrow_cpp6.0.2openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp6.0.2openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_arrow_cpp7.0.1openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp7.0.1openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_arrow_cpp7.0.1openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp7.0.1openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_arrow_cpp8.0.1openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp8.0.1openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_arrow_cpp8.0.1openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp8.0.1openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_arrow_cpp9.0.0openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp9.0.0openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_arrow_cpp9.0.0openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp9.0.0openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow_cpp6.0.2openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp6.0.2openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow_cpp6.0.2openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp6.0.2openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow_cpp7.0.1openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp7.0.1openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow_cpp7.0.1openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp7.0.1openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow_cpp8.0.1openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp8.0.1openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow_cpp8.0.1openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp8.0.1openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow_cpp9.0.0openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp9.0.0openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow_cpp9.0.0openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp9.0.0openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_arrow_cpp6.0.2openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp6.0.2openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_arrow_cpp6.0.2openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp6.0.2openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_arrow_cpp7.0.1openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp7.0.1openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_arrow_cpp7.0.1openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp7.0.1openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_arrow_cpp8.0.1openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp8.0.1openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_arrow_cpp8.0.1openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp8.0.1openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_arrow_cpp9.0.0openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp9.0.0openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_arrow_cpp9.0.0openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp9.0.0openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_arrow_cpp6.0.2openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=win&configuration=win%20win_64_arrow_cpp6.0.2openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_arrow_cpp6.0.2openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=win&configuration=win%20win_64_arrow_cpp6.0.2openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_arrow_cpp7.0.1openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=win&configuration=win%20win_64_arrow_cpp7.0.1openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_arrow_cpp7.0.1openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=win&configuration=win%20win_64_arrow_cpp7.0.1openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_arrow_cpp8.0.1openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=win&configuration=win%20win_64_arrow_cpp8.0.1openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_arrow_cpp8.0.1openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=win&configuration=win%20win_64_arrow_cpp8.0.1openssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_arrow_cpp9.0.0openssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=win&configuration=win%20win_64_arrow_cpp9.0.0openssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_arrow_cpp9.0.0openssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3911&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gdal-feedstock?branchName=main&jobName=win&configuration=win%20win_64_arrow_cpp9.0.0openssl3" alt="variant">
                 </a>
               </td>
             </tr>
@@ -125,7 +377,6 @@ Current release info
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-gdal-green.svg)](https://anaconda.org/conda-forge/gdal) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/gdal.svg)](https://anaconda.org/conda-forge/gdal) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/gdal.svg)](https://anaconda.org/conda-forge/gdal) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/gdal.svg)](https://anaconda.org/conda-forge/gdal) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-libgdal-green.svg)](https://anaconda.org/conda-forge/libgdal) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libgdal.svg)](https://anaconda.org/conda-forge/libgdal) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libgdal.svg)](https://anaconda.org/conda-forge/libgdal) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libgdal.svg)](https://anaconda.org/conda-forge/libgdal) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-libgdal--arrow--parquet-green.svg)](https://anaconda.org/conda-forge/libgdal-arrow-parquet) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libgdal-arrow-parquet.svg)](https://anaconda.org/conda-forge/libgdal-arrow-parquet) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libgdal-arrow-parquet.svg)](https://anaconda.org/conda-forge/libgdal-arrow-parquet) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libgdal-arrow-parquet.svg)](https://anaconda.org/conda-forge/libgdal-arrow-parquet) |
 
 Installing gdal-split
 =====================
@@ -137,16 +388,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `gdal, libgdal, libgdal-arrow-parquet` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `gdal, libgdal` can be installed with `conda`:
 
 ```
-conda install gdal libgdal libgdal-arrow-parquet
+conda install gdal libgdal
 ```
 
 or with `mamba`:
 
 ```
-mamba install gdal libgdal libgdal-arrow-parquet
+mamba install gdal libgdal
 ```
 
 It is possible to list all of the versions of `gdal` available on your platform with `conda`:

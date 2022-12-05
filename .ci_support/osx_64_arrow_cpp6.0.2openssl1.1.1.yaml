@@ -1,5 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
+arrow_cpp:
+- 6.0.2
 c_compiler:
 - clang
 c_compiler_version:
@@ -10,8 +12,6 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
-curl:
-- '7'
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
@@ -68,7 +68,7 @@ numpy:
 openjpeg:
 - '2'
 openssl:
-- '3'
+- 1.1.1
 pcre2:
 - '10.40'
 pin_run_as_build:

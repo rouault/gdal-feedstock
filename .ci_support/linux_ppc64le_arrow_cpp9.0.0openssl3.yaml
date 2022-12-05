@@ -1,3 +1,5 @@
+arrow_cpp:
+- 9.0.0
 c_compiler:
 - gcc
 c_compiler_version:
@@ -10,8 +12,6 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
-curl:
-- '7'
 cxx_compiler:
 - gxx
 cxx_compiler_version:
@@ -91,7 +91,7 @@ python:
 sqlite:
 - '3'
 target_platform:
-- linux-64
+- linux-ppc64le
 tiledb:
 - '2.11'
 xerces_c:
