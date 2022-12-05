@@ -3,7 +3,7 @@ BUILD:
 c_compiler:
 - gcc
 c_compiler_version:
-- '10'
+- '11'
 cdt_arch:
 - aarch64
 cdt_name:
@@ -17,7 +17,7 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '10'
+- '11'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 expat:
@@ -54,6 +54,8 @@ libnetcdf:
 - 4.8.1
 libpng:
 - '1.6'
+libpq:
+- '15'
 libtiff:
 - '4'
 libuuid:
@@ -83,6 +85,8 @@ pin_run_as_build:
     max_pin: x.x
 poppler:
 - '22.11'
+postgresql:
+- '15'
 proj:
 - 9.1.0
 python:
