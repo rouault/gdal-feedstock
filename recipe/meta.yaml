@@ -26,8 +26,6 @@ requirements:
     - {{ compiler('cxx') }}
     - sysroot_linux-64 2.17  # [linux64]
   host:
-    # libarrow only exists from 10.x
-    - arrow-cpp  # [arrow_cpp != "10.0.1"]
     - blosc
     - cfitsio
     - expat
@@ -42,7 +40,6 @@ requirements:
     - json-c  # [not win]
     - kealib
     - lerc
-    - libarrow  # [arrow_cpp == "10.0.1"]
     - libcurl
     - libdeflate
     - libiconv
@@ -159,8 +156,6 @@ outputs:
   - name: libgdal-arrow-parquet
     script: build_arrow_parquet.sh  # [unix]
     script: build_arrow_parquet.bat  # [win]
-    build:
-      skip: true  # [arrow_cpp != "10.0.1"]
     requirements:
       build:
         - cmake
@@ -174,8 +169,6 @@ outputs:
         - sysroot_linux-64 2.17  # [linux64]
       host:
         - {{ pin_subpackage('libgdal', exact=True) }}
-        # libarrow only exists from 10.x
-        - arrow-cpp  # [arrow_cpp != "10.0.1"]
         - blosc
         - cfitsio
         - curl
@@ -190,7 +183,7 @@ outputs:
         - jpeg
         - json-c  # [not win]
         - kealib
-        - libarrow  # [arrow_cpp == "10.0.1"]
+        - arrow-cpp
         - libkml
         - libnetcdf
         - libpng
