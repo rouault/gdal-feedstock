@@ -1,13 +1,12 @@
-BUILD:
-- aarch64-conda_cos7-linux-gnu
 arrow_cpp:
-- 6.0.2
+- 10.0.1
+- 7.0.1
+- 8.0.1
+- 9.0.0
 c_compiler:
 - gcc
 c_compiler_version:
 - '11'
-cdt_arch:
-- aarch64
 cdt_name:
 - cos7
 cfitsio:
@@ -16,6 +15,8 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
+curl:
+- '7'
 cxx_compiler:
 - gxx
 cxx_compiler_version:
@@ -95,7 +96,7 @@ python:
 sqlite:
 - '3'
 target_platform:
-- linux-aarch64
+- linux-ppc64le
 tiledb:
 - '2.11'
 xerces_c:
