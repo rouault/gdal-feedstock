@@ -157,9 +157,8 @@ outputs:
     script: build_arrow_parquet.sh  # [unix]
     script: build_arrow_parquet.bat  # [win]
     build:
-      # skip openssl 3 pending https://github.com/conda-forge/arrow-cpp-feedstock/issues/918;
-      # alternatively only dependon arrow > 10 (conda seems to get confused with a combined skip)
-      skip: true  # [openssl == "3"]
+      # only for libarrow > 10
+      skip: true  # [arrow_cpp != "10.0.1"]
     requirements:
       build:
         - cmake
