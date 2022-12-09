@@ -156,6 +156,10 @@ outputs:
   - name: libgdal-arrow-parquet
     script: build_arrow_parquet.sh  # [unix]
     script: build_arrow_parquet.bat  # [win]
+    build:
+      # currently, openssl 3 only works for arrow>=10; this may change if certain changes are
+      # backported; tracked in e.g. https://github.com/conda-forge/arrow-cpp-feedstock/pull/874
+      skip: true  # [(openssl == "3")  and (arrow_cpp != "10.0.1")]
     requirements:
       build:
         - cmake
