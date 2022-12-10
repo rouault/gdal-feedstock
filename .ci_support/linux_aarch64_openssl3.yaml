@@ -1,5 +1,10 @@
 BUILD:
 - aarch64-conda_cos7-linux-gnu
+arrow_cpp:
+- 10.0.1
+- 7.0.1
+- 8.0.1
+- 9.0.0
 c_compiler:
 - gcc
 c_compiler_version:
@@ -14,6 +19,8 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
+curl:
+- '7'
 cxx_compiler:
 - gxx
 cxx_compiler_version:

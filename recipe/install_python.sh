@@ -10,6 +10,9 @@ rm -rf swig/python
 
 cmake -DPython_EXECUTABLE="$PYTHON" \
       -DBUILD_PYTHON_BINDINGS:BOOL=ON \
+      -DGDAL_USE_EXTERNAL_LIBS=OFF \
+      -DGDAL_BUILD_OPTIONAL_DRIVERS:BOOL=OFF \
+      -DOGR_BUILD_OPTIONAL_DRIVERS:BOOL=OFF \
       ${SRC_DIR} || (cat CMakeFiles/CMakeError.log;false)
 
 cd swig/python
@@ -23,4 +26,5 @@ build-backend = "setuptools.build_meta"
 EOF
 
 $PYTHON setup.py build_ext
+
 $PYTHON -m pip install --no-deps --ignore-installed .

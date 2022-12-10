@@ -9,6 +9,9 @@ if  %vc% GTR 9 set MSVC_VER=1900
 if  %vc% LEQ 9 set MSVC_TS_VER=90
 if  %vc% GTR 9 set MSVC_TS_VER=140
 
+REM Make sure to disable Arrow/Parquet dependencies for now, so they are only
+REM used in build_arrow_parquet
+
 cmake -G "Ninja" ^
       "%CMAKE_ARGS%" ^
       -DMSVC_VERSION="%MSVC_VER%" ^
@@ -25,6 +28,9 @@ cmake -G "Ninja" ^
       -DKEA_LIBRARY:PATH="%LIBRARY_LIB%\libkea.lib" ^
       -DGDAL_USE_MYSQL:BOOL=OFF ^
       -DGDAL_USE_MSSQL_ODBC:BOOL=OFF ^
+      -DGDAL_USE_PARQUET=OFF ^
+      -DGDAL_USE_ARROW=OFF ^
+      -DGDAL_USE_ARROWDATASET=OFF ^
       "%SRC_DIR%"
 
 if errorlevel 1 exit /b 1

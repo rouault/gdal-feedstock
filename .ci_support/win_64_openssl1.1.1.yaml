@@ -1,3 +1,8 @@
+arrow_cpp:
+- 10.0.1
+- 7.0.1
+- 8.0.1
+- 9.0.0
 c_compiler:
 - vs2019
 cfitsio:
@@ -6,6 +11,8 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
+curl:
+- '7'
 cxx_compiler:
 - vs2019
 expat:
