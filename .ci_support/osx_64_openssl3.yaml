@@ -58,7 +58,7 @@ libpng:
 libpq:
 - '15'
 libtiff:
-- '4'
+- '4.4'
 libwebp_base:
 - '1'
 libxml2:
