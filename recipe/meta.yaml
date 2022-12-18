@@ -9,7 +9,7 @@ source:
   sha256: 68f1c03547ff7152289789db7f67ee634167c9b7bfec4872b88406b236f9c230
 
 build:
-  number: 0
+  number: 1
   skip_compile_pyc:
     - "share/bash-completion/completions/*.py"
 
@@ -56,7 +56,8 @@ requirements:
     - poppler
     - postgresql
     - proj
-    - qhull
+    # qhull disabled because of https://github.com/conda-forge/qgis-feedstock/issues/284#issuecomment-1356490896
+    # - qhull
     - sqlite
     - swig
     - tiledb
@@ -118,7 +119,8 @@ outputs:
         - poppler
         - postgresql
         - proj
-        - qhull
+        # qhull disabled because of https://github.com/conda-forge/qgis-feedstock/issues/284#issuecomment-1356490896
+        # - qhull
         - sqlite
         - tiledb
         - xerces-c
