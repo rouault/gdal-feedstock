@@ -1,6 +1,6 @@
 arrow_cpp:
 - 10.0.1
-- 7.0.1
+- 11.0.0
 - 8.0.1
 - 9.0.0
 c_compiler:
@@ -100,7 +100,7 @@ python:
 sqlite:
 - '3'
 target_platform:
-- linux-ppc64le
+- linux-64
 tiledb:
 - '2.13'
 xerces_c:
