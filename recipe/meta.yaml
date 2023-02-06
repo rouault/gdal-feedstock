@@ -37,6 +37,7 @@ requirements:
     - json-c  # [not win]
     - kealib
     - lerc
+    - libarchive
     - libcurl
     - libdeflate
     - libiconv
@@ -100,6 +101,7 @@ outputs:
         - json-c  # [not win]
         - kealib
         - lerc
+        - libarchive
         - libcurl
         - libdeflate
         - libiconv
@@ -186,6 +188,7 @@ outputs:
         - json-c  # [not win]
         - kealib
         - arrow-cpp
+        - libarchive
         - libkml
         - libnetcdf
         - libpng
