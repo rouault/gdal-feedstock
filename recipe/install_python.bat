@@ -12,13 +12,10 @@ cmake -DPython_EXECUTABLE="%PYTHON%" ^
       "%SRC_DIR%"
 if errorlevel 1 exit /b 1
 
+cmake --build . --target python_generated_files
+if errorlevel 1 exit /b 1
+
 cd swig\python
-if errorlevel 1 exit /b 1
-
-copy "%SRC_DIR%"\swig\python\osgeo\*.py osgeo
-if errorlevel 1 exit /b 1
-
-copy "%SRC_DIR%"\swig\python\extensions\*.c* extensions
 if errorlevel 1 exit /b 1
 
 %PYTHON% setup.py install
