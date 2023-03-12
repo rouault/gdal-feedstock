@@ -9,7 +9,7 @@ source:
   sha256: 35f40d2e08061b342513cdcddc2b997b3814ef8254514f0ef1e8bc7aa56cf681
 
 build:
-  number: 9
+  number: 10
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
 
@@ -33,7 +33,7 @@ requirements:
     - hdf4
     - hdf5
     - icu
-    - jpeg
+    - libjpeg-turbo
     - json-c  # [not win]
     - kealib
     - lerc
@@ -96,7 +96,7 @@ outputs:
         - hdf4
         - hdf5
         - icu
-        - jpeg
+        - libjpeg-turbo
         - json-c  # [not win]
         - kealib
         - lerc
@@ -182,7 +182,7 @@ outputs:
         - hdf4
         - hdf5
         - icu
-        - jpeg
+        - libjpeg-turbo
         - json-c  # [not win]
         - kealib
         - arrow-cpp
