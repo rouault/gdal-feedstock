@@ -15,9 +15,8 @@ cmake -DPython_EXECUTABLE="$PYTHON" \
       -DOGR_BUILD_OPTIONAL_DRIVERS:BOOL=OFF \
       ${SRC_DIR} || (cat CMakeFiles/CMakeError.log;false)
 
+cmake --build . --target python_generated_files
 cd swig/python
-cp ${SRC_DIR}/swig/python/osgeo/*.py osgeo/
-cp ${SRC_DIR}/swig/python/extensions/*.c* extensions/
 
 cat >pyproject.toml <<EOF
 [build-system]
