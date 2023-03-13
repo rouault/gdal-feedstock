@@ -9,7 +9,7 @@ source:
   sha256: 35f40d2e08061b342513cdcddc2b997b3814ef8254514f0ef1e8bc7aa56cf681
 
 build:
-  number: 10
+  number: 11
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
 
@@ -264,6 +264,7 @@ outputs:
         # Workaround to prevent conflicts seen in
         #  https://github.com/conda-forge/gdal-feedstock/pull/543
         - openssl
+        - swig
       run:
         - python
         - {{ pin_compatible('numpy') }}
