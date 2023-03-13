@@ -3,10 +3,11 @@ if errorlevel 1 exit 1
 
 rd /s /q swig\python
 
-FOR /F "tokens=*" %%g IN ('%PYTHON% -c "import sys; print(str(sys.version_info.major)+\".\"+str(sys.version_info.minor)+\".\"+str(sys.version_info.micro))"') do (SET Python_LOOKUP_VERSION=%%g)
+FOR /F "tokens=*" %%g IN ('%PYTHON% -c "import numpy; print(numpy.get_include())"') do (SET Python_NumPy_INCLUDE_DIR=%%g)
 
 cmake "-UPython*" ^
-      -DPython_LOOKUP_VERSION=%Python_LOOKUP_VERSION% ^
+      -DPython_EXECUTABLE="%PYTHON%" ^
+      -DPython_NumPy_INCLUDE_DIR="%Python_NumPy_INCLUDE_DIR%" ^
       -DGDAL_PYTHON_INSTALL_PREFIX:PATH="%STDLIB_DIR%\.." ^
       -DBUILD_PYTHON_BINDINGS:BOOL=ON ^
       -DGDAL_USE_EXTERNAL_LIBS=OFF ^
