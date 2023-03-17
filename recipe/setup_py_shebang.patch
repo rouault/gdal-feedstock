@@ -1,0 +1,29 @@
+commit d64659c5b97de578ab3065b56b07aca58b1c6a9c
+Author: Even Rouault <even.rouault@spatialys.com>
+Date:   Fri Mar 17 16:16:16 2023 +0100
+
+    Python bindings: add workaround to avoid issue with Conda-Forge osx arm64 crosscompiler builds (fixes conda-forge/gdal-feedstock#736)
+
+diff --git a/swig/python/setup.py.in b/swig/python/setup.py.in
+index 867b087c4f..e570acd1f9 100644
+--- a/swig/python/setup.py.in
++++ b/swig/python/setup.py.in
+@@ -347,6 +347,18 @@ classifiers = [
+ 
+ exclude_package_data = {'': ['CMakeLists.txt']}
+ 
++if sys.platform != "win32":
++    # Ugly workaround to solve https://github.com/pypa/setuptools/issues/494
++    # and https://github.com/conda-forge/gdal-feedstock/issues/736
++    # to make sure that the shebang of easy_install' generated launcher
++    # script is always "#!/usr/bin/env python3\n"
++    @classmethod
++    def monkey_patched_get_header(cls, script_text="", executable=None):
++        return "#!/usr/bin/env python3\n"
++
++    import setuptools.command.easy_install as easy_install
++    easy_install.ScriptWriter.get_header = monkey_patched_get_header
++
+ setup(
+     name=name,
+     version=version,

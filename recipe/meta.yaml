@@ -7,6 +7,8 @@ package:
 source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
   sha256: 3cccbed883b1fb99b913966aa3a650ad930e7c3afc714f5823f9754176ee49ea
+  patches:
+    - setup_py_shebang.patch
 
 build:
   number: 2
