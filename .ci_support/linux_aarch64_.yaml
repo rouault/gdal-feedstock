@@ -3,7 +3,7 @@ BUILD:
 arrow_cpp:
 - 10.0.1
 - 11.0.0
-- 8.0.1
+- 12.0.0
 - 9.0.0
 c_compiler:
 - gcc
