@@ -9,6 +9,8 @@ cd build
 rm -rf swig/python
 
 Python_LOOKUP_VERSION=$($PYTHON -c "import sys; print(str(sys.version_info.major)+'.'+str(sys.version_info.minor)+'.'+str(sys.version_info.micro))")
+# Workaround/debug OSX ARM build issue
+export SWIG_DIR=$(swig -swiglib)
 
 cmake "-UPython*" \
       -DPython_LOOKUP_VERSION=${Python_LOOKUP_VERSION} \
