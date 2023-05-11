@@ -255,6 +255,7 @@ outputs:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
         - numpy                                  # [build_platform != target_platform]
+        - swig                                   # [build_platform != target_platform]
       host:
         - python
         - pip
