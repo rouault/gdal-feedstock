@@ -1,4 +1,4 @@
-{% set version = "3.6.4" %}
+{% set version = "3.7.0" %}
 
 package:
   name: gdal-split
@@ -6,10 +6,10 @@ package:
 
 source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
-  sha256: 889894cfff348c04ac65b462f629d03efc53ea56cf04de7662fbe81a364e3df1
+  sha256: af4b26a6b6b3509ae9ccf1fcc5104f7fe015ef2110f5ba13220816398365adce
 
 build:
-  number: 2
+  number: 0
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
 
@@ -22,6 +22,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - sysroot_linux-64 2.17  # [linux64]
+    - swig
   host:
     - blosc
     - cfitsio
@@ -37,6 +38,7 @@ requirements:
     - json-c  # [not win]
     - kealib
     - lerc
+    - libarchive
     - libcurl
     - libdeflate
     - libiconv
@@ -59,7 +61,6 @@ requirements:
     # qhull disabled because of https://github.com/conda-forge/qgis-feedstock/issues/284#issuecomment-1356490896
     # - qhull
     - sqlite
-    - swig
     - tiledb
     - xerces-c
     - xz
@@ -100,6 +101,7 @@ outputs:
         - json-c  # [not win]
         - kealib
         - lerc
+        - libarchive
         - libcurl
         - libdeflate
         - libiconv
@@ -186,6 +188,7 @@ outputs:
         - json-c  # [not win]
         - kealib
         - arrow-cpp
+        - libarchive
         - libkml
         - libnetcdf
         - libpng
@@ -252,6 +255,7 @@ outputs:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
         - numpy                                  # [build_platform != target_platform]
+        - swig
       host:
         - python
         - pip
@@ -264,7 +268,6 @@ outputs:
         # Workaround to prevent conflicts seen in
         #  https://github.com/conda-forge/gdal-feedstock/pull/543
         - openssl
-        - swig
       run:
         - python
         - {{ pin_compatible('numpy') }}
