@@ -9,7 +9,7 @@ source:
   sha256: af4b26a6b6b3509ae9ccf1fcc5104f7fe015ef2110f5ba13220816398365adce
 
 build:
-  number: 0
+  number: 1
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
 
@@ -265,6 +265,7 @@ outputs:
         # having not been migrated yet causing conflicts with the "libgdal" output
         # See: https://github.com/conda-forge/gdal-feedstock/pull/415
         - hdf5
+        - libxml2
         # Workaround to prevent conflicts seen in
         #  https://github.com/conda-forge/gdal-feedstock/pull/543
         - openssl
