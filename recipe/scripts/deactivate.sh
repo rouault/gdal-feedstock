@@ -8,7 +8,7 @@ if [ -n "${_CONDA_SET_GDAL_DATA:-}" ]; then
 fi
 
 unset GDAL_DRIVER_PATH
-if [ -n "${_CONDA_SET_GDAL_DRIVER_PATH:-}" ]]; then
+if [ -n "${_CONDA_SET_GDAL_DRIVER_PATH:-}" ]; then
     export GDAL_DRIVER_PATH="$_CONDA_SET_GDAL_DRIVER_PATH"
     unset _CONDA_SET_GDAL_DRIVER_PATH
 fi
