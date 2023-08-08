@@ -93,7 +93,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 poppler:
-- '23.07'
+- '23.08'
 postgresql:
 - '15'
 proj:
