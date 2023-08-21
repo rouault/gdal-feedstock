@@ -32,7 +32,7 @@ giflib:
 hdf4:
 - 4.2.15
 hdf5:
-- 1.14.1
+- 1.14.2
 icu:
 - '72'
 json_c:
@@ -70,10 +70,10 @@ lz4_c:
 macos_machine:
 - arm64-apple-darwin20.0.0
 numpy:
-- '1.21'
+- '1.22'
 - '1.23'
-- '1.21'
-- '1.21'
+- '1.22'
+- '1.22'
 openjpeg:
 - '2'
 openssl:
