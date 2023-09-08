@@ -183,6 +183,7 @@ outputs:
         - kealib
         - arrow-cpp
         - libarchive
+        - libarrow
         - libkml
         - libnetcdf
         - libpng
