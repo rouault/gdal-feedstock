@@ -33,7 +33,6 @@ requirements:
     - giflib  # [not win]
     - hdf4
     - hdf5
-    - icu
     - libjpeg-turbo
     - json-c  # [not win]
     - kealib
@@ -96,7 +95,6 @@ outputs:
         - giflib  # [not win]
         - hdf4
         - hdf5
-        - icu
         - libjpeg-turbo
         - json-c  # [not win]
         - kealib
@@ -183,7 +181,6 @@ outputs:
         - giflib  # [not win]
         - hdf4
         - hdf5
-        - icu
         - libjpeg-turbo
         - json-c  # [not win]
         - kealib
