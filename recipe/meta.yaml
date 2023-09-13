@@ -1,4 +1,4 @@
-{% set version = "3.7.1" %}
+{% set version = "3.7.2" %}
 
 package:
   name: gdal-split
@@ -6,10 +6,10 @@ package:
 
 source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
-  sha256: 9297948f0a8ba9e6369cd50e87c7e2442eda95336b94d2b92ef1829d260b9a06
+  sha256: 40c0068591d2c711c699bbb734319398485ab169116ac28005d8302f80b923ad
 
 build:
-  number: 9
+  number: 0
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
 
@@ -33,7 +33,6 @@ requirements:
     - giflib  # [not win]
     - hdf4
     - hdf5
-    - icu
     - libjpeg-turbo
     - json-c  # [not win]
     - kealib
@@ -96,7 +95,6 @@ outputs:
         - giflib  # [not win]
         - hdf4
         - hdf5
-        - icu
         - libjpeg-turbo
         - json-c  # [not win]
         - kealib
@@ -183,7 +181,6 @@ outputs:
         - giflib  # [not win]
         - hdf4
         - hdf5
-        - icu
         - libjpeg-turbo
         - json-c  # [not win]
         - kealib
