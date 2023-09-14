@@ -40,7 +40,7 @@ kealib:
 lerc:
 - '4'
 libarchive:
-- '3.6'
+- '3.7'
 libcurl:
 - '8'
 libdeflate:
