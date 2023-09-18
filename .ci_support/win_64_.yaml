@@ -34,7 +34,7 @@ libarchive:
 libcurl:
 - '8'
 libdeflate:
-- '1.18'
+- '1.19'
 libiconv:
 - '1'
 libjpeg_turbo:
@@ -48,7 +48,7 @@ libpng:
 libpq:
 - '15'
 libtiff:
-- '4.5'
+- '4.6'
 libwebp_base:
 - '1'
 libxml2:
