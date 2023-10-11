@@ -76,6 +76,7 @@ lz4_c:
 numpy:
 - '1.22'
 - '1.23'
+- '1.26'
 - '1.22'
 - '1.22'
 openjpeg:
@@ -99,6 +100,7 @@ proj:
 python:
 - 3.10.* *_cpython
 - 3.11.* *_cpython
+- 3.12.* *_cpython
 - 3.8.* *_cpython
 - 3.9.* *_cpython
 sqlite:
