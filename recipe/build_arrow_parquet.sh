@@ -4,6 +4,10 @@ set -ex # Abort on error.
 
 cd build
 
+# Remove build artifacts potentially generated with a different libarrow version
+rm -rf ogr/ogrsf_frmts/arrow
+rm -rf ogr/ogrsf_frmts/parquet
+
 # We reuse the same build directory as libgdal, so we just to have to
 # turn on the required dependency and drivers
 cmake -DBUILD_PYTHON_BINDINGS:BOOL=OFF \
