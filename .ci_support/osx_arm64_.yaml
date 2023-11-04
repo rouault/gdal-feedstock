@@ -1,10 +1,5 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '11.0'
-arrow_cpp:
-- 10.0.1
-- 11.0.0
-- '12'
-- '13'
 c_compiler:
 - clang
 c_compiler_version:
@@ -41,6 +36,11 @@ lerc:
 - '4'
 libarchive:
 - '3.7'
+libarrow:
+- 10.0.1
+- 11.0.0
+- '12'
+- '13'
 libcurl:
 - '8'
 libdeflate:

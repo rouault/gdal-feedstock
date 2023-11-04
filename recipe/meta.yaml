@@ -9,7 +9,7 @@ source:
   sha256: e0a6f0c453ea7eb7c09967f50ac49426808fcd8f259dbc9888140eb69d7ffee6
 
 build:
-  number: 0
+  number: 1
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
 
@@ -155,9 +155,6 @@ outputs:
   - name: libgdal-arrow-parquet
     script: build_arrow_parquet.sh  # [unix]
     script: build_arrow_parquet.bat  # [win]
-    build:
-      # only for libarrow > 10
-      skip: true  # [arrow_cpp != "10.0.1"]
     requirements:
       build:
         - cmake
@@ -184,8 +181,8 @@ outputs:
         - libjpeg-turbo
         - json-c  # [not win]
         - kealib
-        - arrow-cpp
         - libarchive
+        - libarrow
         - libkml
         - libnetcdf
         - libpng

@@ -1,6 +1,10 @@
 cd build
 if errorlevel 1 exit 1
 
+REM Remove build artifacts potentially generated with a different libarrow version
+rmdir ogr\ogrsf_frmts\arrow /s /q
+rmdir ogr\ogrsf_frmts\parquet /s /q
+
 REM We reuse the same build directory as libgdal, so we just to have to
 REM turn on the required dependency and drivers
 cmake -DBUILD_PYTHON_BINDINGS:BOOL=OFF ^
