@@ -38,6 +38,7 @@ requirements:
     - kealib
     - lerc
     - libarchive
+    - libaec  # for GRIB driver
     - libcurl
     - libdeflate
     - libiconv
@@ -100,6 +101,7 @@ outputs:
         - kealib
         - lerc
         - libarchive
+        - libaec
         - libcurl
         - libdeflate
         - libiconv
