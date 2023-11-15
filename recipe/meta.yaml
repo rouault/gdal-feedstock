@@ -293,11 +293,13 @@ outputs:
         - osgeo._osr
       commands:
         - python run_test.py
-        # Check Python-implemented GDAL utilities
+        # Check Python-implemented GDAL utilities.
+        # A number of these utilities unexpectedly return an error value when
+        # called with --help, and are thus called with --version below.
         # gdalattachpct.py is checked only for existence as it unexpectedly
-        # returns error codes. For easier debugging, this existence check is
-        # performed in a separate .bat file on Windows.
-        # This existence checks should be replaced by a regular call once
+        # returns an error code on --version, too. For easier debugging, this
+        # existence check is performed in a separate .bat file on Windows.
+        # This existence check should be replaced by a regular call once
         # behavior is fixed in GDAL itself.
         - rgb2pct.py --help
         - pct2rgb.py --help
@@ -318,7 +320,7 @@ outputs:
         - gdalcompare.py --version
         - ogrmerge.py --help
         - ogr_layer_algebra.py --help
-        # Existence checks on Windows are done in a separate .bat file for easier debugging
+        # Use separate .bat file for file existence check on Windows
         - test_script_exist.bat  # [win]
       about:
         summary: Python wrapper for the Geospatial Data Abstraction Library (GDAL)
