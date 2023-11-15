@@ -1,10 +1,5 @@
 {% set version = "3.8.0" %}
 
-# appease linter
-{% if libarrow is undefined %}
-{% set libarrow = "14" %}
-{% endif %}
-
 package:
   name: gdal-split
   version: {{ version }}
@@ -190,6 +185,10 @@ outputs:
         - kealib
         - libarchive
         - libarrow
+        # appease linter
+        {% if libarrow is undefined %}
+        {% set libarrow = "14" %}
+        {% endif %}
         {% if libarrow.split(".")[0] | int >= 14 %}
         - libarrow-dataset
         - libparquet
