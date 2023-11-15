@@ -185,10 +185,12 @@ outputs:
         - kealib
         - libarchive
         - libarrow
-        - libarrow-dataset  # [libarrow >= "14"]
+{% if libarrow.split(".")[0] | int >= 14 %}
+        - libarrow-dataset
+        - libparquet
+{% endif %}
         - libkml
         - libnetcdf
-        - libparquet  # [libarrow >= "14"]
         - libpng
         - libpq
         - libspatialite
