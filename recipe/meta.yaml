@@ -311,24 +311,19 @@ outputs:
         - gdal_merge.py --version
         - gdal2tiles.py --help
         - gdal2xyz.py --help
-        # Errors out on --version despite printing GDAL version
-        - test -f $PREFIX/bin/gdal_retile.py  # [unix]
+        - gdal_retile.py --help
         # Returns error despite printing help
         - test -f $PREFIX/bin/gdal_proximity.py  # [unix]
         - gdal_polygonize.py --help
         - gdal_sieve.py --version
         - gdal_fillnodata.py --help
         - gdalmove.py --version
-        # Errors out on --version despite printing GDAL version
-        - test -f $PREFIX/bin/gdal_edit.py  # [unix]
+        - gdal_edit.py --help
         - gdal_calc.py --help
-        # Errors out on --version despite printing GDAL version
-        - test -f $PREFIX/bin/gdal_pansharpen.py  # [unix]
+        - gdal_pansharpen.py --help
         - gdalcompare.py --version
-        # Errors out on --version despite printing GDAL version
-        - test -f $PREFIX/bin/ogrmerge.py  # [unix]        
-        # Returns error despite printing help
-        - test -f $PREFIX/bin/ogr_layer_algebra.py  # [unix]
+        - ogrmerge.py --help
+        - ogr_layer_algebra.py --help
         # Existence checks on Windows are done in a separate .bat file
         - test_script_exist.bat  # [win]
       about:

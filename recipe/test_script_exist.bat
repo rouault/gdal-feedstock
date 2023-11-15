@@ -8,14 +8,14 @@ REM behavior is fixed in GDAL itself.
 
 if not exist %PREFIX%\Scripts\gdalattachpct.py exit 1
 
-if not exist %PREFIX%\Scripts\gdal_retile.py exit 1
+REM if not exist %PREFIX%\Scripts\gdal_retile.py exit 1
 
 if not exist %PREFIX%\Scripts\gdal_proximity.py exit 1
 
-if not exist %PREFIX%\Scripts\gdal_edit.py exit 1
+REM if not exist %PREFIX%\Scripts\gdal_edit.py exit 1
 
-if not exist %PREFIX%\Scripts\gdal_pansharpen.py exit 1
+REM if not exist %PREFIX%\Scripts\gdal_pansharpen.py exit 1
 
-if not exist %PREFIX%\Scripts\ogrmerge.py exit 1
+REM if not exist %PREFIX%\Scripts\ogrmerge.py exit 1
 
-if not exist %PREFIX%\Scripts\ogr_layer_algebra.py exit 1
+REM if not exist %PREFIX%\Scripts\ogr_layer_algebra.py exit 1
