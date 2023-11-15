@@ -305,7 +305,7 @@ outputs:
         - pct2rgb.py --help
         # Both --help and --version seem to cause an error return value
         - test -f $PREFIX/bin/gdalattachpct.py  # [unix]
-        - gdal_merge.py --version
+        - gdal_merge.py --help
         - gdal2tiles.py --help
         - gdal2xyz.py --help
         - gdal_retile.py --help
