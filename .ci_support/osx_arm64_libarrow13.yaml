@@ -1,13 +1,9 @@
-BUILD:
-- aarch64-conda_cos7-linux-gnu
+MACOSX_DEPLOYMENT_TARGET:
+- '11.0'
 c_compiler:
-- gcc
+- clang
 c_compiler_version:
-- '12'
-cdt_arch:
-- aarch64
-cdt_name:
-- cos7
+- '16'
 cfitsio:
 - 4.3.0
 channel_sources:
@@ -17,11 +13,9 @@ channel_targets:
 curl:
 - '8'
 cxx_compiler:
-- gxx
+- clangxx
 cxx_compiler_version:
-- '12'
-docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- '16'
 expat:
 - '2'
 geos:
@@ -45,10 +39,7 @@ libaec:
 libarchive:
 - '3.7'
 libarrow:
-- 11.0.0
-- '12'
 - '13'
-- '14'
 libcurl:
 - '8'
 libdeflate:
@@ -67,14 +58,14 @@ libpq:
 - '16'
 libtiff:
 - '4.6'
-libuuid:
-- '2'
 libwebp_base:
 - '1'
 libxml2:
 - '2.11'
 lz4_c:
 - 1.9.3
+macos_machine:
+- arm64-apple-darwin20.0.0
 numpy:
 - '1.22'
 - '1.23'
@@ -108,7 +99,7 @@ python:
 sqlite:
 - '3'
 target_platform:
-- linux-aarch64
+- osx-arm64
 tiledb:
 - '2.16'
 xerces_c:
