@@ -293,27 +293,21 @@ outputs:
         - osgeo._osr
       commands:
         - python run_test.py
-        # Check .py GDAL utilities
-        # --help not implemented as documented for gdalattachpct.py,
-        # gdal_merge.py, gdal_retile.py, gdal_sieve.py, gdalmove.py,
-        # gdal_edit.py, gdal_pansharpen.py, gdalcompare.py, ogrmerge.py?
-        # also, --version does not work with e.g. rgb2pct.py...
-        # In addition, some scripts are checked only for existence
-        # (gdalattachpct.py, gdal_retile.py, gdal_proximity.py) as they
-        # unexpectedly return error codes. For easier debugging, these
-        # existence checks are performed in a separate .bat file on Windows.
-        # These existence checks should be replaced by regular calls once
+        # Check Python-implemented GDAL utilities
+        # gdalattachpct.py is checked only for existence as it unexpectedly
+        # returns error codes. For easier debugging, this existence check is
+        # performed in a separate .bat file on Windows.
+        # This existence checks should be replaced by a regular call once
         # behavior is fixed in GDAL itself.
         - rgb2pct.py --help
         - pct2rgb.py --help
-        # Neither --help nor --version seem to work
+        # Both --help and --version seem to cause an error return value
         - test -f $PREFIX/bin/gdalattachpct.py  # [unix]
         - gdal_merge.py --version
         - gdal2tiles.py --help
         - gdal2xyz.py --help
         - gdal_retile.py --help
-        # Returns error despite printing help
-        - test -f $PREFIX/bin/gdal_proximity.py  # [unix]
+        - gdal_proximity.py --help
         - gdal_polygonize.py --help
         - gdal_sieve.py --version
         - gdal_fillnodata.py --help
@@ -324,7 +318,7 @@ outputs:
         - gdalcompare.py --version
         - ogrmerge.py --help
         - ogr_layer_algebra.py --help
-        # Existence checks on Windows are done in a separate .bat file
+        # Existence checks on Windows are done in a separate .bat file for easier debugging
         - test_script_exist.bat  # [win]
       about:
         summary: Python wrapper for the Geospatial Data Abstraction Library (GDAL)
