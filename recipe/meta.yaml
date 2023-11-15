@@ -185,10 +185,10 @@ outputs:
         - kealib
         - libarchive
         - libarrow
-        - libarrow-dataset  # [libarrow >= 14]
+        - libarrow-dataset  # [libarrow >= "14"]
         - libkml
         - libnetcdf
-        - libparquet  # [libarrow >= 14]
+        - libparquet  # [libarrow >= "14"]
         - libpng
         - libpq
         - libspatialite
