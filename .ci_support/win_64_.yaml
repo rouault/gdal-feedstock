@@ -1,9 +1,5 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '11.0'
 c_compiler:
-- clang
-c_compiler_version:
-- '16'
+- vs2019
 cfitsio:
 - 4.3.0
 channel_sources:
@@ -13,23 +9,17 @@ channel_targets:
 curl:
 - '8'
 cxx_compiler:
-- clangxx
-cxx_compiler_version:
-- '16'
+- vs2019
 expat:
 - '2'
 geos:
 - 3.12.0
 geotiff:
 - 1.7.1
-giflib:
-- '5.2'
 hdf4:
 - 4.2.15
 hdf5:
 - 1.14.2
-json_c:
-- '0.17'
 kealib:
 - '1.5'
 lerc:
@@ -39,6 +29,9 @@ libaec:
 libarchive:
 - '3.7'
 libarrow:
+- 11.0.0
+- '12'
+- '13'
 - '14'
 libcurl:
 - '8'
@@ -64,8 +57,6 @@ libxml2:
 - '2.11'
 lz4_c:
 - 1.9.3
-macos_machine:
-- arm64-apple-darwin20.0.0
 numpy:
 - '1.22'
 - '1.23'
@@ -99,7 +90,7 @@ python:
 sqlite:
 - '3'
 target_platform:
-- osx-arm64
+- win-64
 tiledb:
 - '2.16'
 xerces_c:
@@ -107,8 +98,6 @@ xerces_c:
 xz:
 - '5'
 zip_keys:
-- - c_compiler_version
-  - cxx_compiler_version
 - - python
   - numpy
 zlib:
