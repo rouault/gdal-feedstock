@@ -9,7 +9,7 @@ source:
   sha256: ec0f78d9dc32352aeac6edc9c3b27a991b91f9dc6f92c452207d84431c58757d
 
 build:
-  number: 1
+  number: 2
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
 
@@ -185,6 +185,14 @@ outputs:
         - kealib
         - libarchive
         - libarrow
+        # appease linter
+        {% if libarrow is undefined %}
+        {% set libarrow = "14" %}
+        {% endif %}
+        {% if libarrow.split(".")[0] | int >= 14 %}
+        - libarrow-dataset
+        - libparquet
+        {% endif %}
         - libkml
         - libnetcdf
         - libpng
