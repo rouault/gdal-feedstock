@@ -9,7 +9,7 @@ source:
   sha256: ec0f78d9dc32352aeac6edc9c3b27a991b91f9dc6f92c452207d84431c58757d
 
 build:
-  number: 3
+  number: 4
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
 
@@ -293,43 +293,34 @@ outputs:
         - osgeo._osr
       commands:
         - python run_test.py
-        # Check .py GDAL utilities
-        # --help not implemented as documented for gdalattachpct.py,
-        # gdal_merge.py, gdal_retile.py, gdal_sieve.py, gdalmove.py,
-        # gdal_edit.py, gdal_pansharpen.py, gdalcompare.py, ogrmerge.py?
-        # also, --version does not work with e.g. rgb2pct.py...
-        # In addition, some scripts are checked only for existence
-        # (gdalattachpct.py, gdal_retile.py, gdal_proximity.py) as they
-        # unexpectedly return error codes. For easier debugging, these
-        # existence checks are performed in a separate .bat file on Windows.
-        # These existence checks should be replaced by regular calls once
+        # Check Python-implemented GDAL utilities.
+        # A number of these utilities unexpectedly return an error value when
+        # called with --help, and are thus called with --version below.
+        # gdalattachpct.py is checked only for existence as it unexpectedly
+        # returns an error code on --version, too. For easier debugging, this
+        # existence check is performed in a separate .bat file on Windows.
+        # This existence check should be replaced by a regular call once
         # behavior is fixed in GDAL itself.
         - rgb2pct.py --help
         - pct2rgb.py --help
-        # Neither --help nor --version seem to work
+        # Both --help and --version seem to cause an error return value
         - test -f $PREFIX/bin/gdalattachpct.py  # [unix]
-        - gdal_merge.py --version
+        - gdal_merge.py --help
         - gdal2tiles.py --help
         - gdal2xyz.py --help
-        # Errors out on --version despite printing GDAL version
-        - test -f $PREFIX/bin/gdal_retile.py  # [unix]
-        # Returns error despite printing help
-        - test -f $PREFIX/bin/gdal_proximity.py  # [unix]
+        - gdal_retile.py --help
+        - gdal_proximity.py --help
         - gdal_polygonize.py --help
         - gdal_sieve.py --version
         - gdal_fillnodata.py --help
         - gdalmove.py --version
-        # Errors out on --version despite printing GDAL version
-        - test -f $PREFIX/bin/gdal_edit.py  # [unix]
+        - gdal_edit.py --help
         - gdal_calc.py --help
-        # Errors out on --version despite printing GDAL version
-        - test -f $PREFIX/bin/gdal_pansharpen.py  # [unix]
+        - gdal_pansharpen.py --help
         - gdalcompare.py --version
-        # Errors out on --version despite printing GDAL version
-        - test -f $PREFIX/bin/ogrmerge.py  # [unix]        
-        # Returns error despite printing help
-        - test -f $PREFIX/bin/ogr_layer_algebra.py  # [unix]
-        # Existence checks on Windows are done in a separate .bat file
+        - ogrmerge.py --help
+        - ogr_layer_algebra.py --help
+        # Use separate .bat file for file existence check on Windows
         - test_script_exist.bat  # [win]
       about:
         summary: Python wrapper for the Geospatial Data Abstraction Library (GDAL)
