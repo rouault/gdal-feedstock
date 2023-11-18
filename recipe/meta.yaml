@@ -7,6 +7,9 @@ package:
 source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
   sha256: ec0f78d9dc32352aeac6edc9c3b27a991b91f9dc6f92c452207d84431c58757d
+  patches:
+      - 0001-Fix-build-error-with-libxml2-2.12.patch
+      - 0002-Fix-build-error-with-libxml2-2.12-cont-d.patch
 
 build:
   number: 4
