@@ -1,4 +1,4 @@
-{% set version = "3.8.0" %}
+{% set version = "3.8.1" %}
 
 package:
   name: gdal-split
@@ -6,13 +6,10 @@ package:
 
 source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
-  sha256: ec0f78d9dc32352aeac6edc9c3b27a991b91f9dc6f92c452207d84431c58757d
-  patches:
-      - 0001-Fix-build-error-with-libxml2-2.12.patch
-      - 0002-Fix-build-error-with-libxml2-2.12-cont-d.patch
+  sha256: 75a20b23879bfa3d8c0db68e1d6f8b924f7f9d97f5fed089b01a72e404293900
 
 build:
-  number: 7
+  number: 0
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
 
