@@ -19,7 +19,7 @@ geotiff:
 hdf4:
 - 4.2.15
 hdf5:
-- 1.14.2
+- 1.14.3
 kealib:
 - '1.5'
 lerc:
@@ -92,7 +92,7 @@ sqlite:
 target_platform:
 - win-64
 tiledb:
-- '2.16'
+- '2.18'
 xerces_c:
 - '3.2'
 xz:
