@@ -33,7 +33,7 @@ giflib:
 hdf4:
 - 4.2.15
 hdf5:
-- 1.14.2
+- 1.14.3
 json_c:
 - '0.17'
 kealib:
@@ -110,7 +110,7 @@ sqlite:
 target_platform:
 - linux-aarch64
 tiledb:
-- '2.16'
+- '2.18'
 xerces_c:
 - '3.2'
 xz:
