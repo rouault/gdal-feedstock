@@ -1,4 +1,4 @@
-{% set version = "3.8.1" %}
+{% set version = "3.8.2" %}
 
 package:
   name: gdal-split
@@ -6,10 +6,10 @@ package:
 
 source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
-  sha256: 75a20b23879bfa3d8c0db68e1d6f8b924f7f9d97f5fed089b01a72e404293900
+  sha256: dc2921ee1cf7a5c0498e94d15fb9ab9c9689c296363a1d021fc3293dd242b4db
 
 build:
-  number: 4
+  number: 0
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
 
