@@ -45,10 +45,10 @@ libaec:
 libarchive:
 - '3.7'
 libarrow:
-- 11.0.0
 - '12'
 - '13'
 - '14'
+- '15'
 libcurl:
 - '8'
 libdeflate:
@@ -72,7 +72,7 @@ libuuid:
 libwebp_base:
 - '1'
 libxml2:
-- '2.12'
+- '2'
 lz4_c:
 - 1.9.3
 numpy:
