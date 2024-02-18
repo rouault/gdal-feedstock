@@ -7,9 +7,6 @@ package:
 source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
   sha256: 0c53ced95d29474236487202709b49015854f8e02e35e44ed0f4f4e12a7966ce
-  patches:
-    - patches/001_libarrow15_compat.patch
-    - patches/002_libarrow15_compat.patch
 
 build:
   number: 0
