@@ -1,4 +1,4 @@
-{% set version = "3.8.3" %}
+{% set version = "3.8.4" %}
 
 package:
   name: gdal-split
@@ -6,13 +6,13 @@ package:
 
 source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
-  sha256: ae2d160f65016e208eca34ff14490ec4511f1fa03fd386ac130449d15e82929d
+  sha256: 0c53ced95d29474236487202709b49015854f8e02e35e44ed0f4f4e12a7966ce
   patches:
     - patches/001_libarrow15_compat.patch
     - patches/002_libarrow15_compat.patch
 
 build:
-  number: 3
+  number: 0
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
 
