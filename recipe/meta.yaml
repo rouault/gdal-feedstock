@@ -9,7 +9,7 @@ source:
   sha256: e8b4df2a8a7d25272f867455c0c230459545972f81f0eff2ddbf6a6f60dcb1e4
 
 build:
-  number: 0
+  number: 1
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
 
@@ -20,8 +20,8 @@ requirements:
     - make  # [not win]
     - ninja  # [win]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - sysroot_linux-64 2.17  # [linux64]
     - swig
   host:
     - blosc
@@ -80,12 +80,12 @@ outputs:
         - cmake
         # ranlib used at install time
         - {{ compiler('c') }}
+        - {{ stdlib("c") }}
         # libstdc++ is needed in requirements/run
         - {{ compiler('cxx') }}
         - pkg-config  # [not win]
         - make  # [unix]
         - ninja  # [win]
-        - sysroot_linux-64 2.17  # [linux64]
       host:
         - blosc
         - cfitsio
@@ -162,12 +162,12 @@ outputs:
         - cmake
         # ranlib used at install time
         - {{ compiler('c') }}
+        - {{ stdlib("c") }}
         # libstdc++ is needed in requirements/run
         - {{ compiler('cxx') }}
         - pkg-config  # [not win]
         - make  # [unix]
         - ninja  # [win]
-        - sysroot_linux-64 2.17  # [linux64]
       host:
         - {{ pin_subpackage('libgdal', exact=True) }}
         - blosc
@@ -252,6 +252,7 @@ outputs:
     requirements:
       build:
         - {{ compiler('c') }}
+        - {{ stdlib("c") }}
         - {{ compiler('cxx') }}
         - cmake
         - make  # [unix]
