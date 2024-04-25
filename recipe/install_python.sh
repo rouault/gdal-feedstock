@@ -21,12 +21,14 @@ cmake "-UPython*" \
 cmake --build . --target python_generated_files
 cd swig/python
 
-cat >pyproject.toml <<EOF
-[build-system]
-requires = ["setuptools>=40.8.0", "wheel"]
-build-backend = "setuptools.build_meta"
-EOF
-
 $PYTHON setup.py build_ext
 
+# Cf https://github.com/OSGeo/gdal/pull/8926
+# The above build_ext has been run with numpy already installed in the environment
+# because otherwise it would have failed.
+# But as we run pip install without dependencies, we have to force
+# GDAL_PYTHON_BINDINGS_WITHOUT_NUMPY=YES to disable the related check.
+# This is OK here since the bindings have already been built, and it is just
+# a matter of bundling them in the wheel.
+export GDAL_PYTHON_BINDINGS_WITHOUT_NUMPY=YES
 $PYTHON -m pip install --no-deps --ignore-installed .

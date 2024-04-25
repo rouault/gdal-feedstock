@@ -5,7 +5,7 @@
 set -ex # Abort on error.
 
 # also allow newer symbols (https://conda-forge.org/docs/maintainer/knowledge_base.html#newer-c-features-with-old-sdk)
-export CXXFLAGS="${CXXFLAGS} -std=c++17 -D_LIBCPP_DISABLE_AVAILABILITY"
+export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 
 mkdir build
 cd build
@@ -23,6 +23,10 @@ cmake -G "Unix Makefiles" \
       -DGDAL_USE_PARQUET=OFF \
       -DGDAL_USE_ARROW=OFF \
       -DGDAL_USE_ARROWDATASET=OFF \
+      -DOGR_REGISTER_DRIVER_ARROW_FOR_LATER_PLUGIN=ON \
+      -DOGR_REGISTER_DRIVER_PARQUET_FOR_LATER_PLUGIN=ON \
+      -DOGR_DRIVER_ARROW_PLUGIN_INSTALLATION_MESSAGE="You may install it with with 'conda install -c conda-forge libgdal-arrow-parquet'" \
+      -DOGR_DRIVER_PARQUET_PLUGIN_INSTALLATION_MESSAGE="You may install it with with 'conda install -c conda-forge libgdal-arrow-parquet'" \
       -DGDAL_ENABLE_HDF5_GLOBAL_LOCK:BOOL=ON \
       -DBUILD_PYTHON_BINDINGS:BOOL=OFF \
       -DBUILD_JAVA_BINDINGS:BOOL=OFF \
