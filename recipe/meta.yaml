@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
+  url: http://download.osgeo.org/gdal/3.9.0/gdal-{{ version }}.tar.xz
   sha256: bd928d5234d2b0e6cde98177312e8e78176f4230b9f689e8eebde440932742b3
 
 build:
