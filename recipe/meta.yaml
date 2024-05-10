@@ -1,12 +1,12 @@
-{% set version = "3.9.0beta2" %}
+{% set version = "3.9.0" %}
 
 package:
   name: gdal-split
   version: {{ version }}
 
 source:
-  url: http://download.osgeo.org/gdal/3.9.0/gdal-{{ version }}.tar.xz
-  sha256: 9dd1ec30662c714e735b0fcdc0179697fec6c9d0994b60f90dadfb151c5f47c2
+  url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
+  sha256: 577f80e9d14ff7c90b6bfbc34201652b4546700c01543efb4f4c3050e0b3fda2
 
 build:
   number: 0
