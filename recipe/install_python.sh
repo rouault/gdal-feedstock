@@ -21,12 +21,6 @@ cmake "-UPython*" \
 cmake --build . --target python_generated_files
 cd swig/python
 
-cat >pyproject.toml <<EOF
-[build-system]
-requires = ["setuptools>=40.8.0", "wheel"]
-build-backend = "setuptools.build_meta"
-EOF
-
 $PYTHON setup.py build_ext
 
-$PYTHON -m pip install --no-deps --ignore-installed .
+$PYTHON -m pip install --no-deps --ignore-installed --no-build-isolation .
