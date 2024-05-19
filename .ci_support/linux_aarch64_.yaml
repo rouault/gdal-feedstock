@@ -52,7 +52,7 @@ libarrow:
 - '13'
 - '14'
 - '15'
-- '16'
+- '16.1'
 libcurl:
 - '8'
 libdeflate:
