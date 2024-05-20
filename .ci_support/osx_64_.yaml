@@ -13,7 +13,7 @@ c_stdlib_version:
 cfitsio:
 - 4.4.0
 channel_sources:
-- conda-forge
+- conda-forge/label/numpy_rc,conda-forge
 channel_targets:
 - conda-forge main
 curl:
@@ -76,11 +76,11 @@ lz4_c:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
+- '2.0'
+- '2.0'
+- '2.0'
 - '1.22'
-- '1.23'
-- '1.26'
-- '1.22'
-- '1.22'
+- '2.0'
 openjpeg:
 - '2'
 openssl:
