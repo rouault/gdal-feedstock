@@ -5,7 +5,7 @@ c_stdlib:
 cfitsio:
 - 4.4.0
 channel_sources:
-- conda-forge/label/numpy_rc,conda-forge
+- conda-forge
 channel_targets:
 - conda-forge main
 curl:
