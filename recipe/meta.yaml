@@ -256,6 +256,7 @@ outputs:
         - numpy
         - {{ pin_subpackage('libgdal-core', exact=True) }}
         - libxml2
+        - expat
       run:
         - python
         - libgdal-core {{ version }}.*
