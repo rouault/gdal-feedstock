@@ -1,4 +1,4 @@
---- frmts/openjpeg/CMakeLists.txt.bak	2024-07-02 10:40:13.286433817 -0500
+--- frmts/openjpeg/CMakeLists.txt 	2024-07-02 10:40:13.286433817 -0500
 +++ frmts/openjpeg/CMakeLists.txt	2024-07-02 10:41:39.851488836 -0500
 @@ -5,15 +5,15 @@
    DEF FRMT_openjpeg PLUGIN_CAPABLE
@@ -20,3 +20,27 @@
  gdal_standard_includes(gdal_JP2OpenJPEG)
  target_include_directories(gdal_JP2OpenJPEG PRIVATE ../opjlike)
  gdal_target_link_libraries(gdal_JP2OpenJPEG PRIVATE ${OpenJPEG_TARGET})
+
+--- frmts/openjpeg/openjpegdrivercore.cpp       2024-07-02 12:01:16.695306891 -0500
++++ frmts/openjpeg/openjpegdrivercore.cpp       2024-07-02 15:40:10.283455727 -0500
+@@ -35,13 +35,16 @@
+ #pragma clang diagnostic ignored "-Wdocumentation"
+ #endif
+ 
+-#include <openjpeg.h>
+-#include <opj_config.h>
+-
+ #ifdef __clang__
+ #pragma clang diagnostic pop
+ #endif
+ 
++#ifndef OPJ_VERSION_MAJOR
++#define OPJ_VERSION_MAJOR 2
++#define OPJ_VERSION_MINOR 5
++#define OPJ_VERSION_BUILD 2
++#endif
++
+ #define IS_OPENJPEG_OR_LATER(major, minor, patch)                              \
+     ((OPJ_VERSION_MAJOR * 10000 + OPJ_VERSION_MINOR * 100 +                    \
+       OPJ_VERSION_BUILD) >= ((major)*10000 + (minor)*100 + (patch)))
+
