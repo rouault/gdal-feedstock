@@ -80,6 +80,9 @@ outputs:
   - name: libgdal-arrow-parquet
     script: build_plugin.sh  # [unix]
     script: build_plugin.bat  # [win]
+    build:
+      ignore_run_exports_from:
+        - expat
     requirements:
       build:
         - cmake
@@ -90,6 +93,7 @@ outputs:
         - make  # [unix]
         - ninja  # [win]
       host:
+        - expat
         - {{ pin_subpackage('libgdal-core', exact=True) }}
         - libarrow
         - libarrow-dataset  # [libarrow != 13]
@@ -112,6 +116,9 @@ outputs:
   - name: libgdal-jp2openjpeg
     script: build_plugin.sh  # [unix]
     script: build_plugin.bat  # [win]
+    build:
+      ignore_run_exports_from:
+        - expat
     requirements:
       build:
         - cmake
@@ -124,6 +131,7 @@ outputs:
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
         - openjpeg
+        - expat
       run:
         - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
     test:
@@ -139,6 +147,9 @@ outputs:
   - name: libgdal-pdf
     script: build_plugin.sh  # [unix]
     script: build_plugin.bat  # [win]
+    build:
+      ignore_run_exports_from:
+        - expat
     requirements:
       build:
         - cmake
@@ -150,6 +161,7 @@ outputs:
         - ninja  # [win]
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - expat
         - poppler
       run:
         - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
@@ -167,6 +179,9 @@ outputs:
   - name: libgdal-postgisraster
     script: build_plugin.sh  # [unix]
     script: build_plugin.bat  # [win]
+    build:
+      ignore_run_exports_from:
+        - expat
     requirements:
       build:
         - cmake
@@ -178,6 +193,7 @@ outputs:
         - ninja  # [win]
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - expat
         - libpq
         - postgresql
       run:
@@ -196,6 +212,9 @@ outputs:
   - name: libgdal-pg
     script: build_plugin.sh  # [unix]
     script: build_plugin.bat  # [win]
+    build:
+      ignore_run_exports_from:
+        - expat
     requirements:
       build:
         - cmake
@@ -207,6 +226,7 @@ outputs:
         - ninja  # [win]
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - expat
         - libpq
         - postgresql
       run:
@@ -225,6 +245,9 @@ outputs:
   - name: libgdal-fits
     script: build_plugin.sh  # [unix]
     script: build_plugin.bat  # [win]
+    build:
+      ignore_run_exports_from:
+        - expat
     requirements:
       build:
         - cmake
@@ -236,6 +259,7 @@ outputs:
         - ninja  # [win]
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - expat
         - cfitsio
       run:
         - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
@@ -257,6 +281,7 @@ outputs:
         - libgdal-pdf {{ version }}.*
         - libgdal-postgisraster {{ version }}.*
         - libgdal-pg {{ version }}.*
+        - libgdal-fits {{ version }}.*
 
   - name: gdal
     script: install_python.sh  # [unix]
@@ -264,6 +289,8 @@ outputs:
     build:
       skip_compile_pyc:
         - share/bash-completion/completions/*.py
+      ignore_run_exports_from:
+        - expat
     requirements:
       build:
         - {{ compiler('c') }}
