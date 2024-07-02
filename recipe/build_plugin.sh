@@ -46,6 +46,12 @@ elif [[ "$PKG_NAME" == "libgdal-pg" ]]; then
       -DOGR_ENABLE_DRIVER_PG=ON \
       -DOGR_ENABLE_DRIVER_PG_PLUGIN=ON"
 
+elif [[ "$PKG_NAME" == "libgdal-fits" ]]; then
+  CMAKE_ARGS="$CMAKE_ARGS \
+      -DGDAL_USE_CFITSIO=ON \
+      -DGDAL_ENABLE_DRIVER_FITS=ON \
+      -DGDAL_ENABLE_DRIVER_FITS_PLUGIN=ON"
+
 fi
 
 # We reuse the same build directory as libgdal, so we just to have to

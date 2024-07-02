@@ -31,7 +31,6 @@ requirements:
     - swig
   host:
     - blosc
-    - cfitsio
     - expat
     - freexl
     - geos
@@ -220,6 +219,33 @@ outputs:
         - gdalinfo --format PG
     about:
       summary: Vector driver PG for the Geospatial Data Abstraction Library (GDAL)
+      license: MIT
+      license_file: LICENSE.TXT
+
+  - name: libgdal-fits
+    script: build_plugin.sh  # [unix]
+    script: build_plugin.bat  # [win]
+    requirements:
+      build:
+        - cmake
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
+        - {{ compiler('cxx') }}
+        - pkg-config  # [not win]
+        - make  # [unix]
+        - ninja  # [win]
+      host:
+        - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - cfitsio
+      run:
+        - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
+    test:
+      commands:
+        - test -f ${PREFIX}/lib/gdalplugins/gdal_FITS${SHLIB_EXT}        # [unix]
+        - if not exist %LIBRARY_LIB%\gdalplugins\gdal_FITS.dll exit 1    # [win]
+        - gdalinfo --format FITS
+    about:
+      summary: Raster driver FITS for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
 

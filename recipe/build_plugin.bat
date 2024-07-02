@@ -48,6 +48,13 @@ if "%PKG_NAME%" == "libgdal-pg" (
       -DOGR_ENABLE_DRIVER_PG_PLUGIN=ON
 )
 
+if "%PKG_NAME%" == "libgdal-fits" (
+  set CMAKE_ARGS=%CMAKE_ARGS% ^
+      -DGDAL_USE_CFITSIO=ON ^
+      -DGDAL_ENABLE_DRIVER_FITS=ON ^
+      -DGDAL_ENABLE_DRIVER_FITS_PLUGIN=ON
+)
+
 REM We reuse the same build directory as libgdal, so we just to have to
 REM turn on the required dependency and drivers
 cmake -DBUILD_PYTHON_BINDINGS:BOOL=OFF %CMAKE_ARGS% "%SRC_DIR%"
