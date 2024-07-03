@@ -387,7 +387,7 @@ outputs:
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
         - expat
-        - kea
+        - kealib
         - hdf5
       run:
         - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
