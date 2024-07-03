@@ -31,7 +31,7 @@ fi
 
 # We reuse the same build directory as libgdal, so we just to have to
 # turn on the required dependency and drivers
-cmake "-U*LATER_PLUGIN" -DBUILD_PYTHON_BINDINGS:BOOL=OFF ${CMAKE_ARGS} ${SRC_DIR}
+cmake "-U*LATER_PLUGIN" "-UOGR_ENABLE_DRIVER_*" "-UGDAL_ENABLE_DRIVER_*" -DBUILD_PYTHON_BINDINGS:BOOL=OFF ${CMAKE_ARGS} ${SRC_DIR}
 
 cmake --build . -j ${CPU_COUNT} --config Release
 cmake --build . --target install

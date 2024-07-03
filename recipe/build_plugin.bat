@@ -30,7 +30,7 @@ if "%PKG_NAME%" == "libgdal-arrow-parquet" (
 
 REM We reuse the same build directory as libgdal, so we just to have to
 REM turn on the required dependency and drivers
-cmake "-U*LATER_PLUGIN" -DBUILD_PYTHON_BINDINGS:BOOL=OFF %CMAKE_ARGS% "%SRC_DIR%"
+cmake "-U*LATER_PLUGIN" "-UOGR_ENABLE_DRIVER_*" "-UGDAL_ENABLE_DRIVER_*" -DBUILD_PYTHON_BINDINGS:BOOL=OFF %CMAKE_ARGS% "%SRC_DIR%"
 if errorlevel 1 exit /b 1
 
 cmake --build . -j %CPU_COUNT% --verbose --config Release
