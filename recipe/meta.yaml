@@ -39,7 +39,6 @@ requirements:
     - hdf5
     - libjpeg-turbo
     - json-c  # [not win]
-    - kealib
     - lerc
     - libarchive
     - libcurl
@@ -117,6 +116,10 @@ outputs:
     build:
       ignore_run_exports_from:
         - expat
+      script_env:
+        - GDAL_PLUGIN_NAME=JP2OpenJPEG
+        - GDAL_PLUGIN_TYPE=gdal
+        - GDAL_PLUGIN_DEPS=-DGDAL_USE_OPENJPEG=ON
     requirements:
       build:
         - cmake
@@ -134,9 +137,10 @@ outputs:
         - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
     test:
       commands:
-        - test -f ${PREFIX}/lib/gdalplugins/gdal_JP2OpenJPEG${SHLIB_EXT}      # [unix]
-        - if not exist %LIBRARY_LIB%\gdalplugins\gdal_JP2OpenJPEG.dll exit 1  # [win]
-        - gdalinfo --format JP2OpenJPEG
+        - test -f ${PREFIX}/lib/gdalplugins/${GDAL_PLUGIN_TYPE}_${GDAL_PLUGIN_NAME}${SHLIB_EXT}      # [unix]
+        - if not exist %LIBRARY_LIB%\gdalplugins\%GDAL_PLUGIN_TYPE%_%GDAL_PLUGIN_NAME%.dll exit 1    # [win]
+        - gdalinfo --format ${GDAL_PLUGIN_NAME}  # [unix]
+        - gdalinfo --format %GDAL_PLUGIN_NAME%   # [win]
     about:
       summary: Raster driver JP2OpenJPEG for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
@@ -148,6 +152,10 @@ outputs:
     build:
       ignore_run_exports_from:
         - expat
+      script_env:
+        - GDAL_PLUGIN_NAME=PDF
+        - GDAL_PLUGIN_TYPE=gdal
+        - GDAL_PLUGIN_DEPS=-DGDAL_USE_POPPLER=ON
     requirements:
       build:
         - cmake
@@ -166,9 +174,10 @@ outputs:
         - poppler
     test:
       commands:
-        - test -f ${PREFIX}/lib/gdalplugins/gdal_PDF${SHLIB_EXT}      # [unix]
-        - if not exist %LIBRARY_LIB%\gdalplugins\gdal_PDF.dll exit 1  # [win]
-        - gdalinfo --format PDF
+        - test -f ${PREFIX}/lib/gdalplugins/${GDAL_PLUGIN_TYPE}_${GDAL_PLUGIN_NAME}${SHLIB_EXT}      # [unix]
+        - if not exist %LIBRARY_LIB%\gdalplugins\%GDAL_PLUGIN_TYPE%_%GDAL_PLUGIN_NAME%.dll exit 1    # [win]
+        - gdalinfo --format ${GDAL_PLUGIN_NAME}  # [unix]
+        - gdalinfo --format %GDAL_PLUGIN_NAME%   # [win]
     about:
       summary: Raster driver PDF for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
@@ -180,6 +189,10 @@ outputs:
     build:
       ignore_run_exports_from:
         - expat
+      script_env:
+        - GDAL_PLUGIN_NAME=PostGISRaster
+        - GDAL_PLUGIN_TYPE=gdal
+        - GDAL_PLUGIN_DEPS=-DGDAL_USE_POSTGRESQL=ON
     requirements:
       build:
         - cmake
@@ -199,9 +212,10 @@ outputs:
         - postgresql
     test:
       commands:
-        - test -f ${PREFIX}/lib/gdalplugins/gdal_PostGISRaster${SHLIB_EXT}      # [unix]
-        - if not exist %LIBRARY_LIB%\gdalplugins\gdal_PostGISRaster.dll exit 1  # [win]
-        - gdalinfo --format PostGISRaster
+        - test -f ${PREFIX}/lib/gdalplugins/${GDAL_PLUGIN_TYPE}_${GDAL_PLUGIN_NAME}${SHLIB_EXT}      # [unix]
+        - if not exist %LIBRARY_LIB%\gdalplugins\%GDAL_PLUGIN_TYPE%_%GDAL_PLUGIN_NAME%.dll exit 1    # [win]
+        - gdalinfo --format ${GDAL_PLUGIN_NAME}  # [unix]
+        - gdalinfo --format %GDAL_PLUGIN_NAME%   # [win]
     about:
       summary: Raster driver PostGIS for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
@@ -213,6 +227,10 @@ outputs:
     build:
       ignore_run_exports_from:
         - expat
+      script_env:
+        - GDAL_PLUGIN_NAME=PG
+        - GDAL_PLUGIN_TYPE=ogr
+        - GDAL_PLUGIN_DEPS=-DGDAL_USE_POSTGRESQL=ON
     requirements:
       build:
         - cmake
@@ -232,9 +250,10 @@ outputs:
         - postgresql
     test:
       commands:
-        - test -f ${PREFIX}/lib/gdalplugins/ogr_PG${SHLIB_EXT}        # [unix]
-        - if not exist %LIBRARY_LIB%\gdalplugins\ogr_PG.dll exit 1    # [win]
-        - gdalinfo --format PG
+        - test -f ${PREFIX}/lib/gdalplugins/${GDAL_PLUGIN_TYPE}_${GDAL_PLUGIN_NAME}${SHLIB_EXT}      # [unix]
+        - if not exist %LIBRARY_LIB%\gdalplugins\%GDAL_PLUGIN_TYPE%_%GDAL_PLUGIN_NAME%.dll exit 1    # [win]
+        - gdalinfo --format ${GDAL_PLUGIN_NAME}  # [unix]
+        - gdalinfo --format %GDAL_PLUGIN_NAME%   # [win]
     about:
       summary: Vector driver PG for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
@@ -246,6 +265,10 @@ outputs:
     build:
       ignore_run_exports_from:
         - expat
+      script_env:
+        - GDAL_PLUGIN_NAME=XLS
+        - GDAL_PLUGIN_TYPE=ogr
+        - GDAL_PLUGIN_DEPS=-DGDAL_USE_FREEXL=ON
     requirements:
       build:
         - cmake
@@ -263,9 +286,10 @@ outputs:
         - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
     test:
       commands:
-        - test -f ${PREFIX}/lib/gdalplugins/ogr_XLS${SHLIB_EXT}        # [unix]
-        - if not exist %LIBRARY_LIB%\gdalplugins\ogr_XLS.dll exit 1    # [win]
-        - gdalinfo --format XLS
+        - test -f ${PREFIX}/lib/gdalplugins/${GDAL_PLUGIN_TYPE}_${GDAL_PLUGIN_NAME}${SHLIB_EXT}      # [unix]
+        - if not exist %LIBRARY_LIB%\gdalplugins\%GDAL_PLUGIN_TYPE%_%GDAL_PLUGIN_NAME%.dll exit 1    # [win]
+        - gdalinfo --format ${GDAL_PLUGIN_NAME}  # [unix]
+        - gdalinfo --format %GDAL_PLUGIN_NAME%   # [win]
     about:
       summary: Vector driver XLS for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
@@ -277,6 +301,10 @@ outputs:
     build:
       ignore_run_exports_from:
         - expat
+      script_env:
+        - GDAL_PLUGIN_NAME=FITS
+        - GDAL_PLUGIN_TYPE=gdal
+        - GDAL_PLUGIN_DEPS=-DGDAL_USE_CFITSIO
     requirements:
       build:
         - cmake
@@ -294,9 +322,10 @@ outputs:
         - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
     test:
       commands:
-        - test -f ${PREFIX}/lib/gdalplugins/gdal_FITS${SHLIB_EXT}        # [unix]
-        - if not exist %LIBRARY_LIB%\gdalplugins\gdal_FITS.dll exit 1    # [win]
-        - gdalinfo --format FITS
+        - test -f ${PREFIX}/lib/gdalplugins/${GDAL_PLUGIN_TYPE}_${GDAL_PLUGIN_NAME}${SHLIB_EXT}      # [unix]
+        - if not exist %LIBRARY_LIB%\gdalplugins\%GDAL_PLUGIN_TYPE%_%GDAL_PLUGIN_NAME%.dll exit 1    # [win]
+        - gdalinfo --format ${GDAL_PLUGIN_NAME}  # [unix]
+        - gdalinfo --format %GDAL_PLUGIN_NAME%   # [win]
     about:
       summary: Raster driver FITS for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
@@ -308,6 +337,10 @@ outputs:
     build:
       ignore_run_exports_from:
         - expat
+      script_env:
+        - GDAL_PLUGIN_NAME=GRIB
+        - GDAL_PLUGIN_TYPE=gdal
+        - GDAL_PLUGIN_DEPS=-DGDAL_USE_LIBAEC=ON
     requirements:
       build:
         - cmake
@@ -325,11 +358,49 @@ outputs:
         - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
     test:
       commands:
-        - test -f ${PREFIX}/lib/gdalplugins/gdal_GRIB${SHLIB_EXT}        # [unix]
-        - if not exist %LIBRARY_LIB%\gdalplugins\gdal_GRIB.dll exit 1    # [win]
-        - gdalinfo --format GRIB
+        - test -f ${PREFIX}/lib/gdalplugins/${GDAL_PLUGIN_TYPE}_${GDAL_PLUGIN_NAME}${SHLIB_EXT}      # [unix]
+        - if not exist %LIBRARY_LIB%\gdalplugins\%GDAL_PLUGIN_TYPE%_%GDAL_PLUGIN_NAME%.dll exit 1    # [win]
+        - gdalinfo --format ${GDAL_PLUGIN_NAME}  # [unix]
+        - gdalinfo --format %GDAL_PLUGIN_NAME%   # [win]
     about:
       summary: Raster driver GRIB for the Geospatial Data Abstraction Library (GDAL)
+      license: MIT
+      license_file: LICENSE.TXT
+
+  - name: libgdal-kea
+    script: build_plugin.sh  # [unix]
+    script: build_plugin.bat  # [win]
+    build:
+      ignore_run_exports_from:
+        - expat
+      script_env:
+        - GDAL_PLUGIN_NAME=KEA
+        - GDAL_PLUGIN_TYPE=gdal
+        - GDAL_PLUGIN_DEPS=-DGDAL_USE_KEA=ON
+    requirements:
+      build:
+        - cmake
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
+        - {{ compiler('cxx') }}
+        - pkg-config  # [not win]
+        - make  # [unix]
+        - ninja  # [win]
+      host:
+        - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - expat
+        - kea
+        - hdf5
+      run:
+        - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
+    test:
+      commands:
+        - test -f ${PREFIX}/lib/gdalplugins/${GDAL_PLUGIN_TYPE}_${GDAL_PLUGIN_NAME}${SHLIB_EXT}      # [unix]
+        - if not exist %LIBRARY_LIB%\gdalplugins\%GDAL_PLUGIN_TYPE%_%GDAL_PLUGIN_NAME%.dll exit 1    # [win]
+        - gdalinfo --format ${GDAL_PLUGIN_NAME}  # [unix]
+        - gdalinfo --format %GDAL_PLUGIN_NAME%   # [win]
+    about:
+      summary: Raster driver KEA for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
 
@@ -344,6 +415,7 @@ outputs:
         - libgdal-fits {{ version }}.*
         - libgdal-xls {{ version }}.*
         - libgdal-grib {{ version }}.*
+        - libgdal-kea {{ version }}.*
 
   - name: gdal
     script: install_python.sh  # [unix]

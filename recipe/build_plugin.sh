@@ -21,49 +21,12 @@ if [[ "$PKG_NAME" == "libgdal-arrow-parquet" ]]; then
       -DOGR_ENABLE_DRIVER_ARROW_PLUGIN=ON \
       -DOGR_ENABLE_DRIVER_PARQUET=ON \
       -DOGR_ENABLE_DRIVER_PARQUET_PLUGIN=ON"
-
-elif [[ "$PKG_NAME" == "libgdal-jp2openjpeg" ]]; then
-  CMAKE_ARGS="$CMAKE_ARGS \
-      -DGDAL_USE_OPENJPEG=ON \
-      -DGDAL_ENABLE_DRIVER_JP2OPENJPEG=ON \
-      -DGDAL_ENABLE_DRIVER_JP2OPENJPEG_PLUGIN=ON"
-
-elif [[ "$PKG_NAME" == "libgdal-pdf" ]]; then
-  CMAKE_ARGS="$CMAKE_ARGS \
-      -DGDAL_USE_POPPLER=ON \
-      -DGDAL_ENABLE_DRIVER_PDF=ON \
-      -DGDAL_ENABLE_DRIVER_PDF_PLUGIN=ON"
-
-elif [[ "$PKG_NAME" == "libgdal-postgisraster" ]]; then
-  CMAKE_ARGS="$CMAKE_ARGS \
-      -DGDAL_USE_POSTGRESQL=ON \
-      -DGDAL_ENABLE_DRIVER_POSTGISRASTER=ON \
-      -DGDAL_ENABLE_DRIVER_POSTGISRASTER_PLUGIN=ON"
-
-elif [[ "$PKG_NAME" == "libgdal-pg" ]]; then
-  CMAKE_ARGS="$CMAKE_ARGS \
-      -DGDAL_USE_POSTGRESQL=ON \
-      -DOGR_ENABLE_DRIVER_PG=ON \
-      -DOGR_ENABLE_DRIVER_PG_PLUGIN=ON"
-
-elif [[ "$PKG_NAME" == "libgdal-fits" ]]; then
-  CMAKE_ARGS="$CMAKE_ARGS \
-      -DGDAL_USE_CFITSIO=ON \
-      -DGDAL_ENABLE_DRIVER_FITS=ON \
-      -DGDAL_ENABLE_DRIVER_FITS_PLUGIN=ON"
-
-elif [[ "$PKG_NAME" == "libgdal-xls" ]]; then
-  CMAKE_ARGS="$CMAKE_ARGS \
-      -DGDAL_USE_FREEXLS=ON \
-      -DGDAL_ENABLE_DRIVER_XLS=ON \
-      -DGDAL_ENABLE_DRIVER_XLS_PLUGIN=ON"
-
-elif [[ "$PKG_NAME" == "libgdal-grib" ]]; then
-  CMAKE_ARGS="$CMAKE_ARGS \
-      -DGDAL_USE_LIBAEC=ON \
-      -DGDAL_ENABLE_DRIVER_GRIB=ON \
-      -DGDAL_ENABLE_DRIVER_GRIB_PLUGIN=ON"
-
+else
+  GDAL_PLUGIN_TYPE=$(echo ${GDAL_PLUGIN_TYPE} | tr '[:lower:]' '[:upper:]')
+  GDAL_PLUGIN_NAME=$(echo ${GDAL_PLUGIN_NAME} | tr '[:lower:]' '[:upper:]')
+  CMAKE_ARGS="$CMAKE_ARGS ${GDAL_PLUGIN_DEPS}
+      -D${GDAL_PLUGIN_TYPE}_ENABLE_DRIVER_${GDAL_PLUGIN_NAME}=ON \
+      -D${GDAL_PLUGIN_TYPE}_ENABLE_DRIVER_${GDAL_PLUGIN_NAME}_PLUGIN=ON"
 fi
 
 # We reuse the same build directory as libgdal, so we just to have to

@@ -9,6 +9,9 @@ if "%PKG_NAME%" == "libgdal-arrow-parquet" (
   rmdir ogr\ogrsf_frmts\parquet /s /q
 )
 
+for /f "usebackq delims=" %%I in (`powershell "\"%GDAL_PLUGIN_TYPE%\".toUpper()"`) do set "GDAL_PLUGIN_TYPE=%%~I"
+for /f "usebackq delims=" %%I in (`powershell "\"%GDAL_PLUGIN_NAME%\".toUpper()"`) do set "GDAL_PLUGIN_NAME=%%~I"
+
 if "%PKG_NAME%" == "libgdal-arrow-parquet" (
   set CMAKE_ARGS=%CMAKE_ARGS% ^
       -DGDAL_USE_PARQUET=ON ^
@@ -18,56 +21,12 @@ if "%PKG_NAME%" == "libgdal-arrow-parquet" (
       -DOGR_ENABLE_DRIVER_ARROW_PLUGIN=ON ^
       -DOGR_ENABLE_DRIVER_PARQUET=ON ^
       -DOGR_ENABLE_DRIVER_PARQUET_PLUGIN=ON
+) else (
+  set CMAKE_ARGS=%CMAKE_ARGS% %GDAL_PLUGIN_DEPS% ^
+      -D%GDAL_PLUGIN_TYPE%_ENABLE_DRIVER_%GDAL_PLUGIN_NAME%=ON ^
+      -D%GDAL_PLUGIN_TYPE%_ENABLE_DRIVER_%GDAL_PLUGIN_NAME%_PLUGIN=ON
 )
 
-if "%PKG_NAME%" == "libgdal-jp2openjpeg" (
-  set CMAKE_ARGS=%CMAKE_ARGS% ^
-      -DGDAL_USE_OPENJPEG=ON ^
-      -DGDAL_ENABLE_DRIVER_JP2OPENJPEG=ON ^
-      -DGDAL_ENABLE_DRIVER_JP2OPENJPEG_PLUGIN=ON
-)
-
-if "%PKG_NAME%" == "libgdal-pdf" (
-  set CMAKE_ARGS=%CMAKE_ARGS% ^
-      -DGDAL_USE_POPPLER=ON ^
-      -DGDAL_ENABLE_DRIVER_PDF=ON ^
-      -DGDAL_ENABLE_DRIVER_PDF_PLUGIN=ON
-)
-
-if "%PKG_NAME%" == "libgdal-postgisraster" (
-  set CMAKE_ARGS=%CMAKE_ARGS% ^
-      -DGDAL_USE_POSTGRESQL=ON ^
-      -DGDAL_ENABLE_DRIVER_POSTGISRASTER=ON ^
-      -DGDAL_ENABLE_DRIVER_POSTGISRASTER_PLUGIN=ON
-)
-
-if "%PKG_NAME%" == "libgdal-pg" (
-  set CMAKE_ARGS=%CMAKE_ARGS% ^
-      -DGDAL_USE_POSTGRESQL=ON ^
-      -DOGR_ENABLE_DRIVER_PG=ON ^
-      -DOGR_ENABLE_DRIVER_PG_PLUGIN=ON
-)
-
-if "%PKG_NAME%" == "libgdal-fits" (
-  set CMAKE_ARGS=%CMAKE_ARGS% ^
-      -DGDAL_USE_CFITSIO=ON ^
-      -DGDAL_ENABLE_DRIVER_FITS=ON ^
-      -DGDAL_ENABLE_DRIVER_FITS_PLUGIN=ON
-)
-
-if "%PKG_NAME%" == "libgdal-xls" (
-  set CMAKE_ARGS=%CMAKE_ARGS% ^
-      -DGDAL_USE_FREEXLS=ON ^
-      -DGDAL_ENABLE_DRIVER_XLS=ON ^
-      -DGDAL_ENABLE_DRIVER_XLS_PLUGIN=ON
-)
-
-if "%PKG_NAME%" == "libgdal-grib" (
-  set CMAKE_ARGS=%CMAKE_ARGS% ^
-      -DGDAL_USE_LIBAEC=ON ^
-      -DGDAL_ENABLE_DRIVER_GRIB=ON ^
-      -DGDAL_ENABLE_DRIVER_GRIB_PLUGIN=ON
-)
 
 REM We reuse the same build directory as libgdal, so we just to have to
 REM turn on the required dependency and drivers
