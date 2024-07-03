@@ -32,7 +32,6 @@ requirements:
   host:
     - blosc
     - expat
-    - freexl
     - geos
     - geotiff
     - giflib  # [not win]
@@ -242,6 +241,37 @@ outputs:
       license: MIT
       license_file: LICENSE.TXT
 
+  - name: libgdal-xls
+    script: build_plugin.sh  # [unix]
+    script: build_plugin.bat  # [win]
+    build:
+      ignore_run_exports_from:
+        - expat
+    requirements:
+      build:
+        - cmake
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
+        - {{ compiler('cxx') }}
+        - pkg-config  # [not win]
+        - make  # [unix]
+        - ninja  # [win]
+      host:
+        - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - expat
+        - freexl
+      run:
+        - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
+    test:
+      commands:
+        - test -f ${PREFIX}/lib/gdalplugins/ogr_XLS${SHLIB_EXT}        # [unix]
+        - if not exist %LIBRARY_LIB%\gdalplugins\ogr_XLS.dll exit 1    # [win]
+        - gdalinfo --format XLS
+    about:
+      summary: Vector driver XLS for the Geospatial Data Abstraction Library (GDAL)
+      license: MIT
+      license_file: LICENSE.TXT
+
   - name: libgdal-fits
     script: build_plugin.sh  # [unix]
     script: build_plugin.bat  # [win]
@@ -282,6 +312,7 @@ outputs:
         - libgdal-postgisraster {{ version }}.*
         - libgdal-pg {{ version }}.*
         - libgdal-fits {{ version }}.*
+        - libgdal-xls {{ version }}.*
 
   - name: gdal
     script: install_python.sh  # [unix]

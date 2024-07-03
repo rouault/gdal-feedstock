@@ -52,6 +52,12 @@ elif [[ "$PKG_NAME" == "libgdal-fits" ]]; then
       -DGDAL_ENABLE_DRIVER_FITS=ON \
       -DGDAL_ENABLE_DRIVER_FITS_PLUGIN=ON"
 
+elif [[ "$PKG_NAME" == "libgdal-xls" ]]; then
+  CMAKE_ARGS="$CMAKE_ARGS \
+      -DGDAL_USE_FREEXLS=ON \
+      -DGDAL_ENABLE_DRIVER_XLS=ON \
+      -DGDAL_ENABLE_DRIVER_XLS_PLUGIN=ON"
+
 fi
 
 # We reuse the same build directory as libgdal, so we just to have to
