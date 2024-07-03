@@ -7,14 +7,15 @@ package:
 source:
   url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
   sha256: aff3086fee75f5773e33a5598df98d8a4d10be411f777d3ce23584b21d8171ca
-  patches:
-    - patches/fix_openjpeg.diff
 
 build:
   number: 5
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
   skip: true  # [ppc64le]
+  ignore_run_exports_from:
+    - kealib
+    - openjpeg
   run_exports:
     # no idea, going with minor pin
     - {{ pin_subpackage('libgdal-core', max_pin='x.x') }}
@@ -64,6 +65,9 @@ requirements:
     - xz
     - zlib
     - zstd
+    # For these plugins, we need the headers for the core sources
+    - kealib
+    - openjpeg
 
 test:
   files:
