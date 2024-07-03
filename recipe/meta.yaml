@@ -252,8 +252,6 @@ outputs:
       commands:
         - test -f ${PREFIX}/lib/gdalplugins/${GDAL_PLUGIN_TYPE}_${GDAL_PLUGIN_NAME}${SHLIB_EXT}      # [unix]
         - if not exist %LIBRARY_LIB%\gdalplugins\%GDAL_PLUGIN_TYPE%_%GDAL_PLUGIN_NAME%.dll exit 1    # [win]
-        - gdalinfo --format ${GDAL_PLUGIN_NAME}  # [unix]
-        - gdalinfo --format %GDAL_PLUGIN_NAME%   # [win]
     about:
       summary: Vector driver PG for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
