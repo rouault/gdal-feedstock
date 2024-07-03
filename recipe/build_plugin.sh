@@ -58,6 +58,12 @@ elif [[ "$PKG_NAME" == "libgdal-xls" ]]; then
       -DGDAL_ENABLE_DRIVER_XLS=ON \
       -DGDAL_ENABLE_DRIVER_XLS_PLUGIN=ON"
 
+elif [[ "$PKG_NAME" == "libgdal-grib" ]]; then
+  CMAKE_ARGS="$CMAKE_ARGS \
+      -DGDAL_USE_LIBAEC=ON \
+      -DGDAL_ENABLE_DRIVER_GRIB=ON \
+      -DGDAL_ENABLE_DRIVER_GRIB_PLUGIN=ON"
+
 fi
 
 # We reuse the same build directory as libgdal, so we just to have to

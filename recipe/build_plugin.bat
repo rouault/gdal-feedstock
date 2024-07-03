@@ -62,6 +62,13 @@ if "%PKG_NAME%" == "libgdal-xls" (
       -DGDAL_ENABLE_DRIVER_XLS_PLUGIN=ON
 )
 
+if "%PKG_NAME%" == "libgdal-grib" (
+  set CMAKE_ARGS=%CMAKE_ARGS% ^
+      -DGDAL_USE_LIBAEC=ON ^
+      -DGDAL_ENABLE_DRIVER_GRIB=ON ^
+      -DGDAL_ENABLE_DRIVER_GRIB_PLUGIN=ON
+)
+
 REM We reuse the same build directory as libgdal, so we just to have to
 REM turn on the required dependency and drivers
 cmake -DBUILD_PYTHON_BINDINGS:BOOL=OFF %CMAKE_ARGS% "%SRC_DIR%"
