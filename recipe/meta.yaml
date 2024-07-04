@@ -306,7 +306,7 @@ outputs:
       script_env:
         - GDAL_PLUGIN_NAME=FITS
         - GDAL_PLUGIN_TYPE=gdal
-        - GDAL_PLUGIN_DEPS=-DGDAL_USE_CFITSIO
+        - GDAL_PLUGIN_DEPS=-DGDAL_USE_CFITSIO=ON
     requirements:
       build:
         - cmake
