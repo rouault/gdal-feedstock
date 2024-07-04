@@ -30,6 +30,7 @@ cmake -G "Unix Makefiles" \
       -DGDAL_USE_FREEXL=OFF \
       -DGDAL_USE_LIBAEC=OFF \
       -DGDAL_USE_KEA=OFF \
+      -DGDAL_USE_TILEDB=OFF \
       -DOGR_ENABLE_DRIVER_ARROW=OFF \
       -DOGR_ENABLE_DRIVER_PARQUET=OFF \
       -DGDAL_ENABLE_DRIVER_JP2OPENJPEG=OFF \
@@ -40,6 +41,7 @@ cmake -G "Unix Makefiles" \
       -DOGR_ENABLE_DRIVER_XLS=OFF \
       -DGDAL_ENABLE_DRIVER_GRIB=OFF \
       -DGDAL_ENABLE_DRIVER_KEA=OFF \
+      -DGDAL_ENABLE_DRIVER_TILEDB=OFF \
       -DOGR_REGISTER_DRIVER_ARROW_FOR_LATER_PLUGIN=ON \
       -DOGR_REGISTER_DRIVER_PARQUET_FOR_LATER_PLUGIN=ON \
       -DGDAL_REGISTER_DRIVER_JP2OPENJPEG_FOR_LATER_PLUGIN=ON \
@@ -50,6 +52,7 @@ cmake -G "Unix Makefiles" \
       -DOGR_REGISTER_DRIVER_XLS_FOR_LATER_PLUGIN=ON \
       -DGDAL_REGISTER_DRIVER_GRIB_FOR_LATER_PLUGIN=ON \
       -DGDAL_REGISTER_DRIVER_KEA_FOR_LATER_PLUGIN=ON \
+      -DGDAL_REGISTER_DRIVER_TILEDB_FOR_LATER_PLUGIN=ON \
       -DOGR_DRIVER_ARROW_PLUGIN_INSTALLATION_MESSAGE="You may install it with with 'conda install -c conda-forge libgdal-arrow-parquet'" \
       -DOGR_DRIVER_PARQUET_PLUGIN_INSTALLATION_MESSAGE="You may install it with with 'conda install -c conda-forge libgdal-arrow-parquet'" \
       -DGDAL_DRIVER_JP2OPENJPEG_PLUGIN_INSTALLATION_MESSAGE="You may install it with with 'conda install -c conda-forge libgdal-jp2openjpeg'" \
@@ -60,6 +63,7 @@ cmake -G "Unix Makefiles" \
       -DOGR_DRIVER_XLS_PLUGIN_INSTALLATION_MESSAGE="You may install it with with 'conda install -c conda-forge libgdal-xls'" \
       -DGDAL_DRIVER_GRIB_PLUGIN_INSTALLATION_MESSAGE="You may install it with with 'conda install -c conda-forge libgdal-grib'" \
       -DGDAL_DRIVER_KEA_PLUGIN_INSTALLATION_MESSAGE="You may install it with with 'conda install -c conda-forge libgdal-kea'" \
+      -DGDAL_DRIVER_TILEDB_PLUGIN_INSTALLATION_MESSAGE="You may install it with with 'conda install -c conda-forge libgdal-tiledb'" \
       -DGDAL_ENABLE_HDF5_GLOBAL_LOCK:BOOL=ON \
       -DBUILD_PYTHON_BINDINGS:BOOL=OFF \
       -DBUILD_JAVA_BINDINGS:BOOL=OFF \

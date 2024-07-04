@@ -60,7 +60,6 @@ requirements:
     # qhull disabled because of https://github.com/conda-forge/qgis-feedstock/issues/284#issuecomment-1356490896
     # - qhull
     - sqlite
-    - tiledb
     - xerces-c
     - xz
     - zlib
@@ -406,6 +405,42 @@ outputs:
       license: MIT
       license_file: LICENSE.TXT
 
+  - name: libgdal-tiledb
+    script: build_plugin.sh  # [unix]
+    script: build_plugin.bat  # [win]
+    build:
+      ignore_run_exports_from:
+        - expat
+      script_env:
+        - GDAL_PLUGIN_NAME=TileDB
+        - GDAL_PLUGIN_TYPE=gdal
+        - GDAL_PLUGIN_DEPS=-DGDAL_USE_TILEDB=ON
+    requirements:
+      build:
+        - cmake
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
+        - {{ compiler('cxx') }}
+        - pkg-config  # [not win]
+        - make  # [unix]
+        - ninja  # [win]
+      host:
+        - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - expat
+        - tiledb
+      run:
+        - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
+    test:
+      commands:
+        - test -f ${PREFIX}/lib/gdalplugins/${GDAL_PLUGIN_TYPE}_${GDAL_PLUGIN_NAME}${SHLIB_EXT}      # [unix]
+        - if not exist %LIBRARY_LIB%\gdalplugins\%GDAL_PLUGIN_TYPE%_%GDAL_PLUGIN_NAME%.dll exit 1    # [win]
+        - gdalinfo --format ${GDAL_PLUGIN_NAME}  # [unix]
+        - gdalinfo --format %GDAL_PLUGIN_NAME%   # [win]
+    about:
+      summary: Raster driver TileDB for the Geospatial Data Abstraction Library (GDAL)
+      license: MIT
+      license_file: LICENSE.TXT
+
   - name: libgdal
     requirements:
       run:
@@ -418,6 +453,7 @@ outputs:
         - libgdal-xls {{ version }}.*
         - libgdal-grib {{ version }}.*
         - libgdal-kea {{ version }}.*
+        - libgdal-tiledb {{ version }}.*
 
   - name: gdal
     script: install_python.sh  # [unix]
