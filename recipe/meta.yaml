@@ -481,6 +481,11 @@ outputs:
       license_file: LICENSE.TXT
 
   - name: libgdal
+    build:
+      run_exports:
+        # no idea, going with minor pin
+        - {{ pin_subpackage('libgdal-core', max_pin='x.x') }}
+        - {{ pin_subpackage('libgdal', max_pin='x.x') }}
     requirements:
       run:
         - libgdal-core {{ version }}.*
