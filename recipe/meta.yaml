@@ -17,6 +17,7 @@ build:
     - kealib
     - openjpeg
     - tiledb
+    - libnetcdf
   run_exports:
     # no idea, going with minor pin
     - {{ pin_subpackage('libgdal-core', max_pin='x.x') }}
@@ -47,7 +48,6 @@ requirements:
     - libdeflate
     - libiconv
     - libkml
-    - libnetcdf
     - libpng
     - libspatialite
     - libtiff
@@ -69,6 +69,7 @@ requirements:
     - kealib
     - openjpeg
     - tiledb
+    - libnetcdf
 
 test:
   files:
@@ -443,6 +444,42 @@ outputs:
       license: MIT
       license_file: LICENSE.TXT
 
+  - name: libgdal-netcdf
+    script: build_plugin.sh  # [unix]
+    script: build_plugin.bat  # [win]
+    build:
+      ignore_run_exports_from:
+        - expat
+      script_env:
+        - GDAL_PLUGIN_NAME=netCDF
+        - GDAL_PLUGIN_TYPE=gdal
+        - GDAL_PLUGIN_DEPS=-DGDAL_USE_NETCDF=ON
+    requirements:
+      build:
+        - cmake
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
+        - {{ compiler('cxx') }}
+        - pkg-config  # [not win]
+        - make  # [unix]
+        - ninja  # [win]
+      host:
+        - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - expat
+        - tiledb
+      run:
+        - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
+    test:
+      commands:
+        - test -f ${PREFIX}/lib/gdalplugins/${GDAL_PLUGIN_TYPE}_${GDAL_PLUGIN_NAME}${SHLIB_EXT}      # [unix]
+        - if not exist %LIBRARY_LIB%\gdalplugins\%GDAL_PLUGIN_TYPE%_%GDAL_PLUGIN_NAME%.dll exit 1    # [win]
+        - gdalinfo --format ${GDAL_PLUGIN_NAME}  # [unix]
+        - gdalinfo --format %GDAL_PLUGIN_NAME%   # [win]
+    about:
+      summary: Raster driver TileDB for the Geospatial Data Abstraction Library (GDAL)
+      license: MIT
+      license_file: LICENSE.TXT
+
   - name: libgdal
     requirements:
       run:
@@ -456,6 +493,7 @@ outputs:
         - libgdal-grib {{ version }}.*
         - libgdal-kea {{ version }}.*
         - libgdal-tiledb {{ version }}.*
+        - libgdal-netcdf {{ version }}.*
 
   - name: gdal
     script: install_python.sh  # [unix]
