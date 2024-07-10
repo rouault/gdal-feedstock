@@ -46,7 +46,7 @@ requirements:
     - libcurl
     - libdeflate
     - libiconv
-    - libkml
+    - libkml-devel
     - libpng
     - libspatialite
     - libtiff
