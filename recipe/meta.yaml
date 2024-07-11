@@ -68,6 +68,8 @@ requirements:
     - openjpeg
     - tiledb
     - libnetcdf
+  run_constrained:
+    - libgdal {{ version }}.*
 
 test:
   files:
