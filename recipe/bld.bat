@@ -36,6 +36,7 @@ cmake -G "Ninja" ^
       -DGDAL_USE_KEA=OFF ^
       -DGDAL_USE_TILEDB=OFF ^
       -DGDAL_USE_NETCDF=OFF ^
+      -DGDAL_USE_HDF4=OFF ^
       -DGDAL_USE_HDF5=OFF ^
       -DOGR_ENABLE_DRIVER_ARROW=OFF ^
       -DOGR_ENABLE_DRIVER_PARQUET=OFF ^
@@ -49,6 +50,7 @@ cmake -G "Ninja" ^
       -DGDAL_ENABLE_DRIVER_KEA=OFF ^
       -DGDAL_ENABLE_DRIVER_TILEDB=OFF ^
       -DGDAL_ENABLE_DRIVER_NETCDF=OFF ^
+      -DGDAL_ENABLE_DRIVER_HDF4=OFF ^
       -DGDAL_ENABLE_DRIVER_HDF5=OFF ^
       -DOGR_REGISTER_DRIVER_ARROW_FOR_LATER_PLUGIN=ON ^
       -DOGR_REGISTER_DRIVER_PARQUET_FOR_LATER_PLUGIN=ON ^
@@ -62,6 +64,7 @@ cmake -G "Ninja" ^
       -DGDAL_REGISTER_DRIVER_KEA_FOR_LATER_PLUGIN=ON ^
       -DGDAL_REGISTER_DRIVER_TILEDB_FOR_LATER_PLUGIN=ON ^
       -DGDAL_REGISTER_DRIVER_NETCDF_FOR_LATER_PLUGIN=ON ^
+      -DGDAL_REGISTER_DRIVER_HDF4_FOR_LATER_PLUGIN=ON ^
       -DGDAL_REGISTER_DRIVER_HDF5_FOR_LATER_PLUGIN=ON ^
       -DOGR_DRIVER_ARROW_PLUGIN_INSTALLATION_MESSAGE="You may install it with 'conda install -c conda-forge libgdal-arrow-parquet'" ^
       -DOGR_DRIVER_PARQUET_PLUGIN_INSTALLATION_MESSAGE="You may install it with 'conda install -c conda-forge libgdal-arrow-parquet'" ^
@@ -74,6 +77,7 @@ cmake -G "Ninja" ^
       -DGDAL_DRIVER_KEA_PLUGIN_INSTALLATION_MESSAGE="You may install it with 'conda install -c conda-forge libgdal-kea'" ^
       -DGDAL_DRIVER_TILEDB_PLUGIN_INSTALLATION_MESSAGE="You may install it with 'conda install -c conda-forge libgdal-tiledb'" ^
       -DGDAL_DRIVER_NETCDF_PLUGIN_INSTALLATION_MESSAGE="You may install it with 'conda install -c conda-forge libgdal-netcdf'" ^
+      -DGDAL_DRIVER_HDF4_PLUGIN_INSTALLATION_MESSAGE="You may install it with 'conda install -c conda-forge libgdal-hdf4'" ^
       -DGDAL_DRIVER_HDF5_PLUGIN_INSTALLATION_MESSAGE="You may install it with 'conda install -c conda-forge libgdal-hdf5'" ^
       "%SRC_DIR%"
 

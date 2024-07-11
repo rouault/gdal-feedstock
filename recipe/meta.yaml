@@ -38,7 +38,6 @@ requirements:
     - geos
     - geotiff
     - giflib  # [not win]
-    - hdf4
     - libjpeg-turbo
     - json-c  # [not win]
     - lerc
@@ -464,7 +463,7 @@ outputs:
       script_env:
         - GDAL_PLUGIN_NAME=netCDF
         - GDAL_PLUGIN_TYPE=gdal
-        - GDAL_PLUGIN_DEPS=-DGDAL_USE_NETCDF=ON -DGDAL_USE_HDF5=ON
+        - GDAL_PLUGIN_DEPS=-DGDAL_USE_NETCDF=ON -DGDAL_USE_HDF5=ON -DGDAL_USE_HDF4=ON
     requirements:
       build:
         - cmake
@@ -477,12 +476,16 @@ outputs:
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
         - {{ pin_subpackage('libgdal-hdf5', exact=True) }}
+        - {{ pin_subpackage('libgdal-hdf4', exact=True) }}
+        - hdf5
+        - hdf4
         - libkml-devel
         - expat
         - libnetcdf
       run:
         - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
         - libgdal-hdf5 {{ version }}.*
+        - libgdal-hdf4 {{ version }}.*
     test:
       commands:
         - test -f ${PREFIX}/lib/gdalplugins/${GDAL_PLUGIN_TYPE}_${GDAL_PLUGIN_NAME}${SHLIB_EXT}      # [unix]
@@ -531,6 +534,43 @@ outputs:
       license: MIT
       license_file: LICENSE.TXT
 
+  - name: libgdal-hdf4
+    script: build_plugin.sh  # [unix]
+    script: build_plugin.bat  # [win]
+    build:
+      ignore_run_exports_from:
+        - expat
+      script_env:
+        - GDAL_PLUGIN_NAME=HDF4
+        - GDAL_PLUGIN_TYPE=gdal
+        - GDAL_PLUGIN_DEPS=-DGDAL_USE_HDF4=ON
+    requirements:
+      build:
+        - cmake
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
+        - {{ compiler('cxx') }}
+        - pkg-config  # [not win]
+        - make  # [unix]
+        - ninja  # [win]
+      host:
+        - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - libkml-devel
+        - expat
+        - hdf4
+      run:
+        - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
+    test:
+      commands:
+        - test -f ${PREFIX}/lib/gdalplugins/${GDAL_PLUGIN_TYPE}_${GDAL_PLUGIN_NAME}${SHLIB_EXT}      # [unix]
+        - if not exist %LIBRARY_LIB%\gdalplugins\%GDAL_PLUGIN_TYPE%_%GDAL_PLUGIN_NAME%.dll exit 1    # [win]
+        - gdalinfo --format ${GDAL_PLUGIN_NAME}  # [unix]
+        - gdalinfo --format %GDAL_PLUGIN_NAME%   # [win]
+    about:
+      summary: Raster driver HDF4 for the Geospatial Data Abstraction Library (GDAL)
+      license: MIT
+      license_file: LICENSE.TXT
+
   - name: libgdal
     build:
       run_exports:
@@ -551,6 +591,7 @@ outputs:
         - libgdal-tiledb {{ version }}.*
         - libgdal-netcdf {{ version }}.*
         - libgdal-hdf5 {{ version }}.*
+        - libgdal-hdf4 {{ version }}.*
 
   - name: gdal
     script: install_python.sh  # [unix]
