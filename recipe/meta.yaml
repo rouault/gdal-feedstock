@@ -275,6 +275,7 @@ outputs:
         # Workaround to prevent conflicts seen in
         #  https://github.com/conda-forge/gdal-feedstock/pull/543
         - openssl
+        - libkml-devel
       run:
         - python
         - {{ pin_subpackage('libgdal', exact=True) }}
