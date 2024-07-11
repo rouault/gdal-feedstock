@@ -97,6 +97,7 @@ outputs:
       host:
         - expat
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - libkml-devel
         - libarrow
         - libarrow-dataset  # [libarrow != 13]
         - libparquet        # [libarrow != 13]
@@ -136,6 +137,7 @@ outputs:
         - ninja  # [win]
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - libkml-devel
         - openjpeg
         - expat
       run:
@@ -172,6 +174,7 @@ outputs:
         - ninja  # [win]
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - libkml-devel
         - expat
         - poppler
       run:
@@ -209,6 +212,7 @@ outputs:
         - ninja  # [win]
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - libkml-devel
         - expat
         - libpq
         - postgresql
@@ -247,6 +251,7 @@ outputs:
         - ninja  # [win]
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - libkml-devel
         - expat
         - libpq
         - postgresql
@@ -283,6 +288,7 @@ outputs:
         - ninja  # [win]
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - libkml-devel
         - expat
         - freexl
       run:
@@ -319,6 +325,7 @@ outputs:
         - ninja  # [win]
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - libkml-devel
         - expat
         - cfitsio
       run:
@@ -355,6 +362,7 @@ outputs:
         - ninja  # [win]
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - libkml-devel
         - expat
         - libaec
       run:
@@ -392,6 +400,7 @@ outputs:
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
         - {{ pin_subpackage('libgdal-hdf5', exact=True) }}
+        - libkml-devel
         - expat
         - kealib
         - hdf5
@@ -430,6 +439,7 @@ outputs:
         - ninja  # [win]
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - libkml-devel
         - expat
         - tiledb
       run:
@@ -467,6 +477,7 @@ outputs:
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
         - {{ pin_subpackage('libgdal-hdf5', exact=True) }}
+        - libkml-devel
         - expat
         - libnetcdf
       run:
@@ -504,6 +515,7 @@ outputs:
         - ninja  # [win]
       host:
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - libkml-devel
         - expat
         - hdf5
       run:
@@ -565,6 +577,7 @@ outputs:
         - pip
         - numpy
         - {{ pin_subpackage('libgdal-core', exact=True) }}
+        - libkml-devel
         - libxml2
         - expat
       run:
