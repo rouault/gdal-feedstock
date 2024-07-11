@@ -560,6 +560,7 @@ outputs:
         - libkml-devel
         - expat
         - hdf4
+        - libaec
       run:
         - libgdal-core >={{ ".".join(version.split(".")[:2]) }}
     test:
