@@ -94,7 +94,7 @@ sqlite:
 target_platform:
 - win-64
 tiledb:
-- '2.24'
+- '2.25'
 vc:
 - '14'
 xerces_c:
