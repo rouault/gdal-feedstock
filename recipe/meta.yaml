@@ -9,7 +9,7 @@ source:
   sha256: aff3086fee75f5773e33a5598df98d8a4d10be411f777d3ce23584b21d8171ca
 
 build:
-  number: 12
+  number: 13
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
   ignore_run_exports_from:
@@ -54,6 +54,8 @@ requirements:
     - lz4-c
     - openssl
     - pcre2
+    # poppler need to present at build time, so that the shim in core detects that there is read support
+    - poppler
     - proj
     # qhull disabled because of https://github.com/conda-forge/qgis-feedstock/issues/284#issuecomment-1356490896
     # - qhull
