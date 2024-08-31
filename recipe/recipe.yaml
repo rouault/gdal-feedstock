@@ -125,8 +125,11 @@ outputs:
       summary: Arrow and Parquet drivers for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
-    script: build_plugin.sh  # [unix]
-    script: build_plugin.bat  # [win]
+    script:
+      - if: unix
+        then: build_plugin.sh
+      - if: win
+        then: build_plugin.bat
   - package:
       name: libgdal-jp2openjpeg
     build:
@@ -170,8 +173,11 @@ outputs:
       summary: Raster driver JP2OpenJPEG for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
-    script: build_plugin.sh  # [unix]
-    script: build_plugin.bat  # [win]
+    script:
+      - if: unix
+        then: build_plugin.sh
+      - if: win
+        then: build_plugin.bat
   - package:
       name: libgdal-pdf
     build:
@@ -225,8 +231,11 @@ outputs:
       summary: Raster driver PDF for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
-    script: build_plugin.sh  # [unix]
-    script: build_plugin.bat  # [win]
+    script:
+      - if: unix
+        then: build_plugin.sh
+      - if: win
+        then: build_plugin.bat
   - package:
       name: libgdal-postgisraster
     build:
@@ -272,8 +281,11 @@ outputs:
       summary: Raster driver PostGIS for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
-    script: build_plugin.sh  # [unix]
-    script: build_plugin.bat  # [win]
+    script:
+      - if: unix
+        then: build_plugin.sh
+      - if: win
+        then: build_plugin.bat
   - package:
       name: libgdal-pg
     build:
@@ -315,8 +327,11 @@ outputs:
       summary: Vector driver PG for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
-    script: build_plugin.sh  # [unix]
-    script: build_plugin.bat  # [win]
+    script:
+      - if: unix
+        then: build_plugin.sh
+      - if: win
+        then: build_plugin.bat
   - package:
       name: libgdal-xls
     build:
@@ -360,8 +375,11 @@ outputs:
       summary: Vector driver XLS for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
-    script: build_plugin.sh  # [unix]
-    script: build_plugin.bat  # [win]
+    script:
+      - if: unix
+        then: build_plugin.sh
+      - if: win
+        then: build_plugin.bat
   - package:
       name: libgdal-fits
     build:
@@ -405,8 +423,11 @@ outputs:
       summary: Raster driver FITS for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
-    script: build_plugin.sh  # [unix]
-    script: build_plugin.bat  # [win]
+    script:
+      - if: unix
+        then: build_plugin.sh
+      - if: win
+        then: build_plugin.bat
   - package:
       name: libgdal-grib
     build:
@@ -450,8 +471,11 @@ outputs:
       summary: Raster driver GRIB for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
-    script: build_plugin.sh  # [unix]
-    script: build_plugin.bat  # [win]
+    script:
+      - if: unix
+        then: build_plugin.sh
+      - if: win
+        then: build_plugin.bat
   - package:
       name: libgdal-kea
     build:
@@ -498,8 +522,11 @@ outputs:
       summary: Raster driver KEA for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
-    script: build_plugin.sh  # [unix]
-    script: build_plugin.bat  # [win]
+    script:
+      - if: unix
+        then: build_plugin.sh
+      - if: win
+        then: build_plugin.bat
   - package:
       name: libgdal-tiledb
     build:
@@ -543,8 +570,11 @@ outputs:
       summary: Raster driver TileDB for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
-    script: build_plugin.sh  # [unix]
-    script: build_plugin.bat  # [win]
+    script:
+      - if: unix
+        then: build_plugin.sh
+      - if: win
+        then: build_plugin.bat
   - package:
       name: libgdal-netcdf
     build:
@@ -594,8 +624,11 @@ outputs:
       summary: Raster driver netCDF for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
-    script: build_plugin.sh  # [unix]
-    script: build_plugin.bat  # [win]
+    script:
+      - if: unix
+        then: build_plugin.sh
+      - if: win
+        then: build_plugin.bat
   - package:
       name: libgdal-hdf5
     build:
@@ -639,8 +672,11 @@ outputs:
       summary: Raster driver HDF5 for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
-    script: build_plugin.sh  # [unix]
-    script: build_plugin.bat  # [win]
+    script:
+      - if: unix
+        then: build_plugin.sh
+      - if: win
+        then: build_plugin.bat
   - package:
       name: libgdal-hdf4
     build:
@@ -685,8 +721,11 @@ outputs:
       summary: Raster driver HDF4 for the Geospatial Data Abstraction Library (GDAL)
       license: MIT
       license_file: LICENSE.TXT
-    script: build_plugin.sh  # [unix]
-    script: build_plugin.bat  # [win]
+    script:
+      - if: unix
+        then: build_plugin.sh
+      - if: win
+        then: build_plugin.bat
   - package:
       name: libgdal
     build:
@@ -805,8 +844,11 @@ outputs:
           - rgb2pct --help
           - ogrmerge --help
           - ogr_layer_algebra --help
-    script: install_python.sh  # [unix]
-    script: install_python.bat  # [win]
+    script:
+      - if: unix
+        then: install_python.sh
+      - if: win
+        then: install_python.bat
 
 tests:
   - files:
