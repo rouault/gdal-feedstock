@@ -1,5 +1,3 @@
-schema_version: 1
-
 context:
   version: 3.9.2
 
@@ -13,22 +11,12 @@ source:
 
 build:
   number: 1
-  skip_compile_pyc:
-    - share/bash-completion/completions/*.py
-  ignore_run_exports_from:
-    - kealib
-    - openjpeg
-    - tiledb
-    - libnetcdf
 
 outputs:
   - package:
       name: libgdal-core
   - package:
       name: libgdal-arrow-parquet
-    build:
-      ignore_run_exports_from:
-        - expat
     requirements:
       build:
         - cmake
@@ -52,6 +40,9 @@ outputs:
           then: libparquet
       run:
         - "libgdal-core >={{ \".\".join(version | split(\".\")[:2]) }}"
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - script:
           - if: unix
@@ -81,8 +72,6 @@ outputs:
           GDAL_PLUGIN_NAME: JP2OpenJPEG
           GDAL_PLUGIN_TYPE: gdal
           GDAL_PLUGIN_DEPS: "-DGDAL_USE_OPENJPEG=ON"
-      ignore_run_exports_from:
-        - expat
     requirements:
       build:
         - cmake
@@ -102,6 +91,9 @@ outputs:
         - expat
       run:
         - "libgdal-core >={{ \".\".join(version | split(\".\")[:2]) }}"
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - script:
           - if: unix
@@ -129,8 +121,6 @@ outputs:
           GDAL_PLUGIN_NAME: PDF
           GDAL_PLUGIN_TYPE: gdal
           GDAL_PLUGIN_DEPS: "-DGDAL_USE_POPPLER=ON"
-      ignore_run_exports_from:
-        - expat
     requirements:
       build:
         - cmake
@@ -151,6 +141,9 @@ outputs:
       run:
         - "libgdal-core >={{ \".\".join(version | split(\".\")[:2]) }}"
         - poppler
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - files:
           recipe:
@@ -187,8 +180,6 @@ outputs:
           GDAL_PLUGIN_NAME: PostGISRaster
           GDAL_PLUGIN_TYPE: gdal
           GDAL_PLUGIN_DEPS: "-DGDAL_USE_POSTGRESQL=ON"
-      ignore_run_exports_from:
-        - expat
     requirements:
       build:
         - cmake
@@ -210,6 +201,9 @@ outputs:
       run:
         - "libgdal-core >={{ \".\".join(version | split(\".\")[:2]) }}"
         - postgresql
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - script:
           - if: unix
@@ -237,8 +231,6 @@ outputs:
           GDAL_PLUGIN_NAME: PG
           GDAL_PLUGIN_TYPE: ogr
           GDAL_PLUGIN_DEPS: "-DGDAL_USE_POSTGRESQL=ON"
-      ignore_run_exports_from:
-        - expat
     requirements:
       build:
         - cmake
@@ -260,6 +252,9 @@ outputs:
       run:
         - "libgdal-core >={{ \".\".join(version | split(\".\")[:2]) }}"
         - postgresql
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - script:
           - if: unix
@@ -283,8 +278,6 @@ outputs:
           GDAL_PLUGIN_NAME: XLS
           GDAL_PLUGIN_TYPE: ogr
           GDAL_PLUGIN_DEPS: "-DGDAL_USE_FREEXL=ON"
-      ignore_run_exports_from:
-        - expat
     requirements:
       build:
         - cmake
@@ -304,6 +297,9 @@ outputs:
         - freexl
       run:
         - "libgdal-core >={{ \".\".join(version | split(\".\")[:2]) }}"
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - script:
           - if: unix
@@ -331,8 +327,6 @@ outputs:
           GDAL_PLUGIN_NAME: FITS
           GDAL_PLUGIN_TYPE: gdal
           GDAL_PLUGIN_DEPS: "-DGDAL_USE_CFITSIO=ON"
-      ignore_run_exports_from:
-        - expat
     requirements:
       build:
         - cmake
@@ -352,6 +346,9 @@ outputs:
         - cfitsio
       run:
         - "libgdal-core >={{ \".\".join(version | split(\".\")[:2]) }}"
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - script:
           - if: unix
@@ -379,8 +376,6 @@ outputs:
           GDAL_PLUGIN_NAME: GRIB
           GDAL_PLUGIN_TYPE: gdal
           GDAL_PLUGIN_DEPS: "-DGDAL_USE_LIBAEC=ON"
-      ignore_run_exports_from:
-        - expat
     requirements:
       build:
         - cmake
@@ -400,6 +395,9 @@ outputs:
         - libaec
       run:
         - "libgdal-core >={{ \".\".join(version | split(\".\")[:2]) }}"
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - script:
           - if: unix
@@ -427,8 +425,6 @@ outputs:
           GDAL_PLUGIN_NAME: KEA
           GDAL_PLUGIN_TYPE: gdal
           GDAL_PLUGIN_DEPS: "-DGDAL_USE_KEA=ON -DGDAL_USE_HDF5=ON"
-      ignore_run_exports_from:
-        - expat
     requirements:
       build:
         - cmake
@@ -451,6 +447,9 @@ outputs:
       run:
         - "libgdal-core >={{ \".\".join(version | split(\".\")[:2]) }}"
         - libgdal-hdf5 ${{ version }}.*
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - script:
           - if: unix
@@ -478,8 +477,6 @@ outputs:
           GDAL_PLUGIN_NAME: TileDB
           GDAL_PLUGIN_TYPE: gdal
           GDAL_PLUGIN_DEPS: "-DGDAL_USE_TILEDB=ON"
-      ignore_run_exports_from:
-        - expat
     requirements:
       build:
         - cmake
@@ -499,6 +496,9 @@ outputs:
         - tiledb
       run:
         - "libgdal-core >={{ \".\".join(version | split(\".\")[:2]) }}"
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - script:
           - if: unix
@@ -526,8 +526,6 @@ outputs:
           GDAL_PLUGIN_NAME: netCDF
           GDAL_PLUGIN_TYPE: gdal
           GDAL_PLUGIN_DEPS: "-DGDAL_USE_NETCDF=ON -DGDAL_USE_HDF5=ON -DGDAL_USE_HDF4=ON"
-      ignore_run_exports_from:
-        - expat
     requirements:
       build:
         - cmake
@@ -553,6 +551,9 @@ outputs:
         - "libgdal-core >={{ \".\".join(version | split(\".\")[:2]) }}"
         - libgdal-hdf5 ${{ version }}.*
         - libgdal-hdf4 ${{ version }}.*
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - script:
           - if: unix
@@ -580,8 +581,6 @@ outputs:
           GDAL_PLUGIN_NAME: HDF5
           GDAL_PLUGIN_TYPE: gdal
           GDAL_PLUGIN_DEPS: "-DGDAL_USE_HDF5=ON"
-      ignore_run_exports_from:
-        - expat
     requirements:
       build:
         - cmake
@@ -601,6 +600,9 @@ outputs:
         - hdf5
       run:
         - "libgdal-core >={{ \".\".join(version | split(\".\")[:2]) }}"
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - script:
           - if: unix
@@ -628,8 +630,6 @@ outputs:
           GDAL_PLUGIN_NAME: HDF4
           GDAL_PLUGIN_TYPE: gdal
           GDAL_PLUGIN_DEPS: "-DGDAL_USE_HDF4=ON"
-      ignore_run_exports_from:
-        - expat
     requirements:
       build:
         - cmake
@@ -650,6 +650,9 @@ outputs:
         - libaec
       run:
         - "libgdal-core >={{ \".\".join(version | split(\".\")[:2]) }}"
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - script:
           - if: unix
@@ -671,7 +674,6 @@ outputs:
         then: build_plugin.bat
   - package:
       name: libgdal
-    build:
     requirements:
       run:
         - libgdal-core ${{ version }}.*
@@ -693,10 +695,9 @@ outputs:
   - package:
       name: gdal
     build:
-      skip_compile_pyc:
-        - share/bash-completion/completions/*.py
-      ignore_run_exports_from:
-        - expat
+      python:
+        skip_compile_pyc:
+          - share/bash-completion/completions/*.py
     requirements:
       build:
         - ${{ compiler('c') }}
@@ -725,6 +726,9 @@ outputs:
       run:
         - python
         - libgdal-core ${{ version }}.*
+      ignore_run_exports:
+        from_package:
+          - expat
     tests:
       - python:
           imports:
@@ -792,13 +796,6 @@ outputs:
         then: install_python.sh
       - if: win
         then: install_python.bat
-
-tests:
-  - files:
-      recipe:
-        - test_data
-        - run_test.bat
-        - run_test.sh
 
 about:
   license: MIT
