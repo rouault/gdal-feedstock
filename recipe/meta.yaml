@@ -9,7 +9,7 @@ source:
   sha256: bfbcc9f087f012c36151c20c79f8eac9529e1e5298fbded79cd5a1365f0b113a
 
 build:
-  number: 0
+  number: 1
   skip_compile_pyc:
     - share/bash-completion/completions/*.py
   ignore_run_exports_from:
@@ -57,6 +57,7 @@ requirements:
     - proj
     # qhull disabled because of https://github.com/conda-forge/qgis-feedstock/issues/284#issuecomment-1356490896
     # - qhull
+    - setuptools
     - sqlite
     - xerces-c
     - xz
@@ -629,6 +630,7 @@ outputs:
         - libkml-devel
         - libxml2
         - expat
+        - setuptools
       run:
         - python
         - libgdal-core {{ version }}.*
