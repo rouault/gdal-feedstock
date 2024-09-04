@@ -57,6 +57,7 @@ requirements:
     - proj
     # qhull disabled because of https://github.com/conda-forge/qgis-feedstock/issues/284#issuecomment-1356490896
     # - qhull
+    - setuptools
     - sqlite
     - xerces-c
     - xz
@@ -629,6 +630,7 @@ outputs:
         - libkml-devel
         - libxml2
         - expat
+        - setuptools
       run:
         - python
         - libgdal-core {{ version }}.*
