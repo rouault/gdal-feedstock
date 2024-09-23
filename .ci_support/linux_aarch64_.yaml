@@ -41,7 +41,7 @@ hdf4:
 hdf5:
 - 1.14.3
 json_c:
-- '0.17'
+- '0.18'
 kealib:
 - '1.5'
 lerc:
@@ -74,7 +74,7 @@ libpng:
 libpq:
 - '16'
 libtiff:
-- '4.6'
+- '4.7'
 libuuid:
 - '2'
 libwebp_base:
