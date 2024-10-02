@@ -72,7 +72,7 @@ libnetcdf:
 libpng:
 - '1.6'
 libpq:
-- '16'
+- '17'
 libtiff:
 - '4.7'
 libuuid:
@@ -102,7 +102,7 @@ pin_run_as_build:
 poppler:
 - '24.08'
 postgresql:
-- '16'
+- '17'
 proj:
 - '9.5'
 python:
