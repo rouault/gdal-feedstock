@@ -58,7 +58,7 @@ libarrow:
 libcurl:
 - '8'
 libdeflate:
-- '1.21'
+- '1.22'
 libgdal:
 - '3.9'
 libiconv:
